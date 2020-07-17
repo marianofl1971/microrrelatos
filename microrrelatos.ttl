@@ -4,7 +4,8 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix fabio: <http://purl.org/vocab/frbr/core#> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix frbr: <http://purl.org/vocab/frbr/core#> .
 @base <https://w3id.org/def/microrrelatos> .
 
 <https://w3id.org/def/microrrelatos> rdf:type owl:Ontology ;
@@ -50,20 +51,6 @@
 #    Classes
 #################################################################
 
-###  http://purl.org/vocab/frbr/core#ArtisticWork
-fabio:ArtisticWork rdf:type owl:Class ;
-                   owl:equivalentClass :ObraArtistica .
-
-
-###  http://purl.org/vocab/frbr/core#Blog
-fabio:Blog rdf:type owl:Class ;
-           owl:equivalentClass :Blog .
-
-
-###  http://purl.org/vocab/frbr/core#Person
-fabio:Person owl:equivalentClass :Persona .
-
-
 ###  https://w3id.org/def/microrrelatos#Autor
 :Autor rdf:type owl:Class ;
        rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -76,6 +63,7 @@ fabio:Person owl:equivalentClass :Persona .
 
 ###  https://w3id.org/def/microrrelatos#Blog
 :Blog rdf:type owl:Class ;
+      owl:equivalentClass fabio:Blog ;
       rdfs:subClassOf :PublicacionDigital ;
       rdfs:comment "Un medio de publicación en la Web que contiene distintos textos."@es ;
       rdfs:label "blog"@es .
@@ -102,6 +90,7 @@ fabio:Person owl:equivalentClass :Persona .
 
 ###  https://w3id.org/def/microrrelatos#ObraArtistica
 :ObraArtistica rdf:type owl:Class ;
+               owl:equivalentClass fabio:ArtisticWork ;
                rdfs:subClassOf [ rdf:type owl:Restriction ;
                                  owl:onProperty :esObraArtisticaCreadaPor ;
                                  owl:someValuesFrom :Autor
@@ -112,6 +101,7 @@ fabio:Person owl:equivalentClass :Persona .
 
 ###  https://w3id.org/def/microrrelatos#Persona
 :Persona rdf:type owl:Class ;
+         owl:equivalentClass frbr:Person ;
          rdfs:subClassOf [ rdf:type owl:Restriction ;
                            owl:onProperty :tieneApellidos ;
                            owl:someValuesFrom xsd:string
