@@ -7,7 +7,8 @@
 @prefix fabio: <http://purl.org/vocab/frbr/core#> .
 @base <https://w3id.org/def/microrrelatos> .
 
-<https://w3id.org/def/microrrelatos> rdf:type owl:Ontology .
+<https://w3id.org/def/microrrelatos> rdf:type owl:Ontology ;
+                                      owl:imports <http://purl.org/spar/fabio/2019-02-19> .
 
 #################################################################
 #    Object Properties
@@ -15,9 +16,10 @@
 
 ###  https://w3id.org/def/microrrelatos#creaObraArtistica
 :creaObraArtistica rdf:type owl:ObjectProperty ;
-      owl:inverseOf :esObraArtisticaCreadaPor ;
-      rdfs:comment "Relación entre el creador y la obra artística"@es ;
-      rdfs:label "crea obra artística"@es .
+                   owl:inverseOf :esObraArtisticaCreadaPor ;
+                   rdfs:comment "Relación entre el creador y la obra artística"@es ;
+                   rdfs:label "crea obra artística"@es .
+
 
 ###  https://w3id.org/def/microrrelatos#esObraArtisticaCreadaPor
 :esObraArtisticaCreadaPor rdf:type owl:ObjectProperty ;
@@ -26,23 +28,18 @@
 
 
 #################################################################
-#    Classes
+#    Data properties
 #################################################################
 
-###  http://purl.org/dc/terms/creaObraArtisticator
-<http://purl.org/dc/terms/creator> rdf:type owl:Class ;
-                                   owl:equivalentClass :Autor .
+###  https://w3id.org/def/microrrelatos#microrrelatoTieneTitulo
+:microrrelatoTieneTitulo rdf:type owl:DatatypeProperty ;
+                         rdfs:subPropertyOf <http://purl.org/dc/terms/title> ;
+                         rdfs:label "microrrelato tiene título"@es .
 
 
-###  http://purl.org/spar/fabio/ArtisticWork
-<http://purl.org/spar/fabio/ArtisticWork> rdf:type owl:Class ;
-                                          owl:equivalentClass :ObraArtistica .
-
-
-###  http://purl.org/spar/fabio/Blog
-<http://purl.org/spar/fabio/Blog> rdf:type owl:Class ;
-                                  owl:equivalentClass :Blog .
-
+#################################################################
+#    Classes
+#################################################################
 
 ###  https://w3id.org/def/microrrelatos#Autor
 :Autor rdf:type owl:Class ;
@@ -56,6 +53,7 @@
 
 ###  https://w3id.org/def/microrrelatos#Blog
 :Blog rdf:type owl:Class ;
+      owl:equivalentClass fabio:Blog ;
       rdfs:comment "Un medio de publicación en la Web que contiene distintos textos."@es ;
       rdfs:label "blog"@es .
 
@@ -69,6 +67,7 @@
 
 ###  https://w3id.org/def/microrrelatos#ObraArtistica
 :ObraArtistica rdf:type owl:Class ;
+               owl:equivalentClass fabio:ArtisticWork ;
                rdfs:comment "Trabajo como arte en su sentido más amplio, incluyendo trabajos literarios, obras musicales, arte visual, etc. (traducido de http://purl.org/spar/fabio/ArtisticWork)"@es ;
                rdfs:label "obra artística"@es .
 
