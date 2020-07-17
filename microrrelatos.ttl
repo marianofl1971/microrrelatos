@@ -10,10 +10,11 @@
 @base <https://w3id.org/def/microrrelatos> .
 
 <https://w3id.org/def/microrrelatos> rdf:type owl:Ontology ;
-                                      owl:imports <http://purl.org/spar/fabio/2019-02-19> ,
+                                      owl:imports <http://dbpedia.org/ontology/> ,
+                                                  <http://purl.org/spar/fabio/2019-02-19> ,
                                                   <http://www.w3.org/2006/time#2016> ,
                                                   <http://xmlns.com/foaf/0.1/> ,
-                                                  <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.ttl> .
+                                                  <https://www.dublincore.org/specifications/dublin-core/dcmi-terms/dublin_core_terms.nt> .
 
 #################################################################
 #    Object Properties
@@ -157,7 +158,8 @@
 #################################################################
 
 ###  http://purl.org/dc/terms/Location
-<http://purl.org/dc/terms/Location> owl:equivalentClass :Lugar .
+<http://purl.org/dc/terms/Location> rdf:type owl:Class ;
+                                    owl:equivalentClass :Lugar .
 
 
 ###  http://purl.org/spar/fabio/ArtisticWork
@@ -215,7 +217,7 @@ frbr:Place owl:equivalentClass :Lugar .
 
 ###  https://w3id.org/def/microrrelatos#Cortometraje
 :Cortometraje rdf:type owl:Class ;
-              rdfs:subClassOf :ObraArtistica ;
+              rdfs:subClassOf fabio:Film ;
               rdfs:label "cortometraje"@es .
 
 
@@ -250,7 +252,7 @@ frbr:Place owl:equivalentClass :Lugar .
 
 ###  https://w3id.org/def/microrrelatos#IlustracionConMicrorrelatoInsertado
 :IlustracionConMicrorrelatoInsertado rdf:type owl:Class ;
-                                     rdfs:subClassOf :ObraArtistica ,
+                                     rdfs:subClassOf fabio:StillImage ,
                                                      [ rdf:type owl:Restriction ;
                                                        owl:onProperty :tieneMicrorrelatoInsertadoIlustracion ;
                                                        owl:someValuesFrom :Microrrelato
@@ -346,7 +348,8 @@ frbr:Place owl:equivalentClass :Lugar .
 
 ###  https://w3id.org/def/microrrelatos#PublicacionDigital
 :PublicacionDigital rdf:type owl:Class ;
-                    rdfs:subClassOf :Publicacion ,
+                    rdfs:subClassOf fabio:DigitalManifestation ,
+                                    :Publicacion ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty :blogTieneURL ;
                                       owl:someValuesFrom xsd:anyURI
@@ -368,7 +371,7 @@ frbr:Place owl:equivalentClass :Lugar .
 
 ###  https://w3id.org/def/microrrelatos#RevistaDigital
 :RevistaDigital rdf:type owl:Class ;
-                rdfs:subClassOf :PublicacionDigital ;
+                rdfs:subClassOf fabio:Magazine ;
                 rdfs:label "revista digital"@es .
 
 
@@ -406,7 +409,8 @@ frbr:Place owl:equivalentClass :Lugar .
 
 ###  https://w3id.org/def/microrrelatos#publicacionImpresa
 :publicacionImpresa rdf:type owl:Class ;
-                    rdfs:subClassOf :Publicacion ,
+                    rdfs:subClassOf fabio:PrintObject ,
+                                    :Publicacion ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty :tieneEditorial ;
                                       owl:allValuesFrom :Editorial
