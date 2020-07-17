@@ -113,6 +113,12 @@
                     rdfs:label "tiene nombre (persona)"@es .
 
 
+###  https://w3id.org/def/microrrelatos#publicacionImpresaTieneAnnoDePublicacion
+:publicacionImpresaTieneAnnoDePublicacion rdf:type owl:DatatypeProperty ;
+                                          rdfs:subPropertyOf :publicacionImpresaTieneAnnoDePublicacion ;
+                                          rdfs:label "tiene año de publicación (publicación impresa)"@es .
+
+
 ###  https://w3id.org/def/microrrelatos#tieneApellidos
 :tieneApellidos rdf:type owl:DatatypeProperty ;
                 rdfs:subPropertyOf :tieneNombre ;
@@ -132,6 +138,10 @@
 fabio:ArtisticWork owl:equivalentClass :ObraArtistica .
 
 
+###  http://purl.org/spar/fabio/AudioDocument
+fabio:AudioDocument owl:equivalentClass :Audio .
+
+
 ###  http://purl.org/spar/fabio/Blog
 fabio:Blog owl:equivalentClass :Blog .
 
@@ -142,13 +152,13 @@ frbr:Person owl:equivalentClass :Persona .
 
 ###  https://w3id.org/def/microrrelatos#Audio
 :Audio rdf:type owl:Class ;
-       rdfs:subClassOf fabio:SoundRecording ;
        rdfs:label "audio"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#Audiomicrorrelato
 :Audiomicrorrelato rdf:type owl:Class ;
-                   rdfs:subClassOf :Microrrelato ;
+                   rdfs:subClassOf :Audio ,
+                                   :Microrrelato ;
                    rdfs:label "audiomicrorrelato"@es .
 
 
@@ -313,7 +323,7 @@ frbr:Person owl:equivalentClass :Persona .
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty :tieneApellidos ;
-                           owl:someValuesFrom xsd:string
+                           owl:allValuesFrom xsd:string
                          ] ;
          rdfs:label "persona"@es .
 
@@ -363,7 +373,7 @@ frbr:Person owl:equivalentClass :Persona .
 
 ###  https://w3id.org/def/microrrelatos#Video
 :Video rdf:type owl:Class ;
-       rdfs:subClassOf fabio:MovingImage ;
+       rdfs:subClassOf fabio:Movie ;
        rdfs:label "video"@es .
 
 
