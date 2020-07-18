@@ -1,0 +1,7 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "base:ObraArtistica" "base:Microrrelato" ; /*classes style*/
+	"base:Microrrelato" -> "base:ObraArtistica" [ label = "rdfs:subClassOf" ];
+
+}

@@ -1,0 +1,36 @@
+{
+  "@context" : {
+    "Microrrelato" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Microrrelato"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator"
+    },
+    "ObraArtistica" : {
+      "@id" : "https://w3id.org/def/microrrelatos#ObraArtistica"
+    },
+    "Autor" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Autor"
+    },
+    "Blog" : {
+      "@id" : "http://purl.org/spar/fabio/Blog"
+    },
+    "creaObraArtistica" : {
+      "@id" : "https://w3id.org/def/microrrelatos#creaObraArtistica",
+      "@type" : "@id"
+    },
+    "esObraArtisticaCreadaPor" : {
+      "@id" : "https://w3id.org/def/microrrelatos#esObraArtisticaCreadaPor",
+      "@type" : "@id"
+    },
+    "ArtisticWork" : {
+      "@id" : "http://purl.org/spar/fabio/ArtisticWork"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    }
+  }
+}

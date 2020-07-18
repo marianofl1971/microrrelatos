@@ -1,0 +1,11 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1501"
+node [shape = rectangle, color="orange"]; "base:ObraArtistica" "base:Blog" "base:Autor" "http://purl.org/spar/fabio/Blog" "http://purl.org/spar/fabio/ArtisticWork" "http://purl.org/dc/terms/creator" ; /*classes style*/
+	"http://purl.org/spar/fabio/ArtisticWork" -> "base:ObraArtistica" [ label = "owl:equivalentClass" ];
+	"http://purl.org/dc/terms/creator" -> "base:Autor" [ label = "owl:equivalentClass" ];
+	"NULL" -> "base:ObraArtistica" [ label = "owl:someValuesFrom" ];
+	"NULL" -> "base:creaObraArtistica" [ label = "owl:onProperty" ];
+	"http://purl.org/spar/fabio/Blog" -> "base:Blog" [ label = "owl:equivalentClass" ];
+
+}
