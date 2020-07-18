@@ -1,0 +1,64 @@
+{
+  "@context" : {
+    "Microrrelato" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Microrrelato"
+    },
+    "tieneApellidos" : {
+      "@id" : "https://w3id.org/def/microrrelatos#tieneApellidos"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "Person" : {
+      "@id" : "http://purl.org/vocab/frbr/core#Person"
+    },
+    "Persona" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Persona"
+    },
+    "Hombre" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Hombre"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
+      "@type" : "@id"
+    },
+    "ObraArtistica" : {
+      "@id" : "https://w3id.org/def/microrrelatos#ObraArtistica"
+    },
+    "Autor" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Autor"
+    },
+    "Blog" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Blog"
+    },
+    "tieneNombre" : {
+      "@id" : "https://w3id.org/def/microrrelatos#tieneNombre"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "creaObraArtistica" : {
+      "@id" : "https://w3id.org/def/microrrelatos#creaObraArtistica",
+      "@type" : "@id"
+    },
+    "esObraArtisticaCreadaPor" : {
+      "@id" : "https://w3id.org/def/microrrelatos#esObraArtisticaCreadaPor",
+      "@type" : "@id"
+    },
+    "microrrelatoTieneTitulo" : {
+      "@id" : "https://w3id.org/def/microrrelatos#microrrelatoTieneTitulo"
+    },
+    "ArtisticWork" : {
+      "@id" : "http://purl.org/vocab/frbr/core#ArtisticWork"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "Mujer" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Mujer"
+    },
+    "PublicacionDigital" : {
+      "@id" : "https://w3id.org/def/microrrelatos#PublicacionDigital"
+    }
+  }
+}
