@@ -1,0 +1,79 @@
+{
+  "@context" : {
+    "Microrrelato" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Microrrelato"
+    },
+    "tieneApellidos" : {
+      "@id" : "https://w3id.org/def/microrrelatos#tieneApellidos"
+    },
+    "EspacioTelevisivo" : {
+      "@id" : "https://w3id.org/def/microrrelatos#EspacioTelevisivo"
+    },
+    "Cortometraje" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Cortometraje"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "Person" : {
+      "@id" : "http://purl.org/vocab/frbr/core#Person"
+    },
+    "RevistaDigital" : {
+      "@id" : "https://w3id.org/def/microrrelatos#RevistaDigital"
+    },
+    "Persona" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Persona"
+    },
+    "Hombre" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Hombre"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
+      "@type" : "@id"
+    },
+    "ObraArtistica" : {
+      "@id" : "https://w3id.org/def/microrrelatos#ObraArtistica"
+    },
+    "Autor" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Autor"
+    },
+    "Blog" : {
+      "@id" : "http://purl.org/spar/fabio/Blog"
+    },
+    "tieneNombre" : {
+      "@id" : "https://w3id.org/def/microrrelatos#tieneNombre"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "creaObraArtistica" : {
+      "@id" : "https://w3id.org/def/microrrelatos#creaObraArtistica",
+      "@type" : "@id"
+    },
+    "esObraArtisticaCreadaPor" : {
+      "@id" : "https://w3id.org/def/microrrelatos#esObraArtisticaCreadaPor",
+      "@type" : "@id"
+    },
+    "EspacioRadiofonico" : {
+      "@id" : "https://w3id.org/def/microrrelatos#EspacioRadiofonico"
+    },
+    "RemediacionAudiovisual" : {
+      "@id" : "https://w3id.org/def/microrrelatos#RemediacionAudiovisual"
+    },
+    "microrrelatoTieneTitulo" : {
+      "@id" : "https://w3id.org/def/microrrelatos#microrrelatoTieneTitulo"
+    },
+    "ArtisticWork" : {
+      "@id" : "http://purl.org/spar/fabio/ArtisticWork"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "Mujer" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Mujer"
+    },
+    "PublicacionDigital" : {
+      "@id" : "https://w3id.org/def/microrrelatos#PublicacionDigital"
+    }
+  }
+}
