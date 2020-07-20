@@ -1,0 +1,33 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "base:microrrelatoEnLaWeb" "base:TallerDigital" "base:EspacioRadiofonico" "base:ObraArtistica" "base:PublicacionDigital" "base:Persona" "base:RevistaDigital" "base:EspacioTelevisivo" "base:Hombre" "base:Mujer" "base:RemediacionAudiovisual" "base:Microrrelato" "base:Blog" "cc74620135faf66266c77efe6cfb5a83" "time:GeneralDateTimeDescription" "time:DateTimeInterval" "time:DurationDescription" "time:TemporalDuration" "time:Duration" "time:GeneralDurationDescription" "time:January" "time:ProperInterval" "time:TimePosition" "time:TemporalPosition" "time:Interval" "time:TemporalEntity" "time:Year" "time:MonthOfYear" "time:DateTimeDescription" "time:TemporalUnit" "time:Instant" "time:DayOfWeek" ; /*classes style*/
+	"time:TemporalEntity" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"base:RevistaDigital" -> "base:PublicacionDigital" [ label = "rdfs:subClassOf" ];
+	"time:DateTimeInterval" -> "time:ProperInterval" [ label = "rdfs:subClassOf" ];
+	"time:DayOfWeek" -> "owl:Thing" [ label = "rdfs:subClassOf" ];
+	"time:TemporalUnit" -> "time:TemporalDuration" [ label = "rdfs:subClassOf" ];
+	"base:EspacioTelevisivo" -> "base:PublicacionDigital" [ label = "rdfs:subClassOf" ];
+	"time:Year" -> "time:DurationDescription" [ label = "rdfs:subClassOf" ];
+	"base:Hombre" -> "base:Persona" [ label = "rdfs:subClassOf" ];
+	"time:Interval" -> "time:TemporalEntity" [ label = "rdfs:subClassOf" ];
+	"base:microrrelatoEnLaWeb" -> "base:Microrrelato" [ label = "rdfs:subClassOf" ];
+	"base:Microrrelato" -> "base:ObraArtistica" [ label = "rdfs:subClassOf" ];
+	"time:MonthOfYear" -> "time:DateTimeDescription" [ label = "rdfs:subClassOf" ];
+	"time:GeneralDurationDescription" -> "time:TemporalDuration" [ label = "rdfs:subClassOf" ];
+	"time:GeneralDateTimeDescription" -> "time:TemporalPosition" [ label = "rdfs:subClassOf" ];
+	"base:Blog" -> "base:PublicacionDigital" [ label = "rdfs:subClassOf" ];
+	"base:RemediacionAudiovisual" -> "base:PublicacionDigital" [ label = "rdfs:subClassOf" ];
+	"time:DateTimeDescription" -> "time:GeneralDateTimeDescription" [ label = "rdfs:subClassOf" ];
+	"time:DurationDescription" -> "time:GeneralDurationDescription" [ label = "rdfs:subClassOf" ];
+	"time:TimePosition" -> "cc74620135faf66266c77efe6cfb5a83" [ label = "rdfs:subClassOf" ];
+	"time:TimePosition" -> "time:TemporalPosition" [ label = "rdfs:subClassOf" ];
+	"time:January" -> "time:DateTimeDescription" [ label = "rdfs:subClassOf" ];
+	"time:ProperInterval" -> "time:Interval" [ label = "rdfs:subClassOf" ];
+	"base:TallerDigital" -> "base:PublicacionDigital" [ label = "rdfs:subClassOf" ];
+	"time:Instant" -> "time:TemporalEntity" [ label = "rdfs:subClassOf" ];
+	"time:Duration" -> "time:TemporalDuration" [ label = "rdfs:subClassOf" ];
+	"base:EspacioRadiofonico" -> "base:PublicacionDigital" [ label = "rdfs:subClassOf" ];
+	"base:Mujer" -> "base:Persona" [ label = "rdfs:subClassOf" ];
+
+}

@@ -1,0 +1,433 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/def/microrrelatos#"
+     xml:base="https://w3id.org/def/microrrelatos"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:microrrelatos="https://w3id.org/def/microrrelatos#">
+    <owl:Ontology rdf:about="https://w3id.org/def/microrrelatos">
+        <owl:imports rdf:resource="http://purl.org/spar/fabio/2019-02-19"/>
+        <owl:imports rdf:resource="http://www.w3.org/2006/time#2016"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/def/microrrelatos#esObraArtisticaCreadaPor -->
+
+
+    <owl:AnnotationProperty rdf:about="https://w3id.org/def/microrrelatos#esObraArtisticaCreadaPor">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/creator"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/def/microrrelatos#creaObraArtistica -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/microrrelatos#creaObraArtistica">
+        <owl:inverseOf rdf:resource="https://w3id.org/def/microrrelatos#esObraArtisticaCreadaPor"/>
+        <rdfs:comment xml:lang="es">Relación entre el creador y la obra artística</rdfs:comment>
+        <rdfs:label xml:lang="es">crea obra artística</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/def/microrrelatos#esObraArtisticaCreadaPor -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/def/microrrelatos#esObraArtisticaCreadaPor"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- http://purl.org/spar/fabio/hasURL -->
+
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/spar/fabio/hasURL">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/def/microrrelatos#tieneURL"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/microrrelatos#TieneNombrePersona -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/microrrelatos#TieneNombrePersona">
+        <rdfs:label xml:lang="es">tiene nombre (persona)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/microrrelatos#microrrelatoTieneTitulo -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/microrrelatos#microrrelatoTieneTitulo">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/title"/>
+        <rdfs:label xml:lang="es">microrrelato tiene título</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/microrrelatos#tieneApellidos -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/microrrelatos#tieneApellidos">
+        <rdfs:label xml:lang="es">tiene apellidos</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/microrrelatos#tieneNombreBlog -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/microrrelatos#tieneNombreBlog">
+        <rdfs:label xml:lang="es">tiene nombre (blog)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/microrrelatos#tieneURL -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/microrrelatos#tieneURL">
+        <rdfs:label xml:lang="es">tiene URL</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/spar/fabio/ArtisticWork -->
+
+
+    <owl:Class rdf:about="http://purl.org/spar/fabio/ArtisticWork">
+        <owl:equivalentClass rdf:resource="https://w3id.org/def/microrrelatos#ObraArtistica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/fabio/Blog -->
+
+
+    <owl:Class rdf:about="http://purl.org/spar/fabio/Blog">
+        <owl:equivalentClass rdf:resource="https://w3id.org/def/microrrelatos#Blog"/>
+    </owl:Class>
+    
+
+
+    <!-- http://purl.org/spar/fabio/Person -->
+
+
+    <owl:Class rdf:about="http://purl.org/spar/fabio/Person">
+        <owl:equivalentClass rdf:resource="https://w3id.org/def/microrrelatos#Persona"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/microrrelatos#Autor -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/microrrelatos#Autor">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/microrrelatos#creaObraArtistica"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/microrrelatos#ObraArtistica"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Persona que crea la obra artística</rdfs:comment>
+        <rdfs:label xml:lang="es">autor</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/microrrelatos#Blog -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/microrrelatos#Blog">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/microrrelatos#PublicacionDigital"/>
+        <rdfs:comment xml:lang="es">Un medio de publicación en la Web que contiene distintos textos.</rdfs:comment>
+        <rdfs:label xml:lang="es">blog</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/microrrelatos#Cortometraje -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/microrrelatos#Cortometraje">
+        <rdfs:label xml:lang="es">cortometraje</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/microrrelatos#EspacioRadiofonico -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/microrrelatos#EspacioRadiofonico">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/microrrelatos#PublicacionDigital"/>
+        <rdfs:label xml:lang="es">espacio radiofónico</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/microrrelatos#EspacioTelevisivo -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/microrrelatos#EspacioTelevisivo">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/microrrelatos#PublicacionDigital"/>
+        <rdfs:label xml:lang="es">espacio televisivo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/microrrelatos#Hombre -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/microrrelatos#Hombre">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/microrrelatos#Persona"/>
+        <rdfs:label xml:lang="es">hombre</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/microrrelatos#Microrrelato -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/microrrelatos#Microrrelato">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/microrrelatos#ObraArtistica"/>
+        <rdfs:comment xml:lang="es">El microrrelato es un relato de muy pocas líneas que, por la brevedad y precisión en su vocabulario, crea la intensidad suficiente para turbar al lector (http://www.ies-ramonycajal.com/index.php/departamentos-mainmenu-32/dpto-lengua-espa-mainmenu-107/571-que-es-y-como-escribir-un-microrrelato).</rdfs:comment>
+        <rdfs:label xml:lang="es">microrrelato</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/microrrelatos#Mujer -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/microrrelatos#Mujer">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/microrrelatos#Persona"/>
+        <rdfs:label xml:lang="es">mujer</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/microrrelatos#ObraArtistica -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/microrrelatos#ObraArtistica">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/microrrelatos#esObraArtisticaCreadaPor"/>
+                <owl:someValuesFrom rdf:resource="https://w3id.org/def/microrrelatos#Autor"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="es">Trabajo como arte en su sentido más amplio, incluyendo trabajos literarios, obras musicales, arte visual, etc. (traducido de http://purl.org/spar/fabio/ArtisticWork)</rdfs:comment>
+        <rdfs:label xml:lang="es">obra artística</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/microrrelatos#Persona -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/microrrelatos#Persona">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/microrrelatos#TieneNombrePersona"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/def/microrrelatos#tieneApellidos"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="es">persona</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/microrrelatos#PublicacionDigital -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/microrrelatos#PublicacionDigital">
+        <rdfs:label xml:lang="es">publicación digital</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/microrrelatos#RemediacionAudiovisual -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/microrrelatos#RemediacionAudiovisual">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/microrrelatos#PublicacionDigital"/>
+        <rdfs:label xml:lang="es">remediación audiovisual</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/microrrelatos#RevistaDigital -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/microrrelatos#RevistaDigital">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/microrrelatos#PublicacionDigital"/>
+        <rdfs:label xml:lang="es">revista digital</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/microrrelatos#TallerDigital -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/microrrelatos#TallerDigital">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/microrrelatos#PublicacionDigital"/>
+        <rdfs:label xml:lang="es">taller digital</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/def/microrrelatos#microrrelatoEnLaWeb -->
+
+
+    <owl:Class rdf:about="https://w3id.org/def/microrrelatos#microrrelatoEnLaWeb">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/microrrelatos#Microrrelato"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/spar/fabio/hasURL"/>
+                <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:label xml:lang="es">microrrelato en la Web</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/def/microrrelatos#facebook -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/microrrelatos#facebook">
+        <rdf:type rdf:resource="https://w3id.org/def/microrrelatos#PublicacionDigital"/>
+        <rdfs:label xml:lang="es">Facebook</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/microrrelatos#instagram -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/microrrelatos#instagram">
+        <rdf:type rdf:resource="https://w3id.org/def/microrrelatos#PublicacionDigital"/>
+        <rdfs:label xml:lang="es">Instagram</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/microrrelatos#twitter -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/microrrelatos#twitter">
+        <rdf:type rdf:resource="https://w3id.org/def/microrrelatos#PublicacionDigital"/>
+        <rdfs:label xml:lang="es">Twitter</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/def/microrrelatos#youtube -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/def/microrrelatos#youtube">
+        <rdf:type rdf:resource="https://w3id.org/def/microrrelatos#PublicacionDigital"/>
+        <rdfs:label xml:lang="es">YouTube</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="https://w3id.org/def/microrrelatos#esObraArtisticaCreadaPor">
+        <rdfs:comment xml:lang="es">Relación entre la obra artística y su creador</rdfs:comment>
+        <rdfs:label xml:lang="es">es obra artística creada por</rdfs:label>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/ -->
+
+
