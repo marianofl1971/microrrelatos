@@ -1,0 +1,147 @@
+{
+  "@context" : {
+    "Ciudad" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Ciudad"
+    },
+    "Microrrelato" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Microrrelato"
+    },
+    "tieneURL" : {
+      "@id" : "https://w3id.org/def/microrrelatos#tieneURL"
+    },
+    "tieneApellidos" : {
+      "@id" : "https://w3id.org/def/microrrelatos#tieneApellidos"
+    },
+    "tieneInicioFinPublicacion" : {
+      "@id" : "https://w3id.org/def/microrrelatos#tieneInicioFinPublicacion",
+      "@type" : "@id"
+    },
+    "EspacioTelevisivo" : {
+      "@id" : "https://w3id.org/def/microrrelatos#EspacioTelevisivo"
+    },
+    "part" : {
+      "@id" : "http://purl.org/vocab/frbr/core#part",
+      "@type" : "@id"
+    },
+    "Video" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Video"
+    },
+    "Cortometraje" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Cortometraje"
+    },
+    "microrrelatoEnLaWeb" : {
+      "@id" : "https://w3id.org/def/microrrelatos#microrrelatoEnLaWeb"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "Pais" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Pais"
+    },
+    "hasURL" : {
+      "@id" : "http://purl.org/spar/fabio/hasURL",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Person" : {
+      "@id" : "http://purl.org/spar/fabio/Person"
+    },
+    "DateTimeInterval" : {
+      "@id" : "http://www.w3.org/2006/time#DateTimeInterval"
+    },
+    "tieneMicrorrelatoInsertadoIlustracion" : {
+      "@id" : "https://w3id.org/def/microrrelatos#tieneMicrorrelatoInsertadoIlustracion",
+      "@type" : "@id"
+    },
+    "RevistaDigital" : {
+      "@id" : "https://w3id.org/def/microrrelatos#RevistaDigital"
+    },
+    "Persona" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Persona"
+    },
+    "Hombre" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Hombre"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
+      "@type" : "@id"
+    },
+    "ObraArtistica" : {
+      "@id" : "https://w3id.org/def/microrrelatos#ObraArtistica"
+    },
+    "Autor" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Autor"
+    },
+    "microrrelatoTextoYFotografia" : {
+      "@id" : "https://w3id.org/def/microrrelatos#microrrelatoTextoYFotografia"
+    },
+    "Blog" : {
+      "@id" : "http://purl.org/spar/fabio/Blog"
+    },
+    "hasDateTimeDescription" : {
+      "@id" : "http://www.w3.org/2006/time#hasDateTimeDescription",
+      "@type" : "@id"
+    },
+    "IlustracionConMicrorrelatoInsertado" : {
+      "@id" : "https://w3id.org/def/microrrelatos#IlustracionConMicrorrelatoInsertado"
+    },
+    "TieneNombrePersona" : {
+      "@id" : "https://w3id.org/def/microrrelatos#TieneNombrePersona"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "Fotografia" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Fotografia"
+    },
+    "MicrorrelatoConAudioVideo" : {
+      "@id" : "https://w3id.org/def/microrrelatos#MicrorrelatoConAudioVideo"
+    },
+    "creaObraArtistica" : {
+      "@id" : "https://w3id.org/def/microrrelatos#creaObraArtistica",
+      "@type" : "@id"
+    },
+    "esObraArtisticaCreadaPor" : {
+      "@id" : "https://w3id.org/def/microrrelatos#esObraArtisticaCreadaPor",
+      "@type" : "@id"
+    },
+    "EspacioRadiofonico" : {
+      "@id" : "https://w3id.org/def/microrrelatos#EspacioRadiofonico"
+    },
+    "Pueblo" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Pueblo"
+    },
+    "RemediacionAudiovisual" : {
+      "@id" : "https://w3id.org/def/microrrelatos#RemediacionAudiovisual"
+    },
+    "Lugar" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Lugar"
+    },
+    "microrrelatoTieneTitulo" : {
+      "@id" : "https://w3id.org/def/microrrelatos#microrrelatoTieneTitulo"
+    },
+    "ArtisticWork" : {
+      "@id" : "http://purl.org/spar/fabio/ArtisticWork"
+    },
+    "tieneNombreBlog" : {
+      "@id" : "https://w3id.org/def/microrrelatos#tieneNombreBlog"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "TallerDigital" : {
+      "@id" : "https://w3id.org/def/microrrelatos#TallerDigital"
+    },
+    "Audiomicrorrelato" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Audiomicrorrelato"
+    },
+    "Mujer" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Mujer"
+    },
+    "Publicacion" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Publicacion"
+    },
+    "PublicacionDigital" : {
+      "@id" : "https://w3id.org/def/microrrelatos#PublicacionDigital"
+    }
+  }
+}
