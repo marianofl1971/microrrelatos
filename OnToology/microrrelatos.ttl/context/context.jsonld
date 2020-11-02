@@ -1,0 +1,224 @@
+{
+  "@context" : {
+    "Ciudad" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Ciudad"
+    },
+    "Microrrelato" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Microrrelato"
+    },
+    "Magazine" : {
+      "@id" : "http://purl.org/spar/fabio/Magazine"
+    },
+    "microrrelatoTieneFotografia" : {
+      "@id" : "https://w3id.org/def/microrrelatos#microrrelatoTieneFotografia",
+      "@type" : "@id"
+    },
+    "nombreDeLaEditorial" : {
+      "@id" : "https://w3id.org/def/microrrelatos#nombreDeLaEditorial"
+    },
+    "tieneInicioFinPublicacion" : {
+      "@id" : "https://w3id.org/def/microrrelatos#tieneInicioFinPublicacion",
+      "@type" : "@id"
+    },
+    "publicacionImpresaAnnoDePublicacion" : {
+      "@id" : "https://w3id.org/def/microrrelatos#publicacionImpresaAnnoDePublicacion"
+    },
+    "microrrelatoTieneAudio" : {
+      "@id" : "https://w3id.org/def/microrrelatos#microrrelatoTieneAudio",
+      "@type" : "@id"
+    },
+    "EspacioTelevisivo" : {
+      "@id" : "https://w3id.org/def/microrrelatos#EspacioTelevisivo"
+    },
+    "nombreDeLaPersona" : {
+      "@id" : "https://w3id.org/def/microrrelatos#nombreDeLaPersona"
+    },
+    "CorporateBody" : {
+      "@id" : "http://purl.org/vocab/frbr/core#CorporateBody"
+    },
+    "publicacionImpresa" : {
+      "@id" : "https://w3id.org/def/microrrelatos#publicacionImpresa"
+    },
+    "MedioDigitalDePublicacion" : {
+      "@id" : "https://w3id.org/def/microrrelatos#MedioDigitalDePublicacion"
+    },
+    "part" : {
+      "@id" : "http://purl.org/vocab/frbr/core#part",
+      "@type" : "@id"
+    },
+    "sexo" : {
+      "@id" : "https://w3id.org/def/microrrelatos#sexo"
+    },
+    "Video" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Video"
+    },
+    "Cortometraje" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Cortometraje"
+    },
+    "microrrelatoEnLaWeb" : {
+      "@id" : "https://w3id.org/def/microrrelatos#microrrelatoEnLaWeb"
+    },
+    "maker" : {
+      "@id" : "http://xmlns.com/foaf/0.1/maker",
+      "@type" : "@id"
+    },
+    "nombre" : {
+      "@id" : "https://w3id.org/def/microrrelatos#nombre"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "familyName" : {
+      "@id" : "http://xmlns.com/foaf/0.1/familyName",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "perteneceAPais" : {
+      "@id" : "https://w3id.org/def/microrrelatos#perteneceAPais",
+      "@type" : "@id"
+    },
+    "Pais" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Pais"
+    },
+    "Localidad" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Localidad"
+    },
+    "gender" : {
+      "@id" : "http://xmlns.com/foaf/0.1/gender",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "apellidos" : {
+      "@id" : "https://w3id.org/def/microrrelatos#apellidos"
+    },
+    "hasURL" : {
+      "@id" : "http://purl.org/spar/fabio/hasURL",
+      "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
+    },
+    "Person" : {
+      "@id" : "http://xmlns.com/foaf/0.1/Person"
+    },
+    "microrrelatoConFotografia" : {
+      "@id" : "https://w3id.org/def/microrrelatos#microrrelatoConFotografia"
+    },
+    "tieneMicrorrelatoInsertadoIlustracion" : {
+      "@id" : "https://w3id.org/def/microrrelatos#tieneMicrorrelatoInsertadoIlustracion",
+      "@type" : "@id"
+    },
+    "RevistaDigital" : {
+      "@id" : "https://w3id.org/def/microrrelatos#RevistaDigital"
+    },
+    "nombreDelBlog" : {
+      "@id" : "https://w3id.org/def/microrrelatos#nombreDelBlog"
+    },
+    "Persona" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Persona"
+    },
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "ObraArtistica" : {
+      "@id" : "https://w3id.org/def/microrrelatos#ObraArtistica"
+    },
+    "partOf" : {
+      "@id" : "http://purl.org/vocab/frbr/core#partOf",
+      "@type" : "@id"
+    },
+    "MicrorrelatoConMinificcion" : {
+      "@id" : "https://w3id.org/def/microrrelatos#MicrorrelatoConMinificcion"
+    },
+    "firstName" : {
+      "@id" : "http://xmlns.com/foaf/0.1/firstName",
+      "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "tieneMedioDigitalDePublicacion" : {
+      "@id" : "https://w3id.org/def/microrrelatos#tieneMedioDigitalDePublicacion",
+      "@type" : "@id"
+    },
+    "Blog" : {
+      "@id" : "http://purl.org/spar/fabio/Blog"
+    },
+    "hasDateTimeDescription" : {
+      "@id" : "http://www.w3.org/2006/time#hasDateTimeDescription",
+      "@type" : "@id"
+    },
+    "Place" : {
+      "@id" : "http://purl.org/vocab/frbr/core#Place"
+    },
+    "IlustracionConMicrorrelatoInsertado" : {
+      "@id" : "https://w3id.org/def/microrrelatos#IlustracionConMicrorrelatoInsertado"
+    },
+    "Movie" : {
+      "@id" : "http://purl.org/spar/fabio/Movie"
+    },
+    "PrintObject" : {
+      "@id" : "http://purl.org/spar/fabio/PrintObject"
+    },
+    "urlDelMicrorrelato" : {
+      "@id" : "https://w3id.org/def/microrrelatos#urlDelMicrorrelato"
+    },
+    "MicrorrelatoConAudio" : {
+      "@id" : "https://w3id.org/def/microrrelatos#MicrorrelatoConAudio"
+    },
+    "Fotografia" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Fotografia"
+    },
+    "Film" : {
+      "@id" : "http://purl.org/spar/fabio/Film"
+    },
+    "creaObraArtistica" : {
+      "@id" : "https://w3id.org/def/microrrelatos#creaObraArtistica",
+      "@type" : "@id"
+    },
+    "esObraArtisticaCreadaPor" : {
+      "@id" : "https://w3id.org/def/microrrelatos#esObraArtisticaCreadaPor",
+      "@type" : "@id"
+    },
+    "EspacioRadiofonico" : {
+      "@id" : "https://w3id.org/def/microrrelatos#EspacioRadiofonico"
+    },
+    "Pueblo" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Pueblo"
+    },
+    "RemediacionAudiovisual" : {
+      "@id" : "https://w3id.org/def/microrrelatos#RemediacionAudiovisual"
+    },
+    "Lugar" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Lugar"
+    },
+    "StillImage" : {
+      "@id" : "http://purl.org/spar/fabio/StillImage"
+    },
+    "tieneEditorial" : {
+      "@id" : "https://w3id.org/def/microrrelatos#tieneEditorial",
+      "@type" : "@id"
+    },
+    "AudioDocument" : {
+      "@id" : "http://purl.org/spar/fabio/AudioDocument"
+    },
+    "MicrorrelatoConVideo" : {
+      "@id" : "https://w3id.org/def/microrrelatos#MicrorrelatoConVideo"
+    },
+    "ArtisticWork" : {
+      "@id" : "http://purl.org/spar/fabio/ArtisticWork"
+    },
+    "obraArtisticaTieneTitulo" : {
+      "@id" : "https://w3id.org/def/microrrelatos#obraArtisticaTieneTitulo"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "microrrelatoTieneVideo" : {
+      "@id" : "https://w3id.org/def/microrrelatos#microrrelatoTieneVideo",
+      "@type" : "@id"
+    },
+    "Editorial" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Editorial"
+    },
+    "TallerDigital" : {
+      "@id" : "https://w3id.org/def/microrrelatos#TallerDigital"
+    },
+    "Audiomicrorrelato" : {
+      "@id" : "https://w3id.org/def/microrrelatos#Audiomicrorrelato"
+    }
+  }
+}
