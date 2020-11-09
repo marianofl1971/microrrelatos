@@ -252,18 +252,6 @@ frbr:Place owl:equivalentClass :Lugar .
         rdfs:label "dibujo"@es .
 
 
-###  https://w3id.org/def/microrrelatos#DibujoALapiz
-:DibujoALapiz rdf:type owl:Class ;
-              rdfs:subClassOf :Dibujo ;
-              rdfs:label "dibujo a lápiz"@es .
-
-
-###  https://w3id.org/def/microrrelatos#DibujoInfantil
-:DibujoInfantil rdf:type owl:Class ;
-                rdfs:subClassOf :Dibujo ;
-                rdfs:label "dibujo infantil"@es .
-
-
 ###  https://w3id.org/def/microrrelatos#Editorial
 :Editorial rdf:type owl:Class ;
            rdfs:subClassOf frbr:CorporateBody ,
@@ -429,30 +417,6 @@ frbr:Place owl:equivalentClass :Lugar .
                        rdfs:label "microrrelato con dibujo"@es .
 
 
-###  https://w3id.org/def/microrrelatos#MicrorrelatoConDibujoALapiz
-:MicrorrelatoConDibujoALapiz rdf:type owl:Class ;
-                             rdfs:subClassOf :MicrorrelatoConDibujo ;
-                             rdfs:label "microrrelato con dibujo a lápiz"@es .
-
-
-###  https://w3id.org/def/microrrelatos#MicrorrelatoConFotografiaDeCuadro
-:MicrorrelatoConFotografiaDeCuadro rdf:type owl:Class ;
-                                   rdfs:subClassOf :microrrelatoConFotografia ;
-                                   rdfs:label "microrrelato con fotografía de cuadro"@es .
-
-
-###  https://w3id.org/def/microrrelatos#MicrorrelatoConFotografiaDeLaPortadaDeLibro
-:MicrorrelatoConFotografiaDeLaPortadaDeLibro rdf:type owl:Class ;
-                                             rdfs:subClassOf :microrrelatoConFotografia ;
-                                             rdfs:label "microrrelato con fotografía de la portada de libro"@es .
-
-
-###  https://w3id.org/def/microrrelatos#MicrorrelatoConFotografiaDePortadaDeRevista
-:MicrorrelatoConFotografiaDePortadaDeRevista rdf:type owl:Class ;
-                                             rdfs:subClassOf :microrrelatoConFotografia ;
-                                             rdfs:label "microrrelato con fotografía de portada de revista"@es .
-
-
 ###  https://w3id.org/def/microrrelatos#MicrorrelatoConIlustracion
 :MicrorrelatoConIlustracion rdf:type owl:Class ;
                             rdfs:subClassOf :Microrrelato ;
@@ -485,6 +449,12 @@ frbr:Place owl:equivalentClass :Lugar .
                                         owl:someValuesFrom :Video
                                       ] ;
                       rdfs:label "microrrelato con vídeo"@es .
+
+
+###  https://w3id.org/def/microrrelatos#MicrorrelatoVisualAnimado
+:MicrorrelatoVisualAnimado rdf:type owl:Class ;
+                           rdfs:subClassOf :Microrrelato ;
+                           rdfs:label "microrrelato visual animado"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#ObraArtistica
@@ -567,7 +537,7 @@ frbr:Place owl:equivalentClass :Lugar .
 :Videominificcion rdf:type owl:Class ;
                   rdfs:subClassOf :Microrrelato ,
                                   :Video ;
-                  rdfs:label "vídeominificción"@es .
+                  rdfs:label "videominificción"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#microrrelatoConFotografia
