@@ -35,6 +35,12 @@
                           rdfs:label "es obra artística creada por"@es .
 
 
+###  https://w3id.org/def/microrrelatos#ilustracionTieneMicrorrelatoInsertado
+:ilustracionTieneMicrorrelatoInsertado rdf:type owl:ObjectProperty ;
+                                       rdfs:subPropertyOf frbr:part ;
+                                       rdfs:label "tiene microrrelato insertado (ilustración)"@es .
+
+
 ###  https://w3id.org/def/microrrelatos#microrrelatoTieneAudio
 :microrrelatoTieneAudio rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf frbr:part ;
@@ -59,6 +65,12 @@
                 rdfs:label "pertenece a país"@es .
 
 
+###  https://w3id.org/def/microrrelatos#tieneCiudad
+:tieneCiudad rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :tieneLugar ;
+             rdfs:label "tiene ciudad"@es .
+
+
 ###  https://w3id.org/def/microrrelatos#tieneEditorial
 :tieneEditorial rdf:type owl:ObjectProperty ;
                 rdfs:label "tiene editorial"@es .
@@ -70,15 +82,25 @@
                            rdfs:label "tiene inicio fin (publicación)"@es .
 
 
+###  https://w3id.org/def/microrrelatos#tieneLugar
+:tieneLugar rdf:type owl:ObjectProperty .
+
+
 ###  https://w3id.org/def/microrrelatos#tieneMedioDigitalDePublicacion
 :tieneMedioDigitalDePublicacion rdf:type owl:ObjectProperty ;
                                 rdfs:label "tiene medio digital de publicación"@es .
 
 
-###  https://w3id.org/def/microrrelatos#tieneMicrorrelatoInsertadoIlustracion
-:tieneMicrorrelatoInsertadoIlustracion rdf:type owl:ObjectProperty ;
-                                       rdfs:subPropertyOf frbr:part ;
-                                       rdfs:label "tiene microrrelato insertado (ilustración)"@es .
+###  https://w3id.org/def/microrrelatos#tienePais
+:tienePais rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :tieneLugar ;
+           rdfs:label "tiene país"@es .
+
+
+###  https://w3id.org/def/microrrelatos#tienePueblo
+:tienePueblo rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :tieneLugar ;
+             rdfs:label "tiene pueblo"@es .
 
 
 #################################################################
@@ -128,6 +150,12 @@
 :nombreDelBlog rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf :nombre ;
                rdfs:label "nombre del blog"@es .
+
+
+###  https://w3id.org/def/microrrelatos#nombreDelMedioDigital
+:nombreDelMedioDigital rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf :nombre ;
+                       rdfs:label "nombre del medio digital"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#obraArtisticaTieneTitulo
@@ -238,7 +266,7 @@ frbr:Place owl:equivalentClass :Lugar .
 :IlustracionConMicrorrelatoInsertado rdf:type owl:Class ;
                                      rdfs:subClassOf fabio:StillImage ,
                                                      [ rdf:type owl:Restriction ;
-                                                       owl:onProperty :tieneMicrorrelatoInsertadoIlustracion ;
+                                                       owl:onProperty :ilustracionTieneMicrorrelatoInsertado ;
                                                        owl:someValuesFrom :Microrrelato
                                                      ] ;
                                      rdfs:label "ilustración con microrrelato insertado"@es .
@@ -308,6 +336,10 @@ frbr:Place owl:equivalentClass :Lugar .
 ###  https://w3id.org/def/microrrelatos#ObraArtistica
 :ObraArtistica rdf:type owl:Class ;
                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty :tieneMedioDigitalDePublicacion ;
+                                 owl:allValuesFrom :MedioDigitalDePublicacion
+                               ] ,
+                               [ rdf:type owl:Restriction ;
                                  owl:onProperty :obraArtisticaTieneTitulo ;
                                  owl:someValuesFrom xsd:string
                                ] ;
@@ -340,6 +372,12 @@ frbr:Place owl:equivalentClass :Lugar .
         rdfs:label "pueblo"@es .
 
 
+###  https://w3id.org/def/microrrelatos#RedSocial
+:RedSocial rdf:type owl:Class ;
+           rdfs:subClassOf :MedioDigitalDePublicacion ;
+           rdfs:label "red social"@es .
+
+
 ###  https://w3id.org/def/microrrelatos#RemediacionAudiovisual
 :RemediacionAudiovisual rdf:type owl:Class ;
                         rdfs:subClassOf :MedioDigitalDePublicacion ;
@@ -348,7 +386,8 @@ frbr:Place owl:equivalentClass :Lugar .
 
 ###  https://w3id.org/def/microrrelatos#RevistaDigital
 :RevistaDigital rdf:type owl:Class ;
-                rdfs:subClassOf fabio:Magazine ;
+                rdfs:subClassOf fabio:Magazine ,
+                                :MedioDigitalDePublicacion ;
                 rdfs:label "revista digital"@es .
 
 
@@ -392,34 +431,6 @@ frbr:Place owl:equivalentClass :Lugar .
                                       owl:allValuesFrom :Editorial
                                     ] ;
                     rdfs:label "publicación impresa"@es .
-
-
-#################################################################
-#    Individuals
-#################################################################
-
-###  https://w3id.org/def/microrrelatos#facebook
-:facebook rdf:type owl:NamedIndividual ,
-                   :MedioDigitalDePublicacion ;
-          rdfs:label "Facebook"@es .
-
-
-###  https://w3id.org/def/microrrelatos#instagram
-:instagram rdf:type owl:NamedIndividual ,
-                    :MedioDigitalDePublicacion ;
-           rdfs:label "Instagram"@es .
-
-
-###  https://w3id.org/def/microrrelatos#twitter
-:twitter rdf:type owl:NamedIndividual ,
-                  :MedioDigitalDePublicacion ;
-         rdfs:label "Twitter"@es .
-
-
-###  https://w3id.org/def/microrrelatos#youtube
-:youtube rdf:type owl:NamedIndividual ,
-                  :MedioDigitalDePublicacion ;
-         rdfs:label "YouTube"@es .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
