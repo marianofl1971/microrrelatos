@@ -18,7 +18,9 @@
 #################################################################
 
 ###  http://purl.org/vocab/frbr/core#part
-frbr:part owl:equivalentProperty :tieneParte .
+frbr:part owl:equivalentProperty :tieneParte ;
+          rdfs:domain owl:Thing ;
+          rdfs:range owl:Thing .
 
 
 ###  http://xmlns.com/foaf/0.1/maker
@@ -40,47 +42,61 @@ frbr:part owl:equivalentProperty :tieneParte .
                           rdfs:label "es obra artística creada por"@es .
 
 
-###  https://w3id.org/def/microrrelatos#perteneceAPais
-:perteneceAPais rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf frbr:partOf ;
-                rdfs:range :Pais ;
-                rdfs:label "pertenece a país"@es .
-
-
 ###  https://w3id.org/def/microrrelatos#tieneCiudad
 :tieneCiudad rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :tieneLugar ;
+             rdfs:domain owl:Thing ;
+             rdfs:range :Ciudad ;
              rdfs:label "tiene ciudad"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#tieneEditorial
 :tieneEditorial rdf:type owl:ObjectProperty ;
+                rdfs:domain :PublicacionImpresa ;
+                rdfs:range :Editorial ;
                 rdfs:label "tiene editorial"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#tieneLugar
-:tieneLugar rdf:type owl:ObjectProperty .
+:tieneLugar rdf:type owl:ObjectProperty ;
+            rdfs:domain owl:Thing ;
+            rdfs:range :Lugar .
 
 
 ###  https://w3id.org/def/microrrelatos#tieneMedioDigitalDePublicacion
 :tieneMedioDigitalDePublicacion rdf:type owl:ObjectProperty ;
+                                rdfs:domain owl:Thing ;
+                                rdfs:range :MedioDigitalDePublicacion ;
                                 rdfs:label "tiene medio digital de publicación"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#tienePais
 :tienePais rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf :tieneLugar ;
+           rdfs:domain owl:Thing ;
+           rdfs:range :Pais ;
            rdfs:label "tiene país"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#tieneParte
 :tieneParte rdf:type owl:ObjectProperty ;
+            rdfs:domain owl:Thing ;
+            rdfs:range owl:Thing ;
             rdfs:label "tiene parte"@es .
+
+
+###  https://w3id.org/def/microrrelatos#tienePublicacionImpresa
+:tienePublicacionImpresa rdf:type owl:ObjectProperty ;
+                         rdfs:domain owl:Thing ;
+                         rdfs:range :PublicacionImpresa ;
+                         rdfs:label "tiene publicación impresa"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#tienePueblo
 :tienePueblo rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :tieneLugar ;
+             rdfs:domain owl:Thing ;
+             rdfs:range :Pueblo ;
              rdfs:label "tiene pueblo"@es .
 
 
@@ -110,12 +126,14 @@ fabio:hasURL owl:equivalentProperty :tieneURL .
 
 ###  https://w3id.org/def/microrrelatos#annoDeFin
 :annoDeFin rdf:type owl:DatatypeProperty ;
+           rdfs:domain owl:Thing ;
            rdfs:range xsd:gYear ;
            rdfs:label "año de fin"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#annoDeInicio
 :annoDeInicio rdf:type owl:DatatypeProperty ;
+              rdfs:domain owl:Thing ;
               rdfs:range xsd:gYear ;
               rdfs:label "año de inicio"@es .
 
@@ -123,6 +141,8 @@ fabio:hasURL owl:equivalentProperty :tieneURL .
 ###  https://w3id.org/def/microrrelatos#apellidos
 :apellidos rdf:type owl:DatatypeProperty ;
            rdfs:subPropertyOf :nombre ;
+           rdfs:domain :Persona ;
+           rdfs:range xsd:string ;
            rdfs:label "apellidos"@es .
 
 
@@ -135,50 +155,67 @@ fabio:hasURL owl:equivalentProperty :tieneURL .
 
 ###  https://w3id.org/def/microrrelatos#nombre
 :nombre rdf:type owl:DatatypeProperty ;
+        rdfs:domain owl:Thing ;
+        rdfs:range xsd:string ;
         rdfs:label "nombre"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#nombreDeLaEditorial
 :nombreDeLaEditorial rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf :nombre ;
+                     rdfs:domain :Editorial ;
+                     rdfs:range xsd:string ;
                      rdfs:label "nombre  de la editorial"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#nombreDeLaPersona
 :nombreDeLaPersona rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf :nombre ;
+                   rdfs:domain :Persona ;
+                   rdfs:range xsd:string ;
                    rdfs:label "nombre de la persona"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#nombreDelBlog
 :nombreDelBlog rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf :nombre ;
+               rdfs:domain :Blog ;
+               rdfs:range xsd:string ;
                rdfs:label "nombre del blog"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#nombreDelMedioDigital
 :nombreDelMedioDigital rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf :nombre ;
+                       rdfs:domain :MedioDigitalDePublicacion ;
+                       rdfs:range xsd:string ;
                        rdfs:label "nombre del medio digital"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#obraArtisticaTieneTitulo
 :obraArtisticaTieneTitulo rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :ObraArtistica ;
+                          rdfs:range xsd:string ;
                           rdfs:label "tiene título (obra artística)"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#publicacionImpresaAnnoDePublicacion
 :publicacionImpresaAnnoDePublicacion rdf:type owl:DatatypeProperty ;
                                      rdfs:subPropertyOf :publicacionImpresaAnnoDePublicacion ;
+                                     rdfs:domain :PublicacionImpresa ;
+                                     rdfs:range xsd:gYear ;
                                      rdfs:label "año de publicación (publicación impresa)"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#sexo
-:sexo rdf:type owl:DatatypeProperty .
+:sexo rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Persona ;
+      rdfs:range xsd:string .
 
 
 ###  https://w3id.org/def/microrrelatos#tieneURL
 :tieneURL rdf:type owl:DatatypeProperty ;
+          rdfs:domain owl:Thing ;
           rdfs:range xsd:anyURI ;
           rdfs:label "tiene URL"@es .
 
@@ -333,11 +370,7 @@ frbr:Place owl:equivalentClass :Lugar .
 
 ###  https://w3id.org/def/microrrelatos#Localidad
 :Localidad rdf:type owl:Class ;
-           rdfs:subClassOf :Lugar ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :perteneceAPais ;
-                             owl:someValuesFrom :Pais
-                           ] ;
+           rdfs:subClassOf :Lugar ;
            rdfs:label "localidad"@es .
 
 
@@ -465,6 +498,16 @@ frbr:Place owl:equivalentClass :Lugar .
                            owl:allValuesFrom xsd:string
                          ] ;
          rdfs:label "persona"@es .
+
+
+###  https://w3id.org/def/microrrelatos#PublicacionImpresa
+:PublicacionImpresa rdf:type owl:Class ;
+                    rdfs:subClassOf fabio:Expression ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :tieneEditorial ;
+                                      owl:someValuesFrom :Editorial
+                                    ] ;
+                    rdfs:label "publicación impresa"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#Pueblo
