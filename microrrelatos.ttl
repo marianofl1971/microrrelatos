@@ -250,10 +250,24 @@ frbr:Place owl:equivalentClass :Lugar .
                     rdfs:label "espacio radiofónico"@es .
 
 
+###  https://w3id.org/def/microrrelatos#EspacioRadiofonicoFacebook
+:EspacioRadiofonicoFacebook rdf:type owl:Class ;
+                            rdfs:subClassOf :EspacioRadiofonico ,
+                                            :MedioProporcionadoPorFacebook ;
+                            rdfs:label "espacio radiofónico Facebook"@es .
+
+
 ###  https://w3id.org/def/microrrelatos#EspacioTelevisivo
 :EspacioTelevisivo rdf:type owl:Class ;
                    rdfs:subClassOf :MedioDigitalDePublicacion ;
                    rdfs:label "espacio televisivo"@es .
+
+
+###  https://w3id.org/def/microrrelatos#EspacioTelevisivoYouTube
+:EspacioTelevisivoYouTube rdf:type owl:Class ;
+                          rdfs:subClassOf :EspacioTelevisivo ,
+                                          :MedioProporcionadoPorYouTube ;
+                          rdfs:label "espacio televisivo Youtube"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#Fotografia
@@ -294,6 +308,34 @@ frbr:Place owl:equivalentClass :Lugar .
                                              owl:someValuesFrom xsd:anyURI
                                            ] ;
                            rdfs:label "medio digital de publicación"@es .
+
+
+###  https://w3id.org/def/microrrelatos#MedioProporcionadoPorFacebook
+:MedioProporcionadoPorFacebook rdf:type owl:Class ;
+                               rdfs:subClassOf :MedioDigitalDePublicacion ;
+                               rdfs:comment "Cuenta, página o cualquier otro medio proporcionado por Facebook."@es ;
+                               rdfs:label "medio proporcionado por Facebook"@es .
+
+
+###  https://w3id.org/def/microrrelatos#MedioProporcionadoPorInstragram
+:MedioProporcionadoPorInstragram rdf:type owl:Class ;
+                                 rdfs:subClassOf :MedioDigitalDePublicacion ;
+                                 rdfs:comment "Cualquier medio proporcionado por Instagram."@es ;
+                                 rdfs:label "medio proporcionado por Instagram"@es .
+
+
+###  https://w3id.org/def/microrrelatos#MedioProporcionadoPorTwitter
+:MedioProporcionadoPorTwitter rdf:type owl:Class ;
+                              rdfs:subClassOf :MedioDigitalDePublicacion ;
+                              rdfs:comment "Cualquier medio proporcionado por Twitter."@es ;
+                              rdfs:label "medio proporcionado por Twitter"@es .
+
+
+###  https://w3id.org/def/microrrelatos#MedioProporcionadoPorYouTube
+:MedioProporcionadoPorYouTube rdf:type owl:Class ;
+                              rdfs:subClassOf :MedioDigitalDePublicacion ;
+                              rdfs:comment "Cualquier medio proporcionado por YouTube."@es ;
+                              rdfs:label "medio proporcionado por YouTube"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#Microrrelato
