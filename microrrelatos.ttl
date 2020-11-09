@@ -17,6 +17,10 @@
 #    Object Properties
 #################################################################
 
+###  http://purl.org/vocab/frbr/core#part
+frbr:part owl:equivalentProperty :tieneParte .
+
+
 ###  http://xmlns.com/foaf/0.1/maker
 <http://xmlns.com/foaf/0.1/maker> owl:equivalentProperty :esObraArtisticaCreadaPor .
 
@@ -24,6 +28,8 @@
 ###  https://w3id.org/def/microrrelatos#creaObraArtistica
 :creaObraArtistica rdf:type owl:ObjectProperty ;
                    owl:inverseOf :esObraArtisticaCreadaPor ;
+                   rdfs:domain :Persona ;
+                   rdfs:range :ObraArtistica ;
                    rdfs:comment "Relación entre el creador y la obra artística"@es ;
                    rdfs:label "crea obra artística"@es .
 
@@ -34,51 +40,10 @@
                           rdfs:label "es obra artística creada por"@es .
 
 
-###  https://w3id.org/def/microrrelatos#ilustracionTieneMicrorrelatoInsertado
-:ilustracionTieneMicrorrelatoInsertado rdf:type owl:ObjectProperty ;
-                                       rdfs:subPropertyOf frbr:part ;
-                                       rdfs:label "tiene microrrelato insertado (ilustración)"@es .
-
-
-###  https://w3id.org/def/microrrelatos#microrrelatoTieneAudio
-:microrrelatoTieneAudio rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf frbr:part ;
-                        rdfs:label "tiene audio (microrrelato)"@es .
-
-
-###  https://w3id.org/def/microrrelatos#microrrelatoTieneDibujo
-:microrrelatoTieneDibujo rdf:type owl:ObjectProperty ;
-                         rdfs:subPropertyOf frbr:part ;
-                         rdfs:label "tiene dibujo (microrrelato)"@es .
-
-
-###  https://w3id.org/def/microrrelatos#microrrelatoTieneFotografia
-:microrrelatoTieneFotografia rdf:type owl:ObjectProperty ;
-                             rdfs:subPropertyOf frbr:part ;
-                             rdfs:label "tiene fotografía (microrrelato)"@es .
-
-
-###  https://w3id.org/def/microrrelatos#microrrelatoTieneIlustracion
-:microrrelatoTieneIlustracion rdf:type owl:ObjectProperty ;
-                              rdfs:subPropertyOf frbr:part ;
-                              rdfs:label "tiene ilustración (microrrelato)"@es .
-
-
-###  https://w3id.org/def/microrrelatos#microrrelatoTieneMeme
-:microrrelatoTieneMeme rdf:type owl:ObjectProperty ;
-                       rdfs:subPropertyOf frbr:part ;
-                       rdfs:label "tiene meme (microrrelato)"@es .
-
-
-###  https://w3id.org/def/microrrelatos#microrrelatoTieneVideo
-:microrrelatoTieneVideo rdf:type owl:ObjectProperty ;
-                        rdfs:subPropertyOf frbr:part ;
-                        rdfs:label "tiene vídeo (microrrelato)"@es .
-
-
 ###  https://w3id.org/def/microrrelatos#perteneceAPais
 :perteneceAPais rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf frbr:partOf ;
+                rdfs:range :Pais ;
                 rdfs:label "pertenece a país"@es .
 
 
@@ -106,6 +71,11 @@
 :tienePais rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf :tieneLugar ;
            rdfs:label "tiene país"@es .
+
+
+###  https://w3id.org/def/microrrelatos#tieneParte
+:tieneParte rdf:type owl:ObjectProperty ;
+            rdfs:label "tiene parte"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#tienePueblo
@@ -193,6 +163,11 @@
                           rdfs:label "tiene título (obra artística)"@es .
 
 
+###  https://w3id.org/def/microrrelatos#parte
+:parte rdf:type owl:DatatypeProperty ;
+       rdfs:label "parte"@es .
+
+
 ###  https://w3id.org/def/microrrelatos#publicacionImpresaAnnoDePublicacion
 :publicacionImpresaAnnoDePublicacion rdf:type owl:DatatypeProperty ;
                                      rdfs:subPropertyOf :publicacionImpresaAnnoDePublicacion ;
@@ -205,14 +180,9 @@
 
 ###  https://w3id.org/def/microrrelatos#tipologia
 :tipologia rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Microrrelato ;
            rdfs:range xsd:string ;
            rdfs:label "tipología"@es .
-
-
-###  https://w3id.org/def/microrrelatos#urlDelMicrorrelato
-:urlDelMicrorrelato rdf:type owl:DatatypeProperty ;
-                    rdfs:subPropertyOf fabio:hasURL ;
-                    rdfs:label "url del microrrelato"@es .
 
 
 #################################################################
@@ -283,8 +253,7 @@ frbr:Place owl:equivalentClass :Lugar .
 
 ###  https://w3id.org/def/microrrelatos#Dibujo
 :Dibujo rdf:type owl:Class ;
-        rdfs:subClassOf fabio:StillImage ,
-                        :ObraArtistica ;
+        rdfs:subClassOf fabio:StillImage ;
         rdfs:label "dibujo"@es .
 
 
@@ -327,26 +296,20 @@ frbr:Place owl:equivalentClass :Lugar .
 
 ###  https://w3id.org/def/microrrelatos#Fotografia
 :Fotografia rdf:type owl:Class ;
-            rdfs:subClassOf fabio:StillImage ,
-                            :ObraArtistica ;
+            rdfs:subClassOf fabio:StillImage ;
             rdfs:label "fotografía"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#Ilustracion
 :Ilustracion rdf:type owl:Class ;
-             rdfs:subClassOf fabio:StillImage ,
-                             :ObraArtistica ;
+             rdfs:subClassOf fabio:StillImage ;
              rdfs:label "ilustración"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#IlustracionConMicrorrelatoInsertado
 :IlustracionConMicrorrelatoInsertado rdf:type owl:Class ;
                                      rdfs:subClassOf :Ilustracion ,
-                                                     :Microrrelato ,
-                                                     [ rdf:type owl:Restriction ;
-                                                       owl:onProperty :ilustracionTieneMicrorrelatoInsertado ;
-                                                       owl:someValuesFrom :Microrrelato
-                                                     ] ;
+                                                     :MicrorrelatoMultimedia ;
                                      rdfs:label "ilustración con microrrelato insertado"@es .
 
 
@@ -374,10 +337,6 @@ frbr:Place owl:equivalentClass :Lugar .
 
 ###  https://w3id.org/def/microrrelatos#MedioDigitalDePublicacion
 :MedioDigitalDePublicacion rdf:type owl:Class ;
-                           rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                             owl:onProperty :urlDelMicrorrelato ;
-                                             owl:someValuesFrom xsd:anyURI
-                                           ] ;
                            rdfs:label "medio digital de publicación"@es .
 
 
@@ -411,7 +370,7 @@ frbr:Place owl:equivalentClass :Lugar .
 
 ###  https://w3id.org/def/microrrelatos#Meme
 :Meme rdf:type owl:Class ;
-      rdfs:subClassOf :ObraArtistica ;
+      rdfs:subClassOf fabio:Work ;
       rdfs:label "meme"@es .
 
 
@@ -425,66 +384,13 @@ frbr:Place owl:equivalentClass :Lugar .
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :tipologia ;
                                 owl:someValuesFrom xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty fabio:hasURL ;
+                                owl:allValuesFrom xsd:anyURI
                               ] ;
               rdfs:comment "El microrrelato es un relato de muy pocas líneas que, por la brevedad y precisión en su vocabulario, crea la intensidad suficiente para turbar al lector (http://www.ies-ramonycajal.com/index.php/departamentos-mainmenu-32/dpto-lengua-espa-mainmenu-107/571-que-es-y-como-escribir-un-microrrelato)."@es ;
               rdfs:label "microrrelato"@es .
-
-
-###  https://w3id.org/def/microrrelatos#MicrorrelatoConAudio
-:MicrorrelatoConAudio rdf:type owl:Class ;
-                      rdfs:subClassOf :Microrrelato ,
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty :microrrelatoTieneAudio ;
-                                        owl:someValuesFrom fabio:AudioDocument
-                                      ] ;
-                      rdfs:label "microrrelato con audio"@es .
-
-
-###  https://w3id.org/def/microrrelatos#MicrorrelatoConAudioOVideo
-:MicrorrelatoConAudioOVideo rdf:type owl:Class ;
-                            rdfs:subClassOf :Microrrelato ,
-                                            [ rdf:type owl:Class ;
-                                              owl:unionOf ( :MicrorrelatoConAudio
-                                                            :MicrorrelatoConVideo
-                                                          )
-                                            ] ;
-                            rdfs:label "microrrelato con audio/vídeo"@es .
-
-
-###  https://w3id.org/def/microrrelatos#MicrorrelatoConDibujo
-:MicrorrelatoConDibujo rdf:type owl:Class ;
-                       rdfs:subClassOf :Microrrelato ,
-                                       [ rdf:type owl:Restriction ;
-                                         owl:onProperty :microrrelatoTieneDibujo ;
-                                         owl:someValuesFrom :Dibujo
-                                       ] ;
-                       rdfs:label "microrrelato con dibujo"@es .
-
-
-###  https://w3id.org/def/microrrelatos#MicrorrelatoConIlustracion
-:MicrorrelatoConIlustracion rdf:type owl:Class ;
-                            rdfs:subClassOf :Microrrelato ,
-                                            [ rdf:type owl:Restriction ;
-                                              owl:onProperty :microrrelatoTieneIlustracion ;
-                                              owl:someValuesFrom :Ilustracion
-                                            ] ;
-                            rdfs:label "microrrelato con ilustración"@es .
-
-
-###  https://w3id.org/def/microrrelatos#MicrorrelatoConMeme
-:MicrorrelatoConMeme rdf:type owl:Class ;
-                     rdfs:subClassOf :Microrrelato ,
-                                     [ rdf:type owl:Restriction ;
-                                       owl:onProperty :microrrelatoTieneMeme ;
-                                       owl:someValuesFrom :Meme
-                                     ] ;
-                     rdfs:label "microrrelato con meme"@es .
-
-
-###  https://w3id.org/def/microrrelatos#MicrorrelatoConMinificcion
-:MicrorrelatoConMinificcion rdf:type owl:Class ;
-                            rdfs:subClassOf :Microrrelato ;
-                            rdfs:label "microrrelato con minificción"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#MicrorrelatoConTexto
@@ -493,14 +399,10 @@ frbr:Place owl:equivalentClass :Lugar .
                       rdfs:label "microrrelato con texto"@es .
 
 
-###  https://w3id.org/def/microrrelatos#MicrorrelatoConVideo
-:MicrorrelatoConVideo rdf:type owl:Class ;
-                      rdfs:subClassOf :Microrrelato ,
-                                      [ rdf:type owl:Restriction ;
-                                        owl:onProperty :microrrelatoTieneVideo ;
-                                        owl:someValuesFrom :Video
-                                      ] ;
-                      rdfs:label "microrrelato con vídeo"@es .
+###  https://w3id.org/def/microrrelatos#MicrorrelatoMultimedia
+:MicrorrelatoMultimedia rdf:type owl:Class ;
+                        rdfs:subClassOf :Microrrelato ;
+                        rdfs:label "microrrelato multimedia"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#MicrorrelatoVisualAnimado
@@ -517,10 +419,22 @@ frbr:Place owl:equivalentClass :Lugar .
                                ] ,
                                [ rdf:type owl:Restriction ;
                                  owl:onProperty :obraArtisticaTieneTitulo ;
-                                 owl:someValuesFrom xsd:string
+                                 owl:allValuesFrom xsd:string
                                ] ;
                rdfs:comment "Trabajo como arte en su sentido más amplio, incluyendo trabajos literarios, obras musicales, arte visual, etc. (traducido de http://purl.org/spar/fabio/ArtisticWork)"@es ;
                rdfs:label "obra artística"@es .
+
+
+###  https://w3id.org/def/microrrelatos#ObraArtisticaSinTitulo
+:ObraArtisticaSinTitulo rdf:type owl:Class ;
+                        rdfs:subClassOf :ObraArtistica ,
+                                        [ rdf:type owl:Class ;
+                                          owl:complementOf [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :obraArtisticaTieneTitulo ;
+                                                             owl:someValuesFrom xsd:string
+                                                           ]
+                                        ] ;
+                        rdfs:label "obra artística sin título"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#Pais
@@ -590,26 +504,6 @@ frbr:Place owl:equivalentClass :Lugar .
                   rdfs:subClassOf :Microrrelato ,
                                   :Video ;
                   rdfs:label "videominificción"@es .
-
-
-###  https://w3id.org/def/microrrelatos#microrrelatoConFotografia
-:microrrelatoConFotografia rdf:type owl:Class ;
-                           rdfs:subClassOf :Microrrelato ,
-                                           [ rdf:type owl:Restriction ;
-                                             owl:onProperty :microrrelatoTieneFotografia ;
-                                             owl:someValuesFrom :Fotografia
-                                           ] ;
-                           rdfs:label "microrrelato con fotografía"@es .
-
-
-###  https://w3id.org/def/microrrelatos#microrrelatoEnLaWeb
-:microrrelatoEnLaWeb rdf:type owl:Class ;
-                     rdfs:subClassOf :Microrrelato ,
-                                     [ rdf:type owl:Restriction ;
-                                       owl:onProperty fabio:hasURL ;
-                                       owl:someValuesFrom xsd:anyURI
-                                     ] ;
-                     rdfs:label "microrrelato en la Web"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#publicacionImpresa
