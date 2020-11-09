@@ -11,7 +11,6 @@
 
 <https://w3id.org/def/microrrelatos> rdf:type owl:Ontology ;
                                       owl:imports <http://purl.org/spar/fabio/2019-02-19> ,
-                                                  <http://www.w3.org/2006/time#2016> ,
                                                   <http://xmlns.com/foaf/0.1/> .
 
 #################################################################
@@ -47,10 +46,28 @@
                         rdfs:label "tiene audio (microrrelato)"@es .
 
 
+###  https://w3id.org/def/microrrelatos#microrrelatoTieneDibujo
+:microrrelatoTieneDibujo rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf frbr:part ;
+                         rdfs:label "tiene dibujo (microrrelato)"@es .
+
+
 ###  https://w3id.org/def/microrrelatos#microrrelatoTieneFotografia
 :microrrelatoTieneFotografia rdf:type owl:ObjectProperty ;
                              rdfs:subPropertyOf frbr:part ;
                              rdfs:label "tiene fotografía (microrrelato)"@es .
+
+
+###  https://w3id.org/def/microrrelatos#microrrelatoTieneIlustracion
+:microrrelatoTieneIlustracion rdf:type owl:ObjectProperty ;
+                              rdfs:subPropertyOf frbr:part ;
+                              rdfs:label "tiene ilustración (microrrelato)"@es .
+
+
+###  https://w3id.org/def/microrrelatos#microrrelatoTieneMeme
+:microrrelatoTieneMeme rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf frbr:part ;
+                       rdfs:label "tiene meme (microrrelato)"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#microrrelatoTieneVideo
@@ -74,12 +91,6 @@
 ###  https://w3id.org/def/microrrelatos#tieneEditorial
 :tieneEditorial rdf:type owl:ObjectProperty ;
                 rdfs:label "tiene editorial"@es .
-
-
-###  https://w3id.org/def/microrrelatos#tieneInicioFinPublicacion
-:tieneInicioFinPublicacion rdf:type owl:ObjectProperty ;
-                           rdfs:subPropertyOf time:hasDateTimeDescription ;
-                           rdfs:label "tiene inicio fin (publicación)"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#tieneLugar
@@ -123,10 +134,29 @@
 <http://xmlns.com/foaf/0.1/name> owl:equivalentProperty :nombre .
 
 
+###  https://w3id.org/def/microrrelatos#annoDeFin
+:annoDeFin rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:gYear ;
+           rdfs:label "año de fin"@es .
+
+
+###  https://w3id.org/def/microrrelatos#annoDeInicio
+:annoDeInicio rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:gYear ;
+              rdfs:label "año de inicio"@es .
+
+
 ###  https://w3id.org/def/microrrelatos#apellidos
 :apellidos rdf:type owl:DatatypeProperty ;
            rdfs:subPropertyOf :nombre ;
            rdfs:label "apellidos"@es .
+
+
+###  https://w3id.org/def/microrrelatos#codigoDePais
+:codigoDePais rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Pais ;
+              rdfs:range xsd:string ;
+              rdfs:label "código de país"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#nombre
@@ -171,6 +201,12 @@
 
 ###  https://w3id.org/def/microrrelatos#sexo
 :sexo rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/def/microrrelatos#tipologia
+:tipologia rdf:type owl:DatatypeProperty ;
+           rdfs:range xsd:string ;
+           rdfs:label "tipología"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#urlDelMicrorrelato
@@ -385,6 +421,10 @@ frbr:Place owl:equivalentClass :Lugar .
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :tieneMedioDigitalDePublicacion ;
                                 owl:someValuesFrom :MedioDigitalDePublicacion
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :tipologia ;
+                                owl:someValuesFrom xsd:string
                               ] ;
               rdfs:comment "El microrrelato es un relato de muy pocas líneas que, por la brevedad y precisión en su vocabulario, crea la intensidad suficiente para turbar al lector (http://www.ies-ramonycajal.com/index.php/departamentos-mainmenu-32/dpto-lengua-espa-mainmenu-107/571-que-es-y-como-escribir-un-microrrelato)."@es ;
               rdfs:label "microrrelato"@es .
@@ -413,19 +453,31 @@ frbr:Place owl:equivalentClass :Lugar .
 
 ###  https://w3id.org/def/microrrelatos#MicrorrelatoConDibujo
 :MicrorrelatoConDibujo rdf:type owl:Class ;
-                       rdfs:subClassOf :Microrrelato ;
+                       rdfs:subClassOf :Microrrelato ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :microrrelatoTieneDibujo ;
+                                         owl:someValuesFrom :Dibujo
+                                       ] ;
                        rdfs:label "microrrelato con dibujo"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#MicrorrelatoConIlustracion
 :MicrorrelatoConIlustracion rdf:type owl:Class ;
-                            rdfs:subClassOf :Microrrelato ;
+                            rdfs:subClassOf :Microrrelato ,
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty :microrrelatoTieneIlustracion ;
+                                              owl:someValuesFrom :Ilustracion
+                                            ] ;
                             rdfs:label "microrrelato con ilustración"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#MicrorrelatoConMeme
 :MicrorrelatoConMeme rdf:type owl:Class ;
-                     rdfs:subClassOf :Microrrelato ;
+                     rdfs:subClassOf :Microrrelato ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty :microrrelatoTieneMeme ;
+                                       owl:someValuesFrom :Meme
+                                     ] ;
                      rdfs:label "microrrelato con meme"@es .
 
 
