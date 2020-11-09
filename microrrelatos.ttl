@@ -88,6 +88,10 @@ frbr:part owl:equivalentProperty :tieneParte .
 #    Data properties
 #################################################################
 
+###  http://purl.org/spar/fabio/hasURL
+fabio:hasURL owl:equivalentProperty :tieneURL .
+
+
 ###  http://xmlns.com/foaf/0.1/familyName
 <http://xmlns.com/foaf/0.1/familyName> owl:equivalentProperty :apellidos .
 
@@ -163,11 +167,6 @@ frbr:part owl:equivalentProperty :tieneParte .
                           rdfs:label "tiene título (obra artística)"@es .
 
 
-###  https://w3id.org/def/microrrelatos#parte
-:parte rdf:type owl:DatatypeProperty ;
-       rdfs:label "parte"@es .
-
-
 ###  https://w3id.org/def/microrrelatos#publicacionImpresaAnnoDePublicacion
 :publicacionImpresaAnnoDePublicacion rdf:type owl:DatatypeProperty ;
                                      rdfs:subPropertyOf :publicacionImpresaAnnoDePublicacion ;
@@ -176,6 +175,12 @@ frbr:part owl:equivalentProperty :tieneParte .
 
 ###  https://w3id.org/def/microrrelatos#sexo
 :sexo rdf:type owl:DatatypeProperty .
+
+
+###  https://w3id.org/def/microrrelatos#tieneURL
+:tieneURL rdf:type owl:DatatypeProperty ;
+          rdfs:range xsd:anyURI ;
+          rdfs:label "tiene URL"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#tipologia
@@ -298,6 +303,12 @@ frbr:Place owl:equivalentClass :Lugar .
 :Fotografia rdf:type owl:Class ;
             rdfs:subClassOf fabio:StillImage ;
             rdfs:label "fotografía"@es .
+
+
+###  https://w3id.org/def/microrrelatos#Hiperenlace
+:Hiperenlace rdf:type owl:Class ;
+             rdfs:subClassOf fabio:DigitalItem ;
+             rdfs:label "hiperenlace"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#Ilustracion
