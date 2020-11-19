@@ -1,0 +1,570 @@
+@prefix : <https://w3id.org/def/microrrelatos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://w3id.org/def/microrrelatos> .
+
+<https://w3id.org/def/microrrelatos> rdf:type owl:Ontology ;
+                                      owl:imports <http://purl.org/spar/fabio/2019-02-19> ,
+                                                  <http://xmlns.com/foaf/0.1/> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/vocab/frbr/core#part
+<http://purl.org/vocab/frbr/core#part> owl:equivalentProperty :tieneParte ;
+                                       rdfs:domain owl:Thing ;
+                                       rdfs:range owl:Thing .
+
+
+###  http://xmlns.com/foaf/0.1/maker
+<http://xmlns.com/foaf/0.1/maker> owl:equivalentProperty :esObraArtisticaCreadaPor .
+
+
+###  https://w3id.org/def/microrrelatos#creaObraArtistica
+:creaObraArtistica rdf:type owl:ObjectProperty ;
+                   owl:inverseOf :esObraArtisticaCreadaPor ;
+                   rdfs:domain :Persona ;
+                   rdfs:range :ObraArtistica ;
+                   rdfs:comment "Relación entre el creador y la obra artística"@es ;
+                   rdfs:label "crea obra artística"@es .
+
+
+###  https://w3id.org/def/microrrelatos#esObraArtisticaCreadaPor
+:esObraArtisticaCreadaPor rdf:type owl:ObjectProperty ;
+                          rdfs:comment "Relación entre la obra artística y su creador. Es equivalente a la propiedad `http://purl.org/dc/terms/creator`de Dublin Core."@es ;
+                          rdfs:label "es obra artística creada por"@es .
+
+
+###  https://w3id.org/def/microrrelatos#tieneCiudad
+:tieneCiudad rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :tieneLugar ;
+             rdfs:domain owl:Thing ;
+             rdfs:range :Ciudad ;
+             rdfs:label "tiene ciudad"@es .
+
+
+###  https://w3id.org/def/microrrelatos#tieneEditorial
+:tieneEditorial rdf:type owl:ObjectProperty ;
+                rdfs:domain :PublicacionImpresa ;
+                rdfs:range :Editorial ;
+                rdfs:label "tiene editorial"@es .
+
+
+###  https://w3id.org/def/microrrelatos#tieneLugar
+:tieneLugar rdf:type owl:ObjectProperty ;
+            rdfs:domain owl:Thing ;
+            rdfs:range :Lugar .
+
+
+###  https://w3id.org/def/microrrelatos#tieneMedioDigitalDePublicacion
+:tieneMedioDigitalDePublicacion rdf:type owl:ObjectProperty ;
+                                rdfs:domain owl:Thing ;
+                                rdfs:range :MedioDigitalDePublicacion ;
+                                rdfs:label "tiene medio digital de publicación"@es .
+
+
+###  https://w3id.org/def/microrrelatos#tienePais
+:tienePais rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :tieneLugar ;
+           rdfs:domain owl:Thing ;
+           rdfs:range :Pais ;
+           rdfs:label "tiene país"@es .
+
+
+###  https://w3id.org/def/microrrelatos#tieneParte
+:tieneParte rdf:type owl:ObjectProperty ;
+            rdfs:domain owl:Thing ;
+            rdfs:range owl:Thing ;
+            rdfs:label "tiene parte"@es .
+
+
+###  https://w3id.org/def/microrrelatos#tienePublicacionImpresa
+:tienePublicacionImpresa rdf:type owl:ObjectProperty ;
+                         rdfs:domain owl:Thing ;
+                         rdfs:range :PublicacionImpresa ;
+                         rdfs:label "tiene publicación impresa"@es .
+
+
+###  https://w3id.org/def/microrrelatos#tienePueblo
+:tienePueblo rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :tieneLugar ;
+             rdfs:domain owl:Thing ;
+             rdfs:range :Pueblo ;
+             rdfs:label "tiene pueblo"@es .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://purl.org/spar/fabio/hasURL
+<http://purl.org/spar/fabio/hasURL> owl:equivalentProperty :tieneURL .
+
+
+###  http://xmlns.com/foaf/0.1/familyName
+<http://xmlns.com/foaf/0.1/familyName> owl:equivalentProperty :apellidos .
+
+
+###  http://xmlns.com/foaf/0.1/firstName
+<http://xmlns.com/foaf/0.1/firstName> owl:equivalentProperty :nombreDeLaPersona .
+
+
+###  http://xmlns.com/foaf/0.1/gender
+<http://xmlns.com/foaf/0.1/gender> owl:equivalentProperty :sexo .
+
+
+###  http://xmlns.com/foaf/0.1/name
+<http://xmlns.com/foaf/0.1/name> owl:equivalentProperty :nombre .
+
+
+###  https://w3id.org/def/microrrelatos#annoDeFin
+:annoDeFin rdf:type owl:DatatypeProperty ;
+           rdfs:domain owl:Thing ;
+           rdfs:range xsd:gYear ;
+           rdfs:label "año de fin"@es .
+
+
+###  https://w3id.org/def/microrrelatos#annoDeInicio
+:annoDeInicio rdf:type owl:DatatypeProperty ;
+              rdfs:domain owl:Thing ;
+              rdfs:range xsd:gYear ;
+              rdfs:label "año de inicio"@es .
+
+
+###  https://w3id.org/def/microrrelatos#apellidos
+:apellidos rdf:type owl:DatatypeProperty ;
+           rdfs:subPropertyOf :nombre ;
+           rdfs:domain :Persona ;
+           rdfs:range xsd:string ;
+           rdfs:label "apellidos"@es .
+
+
+###  https://w3id.org/def/microrrelatos#codigoDePais
+:codigoDePais rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Pais ;
+              rdfs:range xsd:string ;
+              rdfs:label "código de país"@es .
+
+
+###  https://w3id.org/def/microrrelatos#nombre
+:nombre rdf:type owl:DatatypeProperty ;
+        rdfs:domain owl:Thing ;
+        rdfs:range xsd:string ;
+        rdfs:label "nombre"@es .
+
+
+###  https://w3id.org/def/microrrelatos#nombreDeLaEditorial
+:nombreDeLaEditorial rdf:type owl:DatatypeProperty ;
+                     rdfs:subPropertyOf :nombre ;
+                     rdfs:domain :Editorial ;
+                     rdfs:range xsd:string ;
+                     rdfs:label "nombre  de la editorial"@es .
+
+
+###  https://w3id.org/def/microrrelatos#nombreDeLaPersona
+:nombreDeLaPersona rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :nombre ;
+                   rdfs:domain :Persona ;
+                   rdfs:range xsd:string ;
+                   rdfs:label "nombre de la persona"@es .
+
+
+###  https://w3id.org/def/microrrelatos#nombreDelBlog
+:nombreDelBlog rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :nombre ;
+               rdfs:domain :Blog ;
+               rdfs:range xsd:string ;
+               rdfs:label "nombre del blog"@es .
+
+
+###  https://w3id.org/def/microrrelatos#nombreDelMedioDigital
+:nombreDelMedioDigital rdf:type owl:DatatypeProperty ;
+                       rdfs:subPropertyOf :nombre ;
+                       rdfs:domain :MedioDigitalDePublicacion ;
+                       rdfs:range xsd:string ;
+                       rdfs:label "nombre del medio digital"@es .
+
+
+###  https://w3id.org/def/microrrelatos#obraArtisticaTieneTitulo
+:obraArtisticaTieneTitulo rdf:type owl:DatatypeProperty ;
+                          rdfs:domain :ObraArtistica ;
+                          rdfs:range xsd:string ;
+                          rdfs:label "tiene título (obra artística)"@es .
+
+
+###  https://w3id.org/def/microrrelatos#publicacionImpresaAnnoDePublicacion
+:publicacionImpresaAnnoDePublicacion rdf:type owl:DatatypeProperty ;
+                                     rdfs:subPropertyOf :publicacionImpresaAnnoDePublicacion ;
+                                     rdfs:domain :PublicacionImpresa ;
+                                     rdfs:range xsd:gYear ;
+                                     rdfs:label "año de publicación (publicación impresa)"@es .
+
+
+###  https://w3id.org/def/microrrelatos#sexo
+:sexo rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Persona ;
+      rdfs:range xsd:string .
+
+
+###  https://w3id.org/def/microrrelatos#tieneURL
+:tieneURL rdf:type owl:DatatypeProperty ;
+          rdfs:domain owl:Thing ;
+          rdfs:range xsd:anyURI ;
+          rdfs:label "tiene URL"@es .
+
+
+###  https://w3id.org/def/microrrelatos#tipologia
+:tipologia rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Microrrelato ;
+           rdfs:range xsd:string ;
+           rdfs:label "tipología"@es .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/spar/fabio/ArtisticWork
+<http://purl.org/spar/fabio/ArtisticWork> owl:equivalentClass :ObraArtistica .
+
+
+###  http://purl.org/spar/fabio/Blog
+<http://purl.org/spar/fabio/Blog> owl:equivalentClass :Blog .
+
+
+###  http://purl.org/vocab/frbr/core#Person
+<http://purl.org/vocab/frbr/core#Person> owl:equivalentClass :Persona .
+
+
+###  http://purl.org/vocab/frbr/core#Place
+<http://purl.org/vocab/frbr/core#Place> owl:equivalentClass :Lugar .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> owl:equivalentClass :Persona .
+
+
+###  https://w3id.org/def/microrrelatos#Audiomicrorrelato
+:Audiomicrorrelato rdf:type owl:Class ;
+                   rdfs:subClassOf <http://purl.org/spar/fabio/AudioDocument> ,
+                                   :Microrrelato ;
+                   rdfs:label "audiomicrorrelato"@es .
+
+
+###  https://w3id.org/def/microrrelatos#Blog
+:Blog rdf:type owl:Class ;
+      rdfs:subClassOf :MedioDigitalDePublicacion ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :nombreDelBlog ;
+                        owl:someValuesFrom xsd:string
+                      ] ;
+      rdfs:comment "Un medio de publicación en la Web que contiene distintos textos."@es ;
+      rdfs:label "blog"@es .
+
+
+###  https://w3id.org/def/microrrelatos#Ciudad
+:Ciudad rdf:type owl:Class ;
+        rdfs:subClassOf :Localidad ;
+        rdfs:label "ciudad"@es .
+
+
+###  https://w3id.org/def/microrrelatos#Cortometraje
+:Cortometraje rdf:type owl:Class ;
+              rdfs:subClassOf <http://purl.org/spar/fabio/Film> ;
+              rdfs:label "cortometraje"@es .
+
+
+###  https://w3id.org/def/microrrelatos#Creeypasta
+:Creeypasta rdf:type owl:Class ;
+            rdfs:subClassOf :ObraArtistica ;
+            rdfs:label "creepypasta"@es .
+
+
+###  https://w3id.org/def/microrrelatos#Cuentometraje
+:Cuentometraje rdf:type owl:Class ;
+               rdfs:subClassOf :ObraArtistica ;
+               rdfs:label "cuentometraje"@es .
+
+
+###  https://w3id.org/def/microrrelatos#Dibujo
+:Dibujo rdf:type owl:Class ;
+        rdfs:subClassOf <http://purl.org/spar/fabio/StillImage> ;
+        rdfs:label "dibujo"@es .
+
+
+###  https://w3id.org/def/microrrelatos#Editorial
+:Editorial rdf:type owl:Class ;
+           rdfs:subClassOf <http://purl.org/vocab/frbr/core#CorporateBody> ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :nombreDeLaEditorial ;
+                             owl:someValuesFrom xsd:string
+                           ] ;
+           rdfs:comment "No confundir con \"editorial\" en el sentido de artículo firmado por la propia editorial, que es un término procedente de FABIO."@es ;
+           rdfs:label "editorial"@es .
+
+
+###  https://w3id.org/def/microrrelatos#EspacioRadiofonico
+:EspacioRadiofonico rdf:type owl:Class ;
+                    rdfs:subClassOf :MedioDigitalDePublicacion ;
+                    rdfs:label "espacio radiofónico"@es .
+
+
+###  https://w3id.org/def/microrrelatos#EspacioRadiofonicoFacebook
+:EspacioRadiofonicoFacebook rdf:type owl:Class ;
+                            rdfs:subClassOf :EspacioRadiofonico ,
+                                            :MedioProporcionadoPorFacebook ;
+                            rdfs:label "espacio radiofónico Facebook"@es .
+
+
+###  https://w3id.org/def/microrrelatos#EspacioTelevisivo
+:EspacioTelevisivo rdf:type owl:Class ;
+                   rdfs:subClassOf :MedioDigitalDePublicacion ;
+                   rdfs:label "espacio televisivo"@es .
+
+
+###  https://w3id.org/def/microrrelatos#EspacioTelevisivoYouTube
+:EspacioTelevisivoYouTube rdf:type owl:Class ;
+                          rdfs:subClassOf :EspacioTelevisivo ,
+                                          :MedioProporcionadoPorYouTube ;
+                          rdfs:label "espacio televisivo Youtube"@es .
+
+
+###  https://w3id.org/def/microrrelatos#Fotografia
+:Fotografia rdf:type owl:Class ;
+            rdfs:subClassOf <http://purl.org/spar/fabio/StillImage> ;
+            rdfs:label "fotografía"@es .
+
+
+###  https://w3id.org/def/microrrelatos#Hiperenlace
+:Hiperenlace rdf:type owl:Class ;
+             rdfs:subClassOf <http://purl.org/spar/fabio/DigitalItem> ;
+             rdfs:label "hiperenlace"@es .
+
+
+###  https://w3id.org/def/microrrelatos#Ilustracion
+:Ilustracion rdf:type owl:Class ;
+             rdfs:subClassOf <http://purl.org/spar/fabio/StillImage> ;
+             rdfs:label "ilustración"@es .
+
+
+###  https://w3id.org/def/microrrelatos#IlustracionConMicrorrelatoInsertado
+:IlustracionConMicrorrelatoInsertado rdf:type owl:Class ;
+                                     rdfs:subClassOf :Ilustracion ,
+                                                     :MicrorrelatoMultimedia ;
+                                     rdfs:label "ilustración con microrrelato insertado"@es .
+
+
+###  https://w3id.org/def/microrrelatos#LaminaIlustrada
+:LaminaIlustrada rdf:type owl:Class ;
+                 rdfs:subClassOf <http://purl.org/spar/fabio/StillImage> ,
+                                 :ObraArtistica ;
+                 rdfs:label "lámina ilustrada"@es .
+
+
+###  https://w3id.org/def/microrrelatos#Localidad
+:Localidad rdf:type owl:Class ;
+           rdfs:subClassOf :Lugar ;
+           rdfs:label "localidad"@es .
+
+
+###  https://w3id.org/def/microrrelatos#Lugar
+:Lugar rdf:type owl:Class ;
+       rdfs:label "lugar"@es .
+
+
+###  https://w3id.org/def/microrrelatos#MedioDigitalDePublicacion
+:MedioDigitalDePublicacion rdf:type owl:Class ;
+                           rdfs:label "medio digital de publicación"@es .
+
+
+###  https://w3id.org/def/microrrelatos#MedioProporcionadoPorFacebook
+:MedioProporcionadoPorFacebook rdf:type owl:Class ;
+                               rdfs:subClassOf :MedioDigitalDePublicacion ;
+                               rdfs:comment "Cuenta, página o cualquier otro medio proporcionado por Facebook."@es ;
+                               rdfs:label "medio proporcionado por Facebook"@es .
+
+
+###  https://w3id.org/def/microrrelatos#MedioProporcionadoPorInstragram
+:MedioProporcionadoPorInstragram rdf:type owl:Class ;
+                                 rdfs:subClassOf :MedioDigitalDePublicacion ;
+                                 rdfs:comment "Cualquier medio proporcionado por Instagram."@es ;
+                                 rdfs:label "medio proporcionado por Instagram"@es .
+
+
+###  https://w3id.org/def/microrrelatos#MedioProporcionadoPorTwitter
+:MedioProporcionadoPorTwitter rdf:type owl:Class ;
+                              rdfs:subClassOf :MedioDigitalDePublicacion ;
+                              rdfs:comment "Cualquier medio proporcionado por Twitter."@es ;
+                              rdfs:label "medio proporcionado por Twitter"@es .
+
+
+###  https://w3id.org/def/microrrelatos#MedioProporcionadoPorYouTube
+:MedioProporcionadoPorYouTube rdf:type owl:Class ;
+                              rdfs:subClassOf :MedioDigitalDePublicacion ;
+                              rdfs:comment "Cualquier medio proporcionado por YouTube."@es ;
+                              rdfs:label "medio proporcionado por YouTube"@es .
+
+
+###  https://w3id.org/def/microrrelatos#Meme
+:Meme rdf:type owl:Class ;
+      rdfs:subClassOf <http://purl.org/spar/fabio/Work> ;
+      rdfs:label "meme"@es .
+
+
+###  https://w3id.org/def/microrrelatos#Microrrelato
+:Microrrelato rdf:type owl:Class ;
+              rdfs:subClassOf :ObraArtistica ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :tieneMedioDigitalDePublicacion ;
+                                owl:someValuesFrom :MedioDigitalDePublicacion
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :tipologia ;
+                                owl:someValuesFrom xsd:string
+                              ] ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty <http://purl.org/spar/fabio/hasURL> ;
+                                owl:allValuesFrom xsd:anyURI
+                              ] ;
+              rdfs:comment "El microrrelato es un relato de muy pocas líneas que, por la brevedad y precisión en su vocabulario, crea la intensidad suficiente para turbar al lector (http://www.ies-ramonycajal.com/index.php/departamentos-mainmenu-32/dpto-lengua-espa-mainmenu-107/571-que-es-y-como-escribir-un-microrrelato)."@es ;
+              rdfs:label "microrrelato"@es .
+
+
+###  https://w3id.org/def/microrrelatos#MicrorrelatoConTexto
+:MicrorrelatoConTexto rdf:type owl:Class ;
+                      rdfs:subClassOf :Microrrelato ;
+                      rdfs:label "microrrelato con texto"@es .
+
+
+###  https://w3id.org/def/microrrelatos#MicrorrelatoMultimedia
+:MicrorrelatoMultimedia rdf:type owl:Class ;
+                        rdfs:subClassOf :Microrrelato ;
+                        rdfs:label "microrrelato multimedia"@es .
+
+
+###  https://w3id.org/def/microrrelatos#MicrorrelatoVisualAnimado
+:MicrorrelatoVisualAnimado rdf:type owl:Class ;
+                           rdfs:subClassOf :Microrrelato ;
+                           rdfs:label "microrrelato visual animado"@es .
+
+
+###  https://w3id.org/def/microrrelatos#ObraArtistica
+:ObraArtistica rdf:type owl:Class ;
+               rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                 owl:onProperty :tieneMedioDigitalDePublicacion ;
+                                 owl:allValuesFrom :MedioDigitalDePublicacion
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :obraArtisticaTieneTitulo ;
+                                 owl:allValuesFrom xsd:string
+                               ] ;
+               rdfs:comment "Trabajo como arte en su sentido más amplio, incluyendo trabajos literarios, obras musicales, arte visual, etc. (traducido de http://purl.org/spar/fabio/ArtisticWork)"@es ;
+               rdfs:label "obra artística"@es .
+
+
+###  https://w3id.org/def/microrrelatos#ObraArtisticaSinTitulo
+:ObraArtisticaSinTitulo rdf:type owl:Class ;
+                        rdfs:subClassOf :ObraArtistica ,
+                                        [ rdf:type owl:Class ;
+                                          owl:complementOf [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :obraArtisticaTieneTitulo ;
+                                                             owl:someValuesFrom xsd:string
+                                                           ]
+                                        ] ;
+                        rdfs:label "obra artística sin título"@es .
+
+
+###  https://w3id.org/def/microrrelatos#Pais
+:Pais rdf:type owl:Class ;
+      rdfs:subClassOf :Lugar ;
+      rdfs:label "país"@es .
+
+
+###  https://w3id.org/def/microrrelatos#Persona
+:Persona rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :nombreDeLaPersona ;
+                           owl:someValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :apellidos ;
+                           owl:allValuesFrom xsd:string
+                         ] ;
+         rdfs:label "persona"@es .
+
+
+###  https://w3id.org/def/microrrelatos#PublicacionImpresa
+:PublicacionImpresa rdf:type owl:Class ;
+                    rdfs:subClassOf <http://purl.org/spar/fabio/Expression> ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :tieneEditorial ;
+                                      owl:someValuesFrom :Editorial
+                                    ] ;
+                    rdfs:label "publicación impresa"@es .
+
+
+###  https://w3id.org/def/microrrelatos#Pueblo
+:Pueblo rdf:type owl:Class ;
+        rdfs:subClassOf :Localidad ;
+        rdfs:label "pueblo"@es .
+
+
+###  https://w3id.org/def/microrrelatos#RecreacionAudivisual
+:RecreacionAudivisual rdf:type owl:Class ;
+                      rdfs:subClassOf :ObraArtistica ;
+                      rdfs:label "recreación audivisual"@es .
+
+
+###  https://w3id.org/def/microrrelatos#RedSocial
+:RedSocial rdf:type owl:Class ;
+           rdfs:subClassOf :MedioDigitalDePublicacion ;
+           rdfs:label "red social"@es .
+
+
+###  https://w3id.org/def/microrrelatos#RemediacionAudiovisual
+:RemediacionAudiovisual rdf:type owl:Class ;
+                        rdfs:subClassOf :MedioDigitalDePublicacion ;
+                        rdfs:label "remediación audiovisual"@es .
+
+
+###  https://w3id.org/def/microrrelatos#RevistaDigital
+:RevistaDigital rdf:type owl:Class ;
+                rdfs:subClassOf <http://purl.org/spar/fabio/Magazine> ,
+                                :MedioDigitalDePublicacion ;
+                rdfs:label "revista digital"@es .
+
+
+###  https://w3id.org/def/microrrelatos#TallerDigital
+:TallerDigital rdf:type owl:Class ;
+               rdfs:subClassOf :MedioDigitalDePublicacion ;
+               rdfs:label "taller digital"@es .
+
+
+###  https://w3id.org/def/microrrelatos#Video
+:Video rdf:type owl:Class ;
+       rdfs:subClassOf <http://purl.org/spar/fabio/Movie> ;
+       rdfs:label "vídeo"@es .
+
+
+###  https://w3id.org/def/microrrelatos#Videominificcion
+:Videominificcion rdf:type owl:Class ;
+                  rdfs:subClassOf :Microrrelato ,
+                                  :Video ;
+                  rdfs:label "videominificción"@es .
+
+
+###  https://w3id.org/def/microrrelatos#publicacionImpresa
+:publicacionImpresa rdf:type owl:Class ;
+                    rdfs:subClassOf <http://purl.org/spar/fabio/PrintObject> ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :tieneEditorial ;
+                                      owl:allValuesFrom :Editorial
+                                    ] ;
+                    rdfs:label "publicación impresa"@es .
+
+
+###  Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
