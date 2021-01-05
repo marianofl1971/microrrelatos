@@ -90,6 +90,9 @@
 # #################################################################
 # 
 # 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/2002/07/owl#equivalentProperty> <https://w3id.org/def/microrrelatos#tieneTitulo> .
+# 
 # http://purl.org/spar/fabio/hasURL
 <http://purl.org/spar/fabio/hasURL> <http://www.w3.org/2002/07/owl#equivalentProperty> <https://w3id.org/def/microrrelatos#tieneURL> .
 # 
@@ -181,6 +184,11 @@
 <https://w3id.org/def/microrrelatos#sexo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/def/microrrelatos#sexo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/microrrelatos#Persona> .
 <https://w3id.org/def/microrrelatos#sexo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/def/microrrelatos#tieneTitulo
+<https://w3id.org/def/microrrelatos#tieneTitulo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/microrrelatos#tieneTitulo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/microrrelatos#ObraArtistica> .
+<https://w3id.org/def/microrrelatos#tieneTitulo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 # 
 # https://w3id.org/def/microrrelatos#tieneURL
 <https://w3id.org/def/microrrelatos#tieneURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .

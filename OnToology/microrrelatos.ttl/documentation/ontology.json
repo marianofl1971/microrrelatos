@@ -113,6 +113,11 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "http://www.w3.org/2002/07/owl#equivalentProperty" : [ {
+    "@id" : "https://w3id.org/def/microrrelatos#tieneTitulo"
+  } ]
+}, {
   "@id" : "http://purl.org/spar/fabio/ArtisticWork",
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "https://w3id.org/def/microrrelatos#ObraArtistica"
@@ -985,6 +990,15 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/def/microrrelatos#tieneLugar"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/microrrelatos#tieneTitulo",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/def/microrrelatos#ObraArtistica"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "https://w3id.org/def/microrrelatos#tieneURL",

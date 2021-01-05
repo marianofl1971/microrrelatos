@@ -202,6 +202,9 @@
     "PrintObject" : {
       "@id" : "http://purl.org/spar/fabio/PrintObject"
     },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
     "Fotografia" : {
       "@id" : "https://w3id.org/def/microrrelatos#Fotografia"
     },
@@ -280,6 +283,10 @@
     },
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "tieneTitulo" : {
+      "@id" : "https://w3id.org/def/microrrelatos#tieneTitulo",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "Editorial" : {
       "@id" : "https://w3id.org/def/microrrelatos#Editorial"

@@ -101,6 +101,10 @@
 #    Data properties
 #################################################################
 
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> owl:equivalentProperty :tieneTitulo .
+
+
 ###  http://purl.org/spar/fabio/hasURL
 <http://purl.org/spar/fabio/hasURL> owl:equivalentProperty :tieneURL .
 
@@ -208,6 +212,12 @@
 :sexo rdf:type owl:DatatypeProperty ;
       rdfs:domain :Persona ;
       rdfs:range xsd:string .
+
+
+###  https://w3id.org/def/microrrelatos#tieneTitulo
+:tieneTitulo rdf:type owl:DatatypeProperty ;
+             rdfs:domain :ObraArtistica ;
+             rdfs:range xsd:string .
 
 
 ###  https://w3id.org/def/microrrelatos#tieneURL

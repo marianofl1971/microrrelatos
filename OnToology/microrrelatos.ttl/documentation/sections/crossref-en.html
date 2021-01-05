@@ -1,6 +1,6 @@
 <h2 id="crossreference" class="list">Cross reference for [Ontology Name] classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 This section provides details for each class and property defined by [Ontology Name].
-<div id="classes">
+<div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
@@ -783,7 +783,8 @@ This section provides details for each class and property defined by [Ontology N
          </dd>
          <dt>is in domain of</dt>
          <dd>
-            <a href="#obraArtisticaTieneTitulo"
+            <a href="#tieneTitulo" title="https://w3id.org/def/microrrelatos#tieneTitulo">tiene titulo</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#obraArtisticaTieneTitulo"
                title="https://w3id.org/def/microrrelatos#obraArtisticaTieneTitulo">tiene título (obra artística)</a>
             <sup class="type-dp" title="data property">dp</sup>
          </dd>
@@ -1041,7 +1042,7 @@ This section provides details for each class and property defined by [Ontology N
          </dd>
       </dl>
    </div>
-</div><div id="objectproperties">
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
@@ -1350,7 +1351,7 @@ This section provides details for each class and property defined by [Ontology N
          </dl>
       </div>
    </div>
-</div><div id="dataproperties">
+</div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
@@ -1390,6 +1391,11 @@ This section provides details for each class and property defined by [Ontology N
       <li>
          <a href="#sexo" title="https://w3id.org/def/microrrelatos#sexo">
             <span>sexo</span>
+         </a>
+      </li>
+      <li>
+         <a href="#tieneTitulo" title="https://w3id.org/def/microrrelatos#tieneTitulo">
+            <span>tiene titulo</span>
          </a>
       </li>
       <li>
@@ -1702,6 +1708,29 @@ This section provides details for each class and property defined by [Ontology N
             <dt>has domain</dt>
             <dd>
                <a href="#Persona" title="https://w3id.org/def/microrrelatos#Persona">persona</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="http://www.w3.org/2001/XMLSchema#string"
+                  target="_blank"
+                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="tieneTitulo">
+      <h3>tiene titulo<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/def/microrrelatos#tieneTitulo</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#ObraArtistica" title="https://w3id.org/def/microrrelatos#ObraArtistica">obra artística</a>
                <sup class="type-c" title="class">c</sup>
             </dd>
             <dt>has range</dt>
