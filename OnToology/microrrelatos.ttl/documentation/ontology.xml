@@ -103,6 +103,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/def/microrrelatos#tieneLugar">
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="https://w3id.org/def/microrrelatos#Lugar"/>
+        <rdfs:label xml:lang="es">tiene lugar</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -176,6 +177,24 @@
     
 
 
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <rdf:Description rdf:about="http://purl.org/dc/terms/title">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/def/microrrelatos#tieneTitulo"/>
+    </rdf:Description>
+    
+
+
+    <!-- http://purl.org/spar/fabio/hasPublicationYear -->
+
+
+    <rdf:Description rdf:about="http://purl.org/spar/fabio/hasPublicationYear">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/def/microrrelatos#annoDePublicacion"/>
+    </rdf:Description>
+    
+
+
     <!-- http://purl.org/spar/fabio/hasURL -->
 
 
@@ -239,6 +258,17 @@
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
         <rdfs:label xml:lang="es">año de inicio</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/microrrelatos#annoDePublicacion -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/microrrelatos#annoDePublicacion">
+        <rdfs:domain rdf:resource="http://purl.org/spar/fabio/Expression"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
+        <rdfs:label xml:lang="es">año de publicación</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -325,35 +355,23 @@
     
 
 
-    <!-- https://w3id.org/def/microrrelatos#obraArtisticaTieneTitulo -->
-
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/microrrelatos#obraArtisticaTieneTitulo">
-        <rdfs:domain rdf:resource="https://w3id.org/def/microrrelatos#ObraArtistica"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:label xml:lang="es">tiene título (obra artística)</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- https://w3id.org/def/microrrelatos#publicacionImpresaAnnoDePublicacion -->
-
-
-    <owl:DatatypeProperty rdf:about="https://w3id.org/def/microrrelatos#publicacionImpresaAnnoDePublicacion">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/def/microrrelatos#publicacionImpresaAnnoDePublicacion"/>
-        <rdfs:domain rdf:resource="https://w3id.org/def/microrrelatos#PublicacionImpresa"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
-        <rdfs:label xml:lang="es">año de publicación (publicación impresa)</rdfs:label>
-    </owl:DatatypeProperty>
-    
-
-
     <!-- https://w3id.org/def/microrrelatos#sexo -->
 
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/def/microrrelatos#sexo">
         <rdfs:domain rdf:resource="https://w3id.org/def/microrrelatos#Persona"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/def/microrrelatos#tieneTitulo -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/def/microrrelatos#tieneTitulo">
+        <rdfs:domain rdf:resource="https://w3id.org/def/microrrelatos#ObraArtistica"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label xml:lang="es">tiene título</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -777,12 +795,6 @@
                 <owl:allValuesFrom rdf:resource="https://w3id.org/def/microrrelatos#MedioDigitalDePublicacion"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/microrrelatos#obraArtisticaTieneTitulo"/>
-                <owl:allValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
         <rdfs:comment xml:lang="es">Trabajo como arte en su sentido más amplio, incluyendo trabajos literarios, obras musicales, arte visual, etc. (traducido de http://purl.org/spar/fabio/ArtisticWork)</rdfs:comment>
         <rdfs:label xml:lang="es">obra artística</rdfs:label>
     </owl:Class>
@@ -794,16 +806,6 @@
 
     <owl:Class rdf:about="https://w3id.org/def/microrrelatos#ObraArtisticaSinTitulo">
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/microrrelatos#ObraArtistica"/>
-        <rdfs:subClassOf>
-            <owl:Class>
-                <owl:complementOf>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="https://w3id.org/def/microrrelatos#obraArtisticaTieneTitulo"/>
-                        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-                    </owl:Restriction>
-                </owl:complementOf>
-            </owl:Class>
-        </rdfs:subClassOf>
         <rdfs:label xml:lang="es">obra artística sin título</rdfs:label>
     </owl:Class>
     
