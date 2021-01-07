@@ -35,6 +35,8 @@
 
 ###  https://w3id.org/def/microrrelatos#esObraArtisticaCreadaPor
 :esObraArtisticaCreadaPor rdf:type owl:ObjectProperty ;
+                          rdfs:domain :Persona ;
+                          rdfs:range :ObraArtistica ;
                           rdfs:comment "Relación entre la obra artística y su creador. Es equivalente a la propiedad `http://purl.org/dc/terms/creator`de Dublin Core."@es ;
                           rdfs:label "es obra artística creada por"@es .
 
@@ -57,7 +59,8 @@
 ###  https://w3id.org/def/microrrelatos#tieneLugar
 :tieneLugar rdf:type owl:ObjectProperty ;
             rdfs:domain owl:Thing ;
-            rdfs:range :Lugar .
+            rdfs:range :Lugar ;
+            rdfs:label "tiene lugar"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#tieneMedioDigitalDePublicacion
@@ -101,6 +104,14 @@
 #    Data properties
 #################################################################
 
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> owl:equivalentProperty :tieneTitulo .
+
+
+###  http://purl.org/spar/fabio/hasPublicationYear
+<http://purl.org/spar/fabio/hasPublicationYear> owl:equivalentProperty :annoDePublicacion .
+
+
 ###  http://purl.org/spar/fabio/hasURL
 <http://purl.org/spar/fabio/hasURL> owl:equivalentProperty :tieneURL .
 
@@ -110,7 +121,7 @@
 
 
 ###  http://xmlns.com/foaf/0.1/firstName
-<http://xmlns.com/foaf/0.1/firstName> owl:equivalentProperty :nombreDeLaPersona .
+<http://xmlns.com/foaf/0.1/firstName> owl:equivalentProperty :nombreDePila .
 
 
 ###  http://xmlns.com/foaf/0.1/gender
@@ -135,6 +146,13 @@
               rdfs:label "año de inicio"@es .
 
 
+###  https://w3id.org/def/microrrelatos#annoDePublicacion
+:annoDePublicacion rdf:type owl:DatatypeProperty ;
+                   rdfs:domain <http://purl.org/spar/fabio/Expression> ;
+                   rdfs:range xsd:gYear ;
+                   rdfs:label "año de publicación"@es .
+
+
 ###  https://w3id.org/def/microrrelatos#apellidos
 :apellidos rdf:type owl:DatatypeProperty ;
            rdfs:subPropertyOf :nombre ;
@@ -157,57 +175,25 @@
         rdfs:label "nombre"@es .
 
 
-###  https://w3id.org/def/microrrelatos#nombreDeLaEditorial
-:nombreDeLaEditorial rdf:type owl:DatatypeProperty ;
-                     rdfs:subPropertyOf :nombre ;
-                     rdfs:domain :Editorial ;
-                     rdfs:range xsd:string ;
-                     rdfs:label "nombre  de la editorial"@es .
-
-
-###  https://w3id.org/def/microrrelatos#nombreDeLaPersona
-:nombreDeLaPersona rdf:type owl:DatatypeProperty ;
-                   rdfs:subPropertyOf :nombre ;
-                   rdfs:domain :Persona ;
-                   rdfs:range xsd:string ;
-                   rdfs:label "nombre de la persona"@es .
-
-
-###  https://w3id.org/def/microrrelatos#nombreDelBlog
-:nombreDelBlog rdf:type owl:DatatypeProperty ;
-               rdfs:subPropertyOf :nombre ;
-               rdfs:domain :Blog ;
-               rdfs:range xsd:string ;
-               rdfs:label "nombre del blog"@es .
-
-
-###  https://w3id.org/def/microrrelatos#nombreDelMedioDigital
-:nombreDelMedioDigital rdf:type owl:DatatypeProperty ;
-                       rdfs:subPropertyOf :nombre ;
-                       rdfs:domain :MedioDigitalDePublicacion ;
-                       rdfs:range xsd:string ;
-                       rdfs:label "nombre del medio digital"@es .
-
-
-###  https://w3id.org/def/microrrelatos#obraArtisticaTieneTitulo
-:obraArtisticaTieneTitulo rdf:type owl:DatatypeProperty ;
-                          rdfs:domain :ObraArtistica ;
-                          rdfs:range xsd:string ;
-                          rdfs:label "tiene título (obra artística)"@es .
-
-
-###  https://w3id.org/def/microrrelatos#publicacionImpresaAnnoDePublicacion
-:publicacionImpresaAnnoDePublicacion rdf:type owl:DatatypeProperty ;
-                                     rdfs:subPropertyOf :publicacionImpresaAnnoDePublicacion ;
-                                     rdfs:domain :PublicacionImpresa ;
-                                     rdfs:range xsd:gYear ;
-                                     rdfs:label "año de publicación (publicación impresa)"@es .
+###  https://w3id.org/def/microrrelatos#nombreDePila
+:nombreDePila rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :nombre ;
+              rdfs:domain :Persona ;
+              rdfs:range xsd:string ;
+              rdfs:label "nombre de pila"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#sexo
 :sexo rdf:type owl:DatatypeProperty ;
       rdfs:domain :Persona ;
       rdfs:range xsd:string .
+
+
+###  https://w3id.org/def/microrrelatos#tieneTitulo
+:tieneTitulo rdf:type owl:DatatypeProperty ;
+             rdfs:domain :ObraArtistica ;
+             rdfs:range xsd:string ;
+             rdfs:label "tiene título"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#tieneURL
@@ -257,11 +243,7 @@
 
 ###  https://w3id.org/def/microrrelatos#Blog
 :Blog rdf:type owl:Class ;
-      rdfs:subClassOf :MedioDigitalDePublicacion ,
-                      [ rdf:type owl:Restriction ;
-                        owl:onProperty :nombreDelBlog ;
-                        owl:someValuesFrom xsd:string
-                      ] ;
+      rdfs:subClassOf :MedioDigitalDePublicacion ;
       rdfs:comment "Un medio de publicación en la Web que contiene distintos textos."@es ;
       rdfs:label "blog"@es .
 
@@ -298,11 +280,7 @@
 
 ###  https://w3id.org/def/microrrelatos#Editorial
 :Editorial rdf:type owl:Class ;
-           rdfs:subClassOf <http://purl.org/vocab/frbr/core#CorporateBody> ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :nombreDeLaEditorial ;
-                             owl:someValuesFrom xsd:string
-                           ] ;
+           rdfs:subClassOf <http://purl.org/vocab/frbr/core#CorporateBody> ;
            rdfs:comment "No confundir con \"editorial\" en el sentido de artículo firmado por la propia editorial, que es un término procedente de FABIO."@es ;
            rdfs:label "editorial"@es .
 
@@ -457,10 +435,6 @@
                rdfs:subClassOf [ rdf:type owl:Restriction ;
                                  owl:onProperty :tieneMedioDigitalDePublicacion ;
                                  owl:allValuesFrom :MedioDigitalDePublicacion
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :obraArtisticaTieneTitulo ;
-                                 owl:allValuesFrom xsd:string
                                ] ;
                rdfs:comment "Trabajo como arte en su sentido más amplio, incluyendo trabajos literarios, obras musicales, arte visual, etc. (traducido de http://purl.org/spar/fabio/ArtisticWork)"@es ;
                rdfs:label "obra artística"@es .
@@ -468,13 +442,7 @@
 
 ###  https://w3id.org/def/microrrelatos#ObraArtisticaSinTitulo
 :ObraArtisticaSinTitulo rdf:type owl:Class ;
-                        rdfs:subClassOf :ObraArtistica ,
-                                        [ rdf:type owl:Class ;
-                                          owl:complementOf [ rdf:type owl:Restriction ;
-                                                             owl:onProperty :obraArtisticaTieneTitulo ;
-                                                             owl:someValuesFrom xsd:string
-                                                           ]
-                                        ] ;
+                        rdfs:subClassOf :ObraArtistica ;
                         rdfs:label "obra artística sin título"@es .
 
 
@@ -487,7 +455,7 @@
 ###  https://w3id.org/def/microrrelatos#Persona
 :Persona rdf:type owl:Class ;
          rdfs:subClassOf [ rdf:type owl:Restriction ;
-                           owl:onProperty :nombreDeLaPersona ;
+                           owl:onProperty :nombreDePila ;
                            owl:someValuesFrom xsd:string
                          ] ,
                          [ rdf:type owl:Restriction ;
