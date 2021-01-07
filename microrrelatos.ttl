@@ -60,7 +60,8 @@ frbr:part owl:equivalentProperty :tieneParte ;
 ###  https://w3id.org/def/microrrelatos#tieneLugar
 :tieneLugar rdf:type owl:ObjectProperty ;
             rdfs:domain owl:Thing ;
-            rdfs:range :Lugar .
+            rdfs:range :Lugar ;
+            rdfs:label "tiene lugar"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#tieneMedioDigitalDePublicacion
@@ -108,6 +109,10 @@ frbr:part owl:equivalentProperty :tieneParte ;
 <http://purl.org/dc/terms/title> owl:equivalentProperty :tieneTitulo .
 
 
+###  http://purl.org/spar/fabio/hasPublicationYear
+fabio:hasPublicationYear owl:equivalentProperty :annoDePublicacion .
+
+
 ###  http://purl.org/spar/fabio/hasURL
 fabio:hasURL owl:equivalentProperty :tieneURL .
 
@@ -140,6 +145,13 @@ fabio:hasURL owl:equivalentProperty :tieneURL .
               rdfs:domain owl:Thing ;
               rdfs:range xsd:gYear ;
               rdfs:label "año de inicio"@es .
+
+
+###  https://w3id.org/def/microrrelatos#annoDePublicacion
+:annoDePublicacion rdf:type owl:DatatypeProperty ;
+                   rdfs:domain fabio:Expression ;
+                   rdfs:range xsd:gYear ;
+                   rdfs:label "año de publicación"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#apellidos
@@ -196,21 +208,6 @@ fabio:hasURL owl:equivalentProperty :tieneURL .
                        rdfs:label "nombre del medio digital"@es .
 
 
-###  https://w3id.org/def/microrrelatos#obraArtisticaTieneTitulo
-:obraArtisticaTieneTitulo rdf:type owl:DatatypeProperty ;
-                          rdfs:domain :ObraArtistica ;
-                          rdfs:range xsd:string ;
-                          rdfs:label "tiene título (obra artística)"@es .
-
-
-###  https://w3id.org/def/microrrelatos#publicacionImpresaAnnoDePublicacion
-:publicacionImpresaAnnoDePublicacion rdf:type owl:DatatypeProperty ;
-                                     rdfs:subPropertyOf :publicacionImpresaAnnoDePublicacion ;
-                                     rdfs:domain :PublicacionImpresa ;
-                                     rdfs:range xsd:gYear ;
-                                     rdfs:label "año de publicación (publicación impresa)"@es .
-
-
 ###  https://w3id.org/def/microrrelatos#sexo
 :sexo rdf:type owl:DatatypeProperty ;
       rdfs:domain :Persona ;
@@ -220,7 +217,8 @@ fabio:hasURL owl:equivalentProperty :tieneURL .
 ###  https://w3id.org/def/microrrelatos#tieneTitulo
 :tieneTitulo rdf:type owl:DatatypeProperty ;
              rdfs:domain :ObraArtistica ;
-             rdfs:range xsd:string .
+             rdfs:range xsd:string ;
+             rdfs:label "tiene título"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#tieneURL
@@ -470,10 +468,6 @@ frbr:Place owl:equivalentClass :Lugar .
                rdfs:subClassOf [ rdf:type owl:Restriction ;
                                  owl:onProperty :tieneMedioDigitalDePublicacion ;
                                  owl:allValuesFrom :MedioDigitalDePublicacion
-                               ] ,
-                               [ rdf:type owl:Restriction ;
-                                 owl:onProperty :obraArtisticaTieneTitulo ;
-                                 owl:allValuesFrom xsd:string
                                ] ;
                rdfs:comment "Trabajo como arte en su sentido más amplio, incluyendo trabajos literarios, obras musicales, arte visual, etc. (traducido de http://purl.org/spar/fabio/ArtisticWork)"@es ;
                rdfs:label "obra artística"@es .
@@ -481,13 +475,7 @@ frbr:Place owl:equivalentClass :Lugar .
 
 ###  https://w3id.org/def/microrrelatos#ObraArtisticaSinTitulo
 :ObraArtisticaSinTitulo rdf:type owl:Class ;
-                        rdfs:subClassOf :ObraArtistica ,
-                                        [ rdf:type owl:Class ;
-                                          owl:complementOf [ rdf:type owl:Restriction ;
-                                                             owl:onProperty :obraArtisticaTieneTitulo ;
-                                                             owl:someValuesFrom xsd:string
-                                                           ]
-                                        ] ;
+                        rdfs:subClassOf :ObraArtistica ;
                         rdfs:label "obra artística sin título"@es .
 
 
