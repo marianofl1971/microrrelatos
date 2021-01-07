@@ -241,13 +241,14 @@ frbr:Place owl:equivalentClass :Lugar .
 :Audiomicrorrelato rdf:type owl:Class ;
                    rdfs:subClassOf fabio:AudioDocument ,
                                    :Microrrelato ;
+                   rdfs:comment "Microrrelato grabado en forma de audio."@es ;
                    rdfs:label "audiomicrorrelato"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#Blog
 :Blog rdf:type owl:Class ;
       rdfs:subClassOf :MedioDigitalDePublicacion ;
-      rdfs:comment "Un medio de publicación en la Web que contiene distintos textos."@es ;
+      rdfs:comment "Un medio de publicación en la Web que contiene distintas entradas conocidaas como posts."@es ;
       rdfs:label "blog"@es .
 
 
@@ -354,6 +355,7 @@ frbr:Place owl:equivalentClass :Lugar .
 
 ###  https://w3id.org/def/microrrelatos#Lugar
 :Lugar rdf:type owl:Class ;
+       rdfs:comment "La entidad definida como lugar abarca una amplia gama de sitios: terrestres y extraterrestres; históricos y contemporáneos; características geográficas y jurisdicciones geopolíticas (traducido de http://purl.org/vocab/frbr/core#Place)."@es ;
        rdfs:label "lugar"@es .
 
 
@@ -465,6 +467,8 @@ frbr:Place owl:equivalentClass :Lugar .
                            owl:onProperty :apellidos ;
                            owl:allValuesFrom xsd:string
                          ] ;
+         rdfs:comment "Dado que se ha establecido que esta clase es equivalente a la clase `Person`de FOAF, se recomienda leer su descripción en dicho vocabulario."@es ,
+                      "Individuo de la especie humana (https://dle.rae.es/persona?m=form)."@es ;
          rdfs:label "persona"@es .
 
 
