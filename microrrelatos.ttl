@@ -38,6 +38,8 @@ frbr:part owl:equivalentProperty :tieneParte ;
 
 ###  https://w3id.org/def/microrrelatos#esObraArtisticaCreadaPor
 :esObraArtisticaCreadaPor rdf:type owl:ObjectProperty ;
+                          rdfs:domain :Persona ;
+                          rdfs:range :ObraArtistica ;
                           rdfs:comment "Relación entre la obra artística y su creador. Es equivalente a la propiedad `http://purl.org/dc/terms/creator`de Dublin Core."@es ;
                           rdfs:label "es obra artística creada por"@es .
 
@@ -122,7 +124,7 @@ fabio:hasURL owl:equivalentProperty :tieneURL .
 
 
 ###  http://xmlns.com/foaf/0.1/firstName
-<http://xmlns.com/foaf/0.1/firstName> owl:equivalentProperty :nombreDeLaPersona .
+<http://xmlns.com/foaf/0.1/firstName> owl:equivalentProperty :nombreDePila .
 
 
 ###  http://xmlns.com/foaf/0.1/gender
@@ -176,36 +178,12 @@ fabio:hasURL owl:equivalentProperty :tieneURL .
         rdfs:label "nombre"@es .
 
 
-###  https://w3id.org/def/microrrelatos#nombreDeLaEditorial
-:nombreDeLaEditorial rdf:type owl:DatatypeProperty ;
-                     rdfs:subPropertyOf :nombre ;
-                     rdfs:domain :Editorial ;
-                     rdfs:range xsd:string ;
-                     rdfs:label "nombre  de la editorial"@es .
-
-
-###  https://w3id.org/def/microrrelatos#nombreDeLaPersona
-:nombreDeLaPersona rdf:type owl:DatatypeProperty ;
-                   rdfs:subPropertyOf :nombre ;
-                   rdfs:domain :Persona ;
-                   rdfs:range xsd:string ;
-                   rdfs:label "nombre de la persona"@es .
-
-
-###  https://w3id.org/def/microrrelatos#nombreDelBlog
-:nombreDelBlog rdf:type owl:DatatypeProperty ;
-               rdfs:subPropertyOf :nombre ;
-               rdfs:domain :Blog ;
-               rdfs:range xsd:string ;
-               rdfs:label "nombre del blog"@es .
-
-
-###  https://w3id.org/def/microrrelatos#nombreDelMedioDigital
-:nombreDelMedioDigital rdf:type owl:DatatypeProperty ;
-                       rdfs:subPropertyOf :nombre ;
-                       rdfs:domain :MedioDigitalDePublicacion ;
-                       rdfs:range xsd:string ;
-                       rdfs:label "nombre del medio digital"@es .
+###  https://w3id.org/def/microrrelatos#nombreDePila
+:nombreDePila rdf:type owl:DatatypeProperty ;
+              rdfs:subPropertyOf :nombre ;
+              rdfs:domain :Persona ;
+              rdfs:range xsd:string ;
+              rdfs:label "nombre de pila"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#sexo
@@ -268,11 +246,7 @@ frbr:Place owl:equivalentClass :Lugar .
 
 ###  https://w3id.org/def/microrrelatos#Blog
 :Blog rdf:type owl:Class ;
-      rdfs:subClassOf :MedioDigitalDePublicacion ,
-                      [ rdf:type owl:Restriction ;
-                        owl:onProperty :nombreDelBlog ;
-                        owl:someValuesFrom xsd:string
-                      ] ;
+      rdfs:subClassOf :MedioDigitalDePublicacion ;
       rdfs:comment "Un medio de publicación en la Web que contiene distintos textos."@es ;
       rdfs:label "blog"@es .
 
@@ -309,11 +283,7 @@ frbr:Place owl:equivalentClass :Lugar .
 
 ###  https://w3id.org/def/microrrelatos#Editorial
 :Editorial rdf:type owl:Class ;
-           rdfs:subClassOf frbr:CorporateBody ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :nombreDeLaEditorial ;
-                             owl:someValuesFrom xsd:string
-                           ] ;
+           rdfs:subClassOf frbr:CorporateBody ;
            rdfs:comment "No confundir con \"editorial\" en el sentido de artículo firmado por la propia editorial, que es un término procedente de FABIO."@es ;
            rdfs:label "editorial"@es .
 
@@ -488,7 +458,7 @@ frbr:Place owl:equivalentClass :Lugar .
 ###  https://w3id.org/def/microrrelatos#Persona
 :Persona rdf:type owl:Class ;
          rdfs:subClassOf [ rdf:type owl:Restriction ;
-                           owl:onProperty :nombreDeLaPersona ;
+                           owl:onProperty :nombreDePila ;
                            owl:someValuesFrom xsd:string
                          ] ,
                          [ rdf:type owl:Restriction ;
