@@ -448,6 +448,7 @@ frbr:Place owl:equivalentClass :Lugar .
 ###  https://w3id.org/def/microrrelatos#MicrorrelatoVisualAnimado
 :MicrorrelatoVisualAnimado rdf:type owl:Class ;
                            rdfs:subClassOf :Microrrelato ;
+                           rdfs:comment "Microrrelato en forma de animación, por ejemplo, haciendo aparecer y desaparecer palabras al modo en que se hace en las presentaciones con animaciones."@es ;
                            rdfs:label "microrrelato visual animado"@es .
 
 
@@ -464,6 +465,7 @@ frbr:Place owl:equivalentClass :Lugar .
 ###  https://w3id.org/def/microrrelatos#ObraArtisticaSinTitulo
 :ObraArtisticaSinTitulo rdf:type owl:Class ;
                         rdfs:subClassOf :ObraArtistica ;
+                        rdfs:comment "Obra artísitica a la que no se ha proporcionado un título."@es ;
                         rdfs:label "obra artística sin título"@es .
 
 
@@ -510,6 +512,7 @@ frbr:Place owl:equivalentClass :Lugar .
 ###  https://w3id.org/def/microrrelatos#RecreacionAudivisual
 :RecreacionAudivisual rdf:type owl:Class ;
                       rdfs:subClassOf :ObraArtistica ;
+                      rdfs:comment "Juego con imágenes para contar una historia."@es ;
                       rdfs:label "recreación audivisual"@es .
 
 
