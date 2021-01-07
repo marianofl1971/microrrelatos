@@ -28,6 +28,8 @@
 # 
 # https://w3id.org/def/microrrelatos#esObraArtisticaCreadaPor
 <https://w3id.org/def/microrrelatos#esObraArtisticaCreadaPor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/def/microrrelatos#esObraArtisticaCreadaPor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/microrrelatos#Persona> .
+<https://w3id.org/def/microrrelatos#esObraArtisticaCreadaPor> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/microrrelatos#ObraArtistica> .
 <https://w3id.org/def/microrrelatos#esObraArtisticaCreadaPor> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre la obra artística y su creador. Es equivalente a la propiedad `http://purl.org/dc/terms/creator`de Dublin Core."@es .
 <https://w3id.org/def/microrrelatos#esObraArtisticaCreadaPor> <http://www.w3.org/2000/01/rdf-schema#label> "es obra artística creada por"@es .
 # 
@@ -48,6 +50,7 @@
 <https://w3id.org/def/microrrelatos#tieneLugar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/def/microrrelatos#tieneLugar> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
 <https://w3id.org/def/microrrelatos#tieneLugar> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/def/microrrelatos#Lugar> .
+<https://w3id.org/def/microrrelatos#tieneLugar> <http://www.w3.org/2000/01/rdf-schema#label> "tiene lugar"@es .
 # 
 # https://w3id.org/def/microrrelatos#tieneMedioDigitalDePublicacion
 <https://w3id.org/def/microrrelatos#tieneMedioDigitalDePublicacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -90,6 +93,12 @@
 # #################################################################
 # 
 # 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/2002/07/owl#equivalentProperty> <https://w3id.org/def/microrrelatos#tieneTitulo> .
+# 
+# http://purl.org/spar/fabio/hasPublicationYear
+<http://purl.org/spar/fabio/hasPublicationYear> <http://www.w3.org/2002/07/owl#equivalentProperty> <https://w3id.org/def/microrrelatos#annoDePublicacion> .
+# 
 # http://purl.org/spar/fabio/hasURL
 <http://purl.org/spar/fabio/hasURL> <http://www.w3.org/2002/07/owl#equivalentProperty> <https://w3id.org/def/microrrelatos#tieneURL> .
 # 
@@ -97,7 +106,7 @@
 <http://xmlns.com/foaf/0.1/familyName> <http://www.w3.org/2002/07/owl#equivalentProperty> <https://w3id.org/def/microrrelatos#apellidos> .
 # 
 # http://xmlns.com/foaf/0.1/firstName
-<http://xmlns.com/foaf/0.1/firstName> <http://www.w3.org/2002/07/owl#equivalentProperty> <https://w3id.org/def/microrrelatos#nombreDeLaPersona> .
+<http://xmlns.com/foaf/0.1/firstName> <http://www.w3.org/2002/07/owl#equivalentProperty> <https://w3id.org/def/microrrelatos#nombreDePila> .
 # 
 # http://xmlns.com/foaf/0.1/gender
 <http://xmlns.com/foaf/0.1/gender> <http://www.w3.org/2002/07/owl#equivalentProperty> <https://w3id.org/def/microrrelatos#sexo> .
@@ -116,6 +125,12 @@
 <https://w3id.org/def/microrrelatos#annoDeInicio> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
 <https://w3id.org/def/microrrelatos#annoDeInicio> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#gYear> .
 <https://w3id.org/def/microrrelatos#annoDeInicio> <http://www.w3.org/2000/01/rdf-schema#label> "año de inicio"@es .
+# 
+# https://w3id.org/def/microrrelatos#annoDePublicacion
+<https://w3id.org/def/microrrelatos#annoDePublicacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/microrrelatos#annoDePublicacion> <http://www.w3.org/2000/01/rdf-schema#domain> <http://purl.org/spar/fabio/Expression> .
+<https://w3id.org/def/microrrelatos#annoDePublicacion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#gYear> .
+<https://w3id.org/def/microrrelatos#annoDePublicacion> <http://www.w3.org/2000/01/rdf-schema#label> "año de publicación"@es .
 # 
 # https://w3id.org/def/microrrelatos#apellidos
 <https://w3id.org/def/microrrelatos#apellidos> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -136,51 +151,23 @@
 <https://w3id.org/def/microrrelatos#nombre> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/def/microrrelatos#nombre> <http://www.w3.org/2000/01/rdf-schema#label> "nombre"@es .
 # 
-# https://w3id.org/def/microrrelatos#nombreDeLaEditorial
-<https://w3id.org/def/microrrelatos#nombreDeLaEditorial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/microrrelatos#nombreDeLaEditorial> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/def/microrrelatos#nombre> .
-<https://w3id.org/def/microrrelatos#nombreDeLaEditorial> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/microrrelatos#Editorial> .
-<https://w3id.org/def/microrrelatos#nombreDeLaEditorial> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/def/microrrelatos#nombreDeLaEditorial> <http://www.w3.org/2000/01/rdf-schema#label> "nombre  de la editorial"@es .
-# 
-# https://w3id.org/def/microrrelatos#nombreDeLaPersona
-<https://w3id.org/def/microrrelatos#nombreDeLaPersona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/microrrelatos#nombreDeLaPersona> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/def/microrrelatos#nombre> .
-<https://w3id.org/def/microrrelatos#nombreDeLaPersona> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/microrrelatos#Persona> .
-<https://w3id.org/def/microrrelatos#nombreDeLaPersona> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/def/microrrelatos#nombreDeLaPersona> <http://www.w3.org/2000/01/rdf-schema#label> "nombre de la persona"@es .
-# 
-# https://w3id.org/def/microrrelatos#nombreDelBlog
-<https://w3id.org/def/microrrelatos#nombreDelBlog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/microrrelatos#nombreDelBlog> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/def/microrrelatos#nombre> .
-<https://w3id.org/def/microrrelatos#nombreDelBlog> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/microrrelatos#Blog> .
-<https://w3id.org/def/microrrelatos#nombreDelBlog> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/def/microrrelatos#nombreDelBlog> <http://www.w3.org/2000/01/rdf-schema#label> "nombre del blog"@es .
-# 
-# https://w3id.org/def/microrrelatos#nombreDelMedioDigital
-<https://w3id.org/def/microrrelatos#nombreDelMedioDigital> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/microrrelatos#nombreDelMedioDigital> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/def/microrrelatos#nombre> .
-<https://w3id.org/def/microrrelatos#nombreDelMedioDigital> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/microrrelatos#MedioDigitalDePublicacion> .
-<https://w3id.org/def/microrrelatos#nombreDelMedioDigital> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/def/microrrelatos#nombreDelMedioDigital> <http://www.w3.org/2000/01/rdf-schema#label> "nombre del medio digital"@es .
-# 
-# https://w3id.org/def/microrrelatos#obraArtisticaTieneTitulo
-<https://w3id.org/def/microrrelatos#obraArtisticaTieneTitulo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/microrrelatos#obraArtisticaTieneTitulo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/microrrelatos#ObraArtistica> .
-<https://w3id.org/def/microrrelatos#obraArtisticaTieneTitulo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/def/microrrelatos#obraArtisticaTieneTitulo> <http://www.w3.org/2000/01/rdf-schema#label> "tiene título (obra artística)"@es .
-# 
-# https://w3id.org/def/microrrelatos#publicacionImpresaAnnoDePublicacion
-<https://w3id.org/def/microrrelatos#publicacionImpresaAnnoDePublicacion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/def/microrrelatos#publicacionImpresaAnnoDePublicacion> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/def/microrrelatos#publicacionImpresaAnnoDePublicacion> .
-<https://w3id.org/def/microrrelatos#publicacionImpresaAnnoDePublicacion> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/microrrelatos#PublicacionImpresa> .
-<https://w3id.org/def/microrrelatos#publicacionImpresaAnnoDePublicacion> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#gYear> .
-<https://w3id.org/def/microrrelatos#publicacionImpresaAnnoDePublicacion> <http://www.w3.org/2000/01/rdf-schema#label> "año de publicación (publicación impresa)"@es .
+# https://w3id.org/def/microrrelatos#nombreDePila
+<https://w3id.org/def/microrrelatos#nombreDePila> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/microrrelatos#nombreDePila> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/def/microrrelatos#nombre> .
+<https://w3id.org/def/microrrelatos#nombreDePila> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/microrrelatos#Persona> .
+<https://w3id.org/def/microrrelatos#nombreDePila> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/microrrelatos#nombreDePila> <http://www.w3.org/2000/01/rdf-schema#label> "nombre de pila"@es .
 # 
 # https://w3id.org/def/microrrelatos#sexo
 <https://w3id.org/def/microrrelatos#sexo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/def/microrrelatos#sexo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/microrrelatos#Persona> .
 <https://w3id.org/def/microrrelatos#sexo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://w3id.org/def/microrrelatos#tieneTitulo
+<https://w3id.org/def/microrrelatos#tieneTitulo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/def/microrrelatos#tieneTitulo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/def/microrrelatos#ObraArtistica> .
+<https://w3id.org/def/microrrelatos#tieneTitulo> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/microrrelatos#tieneTitulo> <http://www.w3.org/2000/01/rdf-schema#label> "tiene título"@es .
 # 
 # https://w3id.org/def/microrrelatos#tieneURL
 <https://w3id.org/def/microrrelatos#tieneURL> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -222,16 +209,13 @@
 <https://w3id.org/def/microrrelatos#Audiomicrorrelato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/microrrelatos#Audiomicrorrelato> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/AudioDocument> .
 <https://w3id.org/def/microrrelatos#Audiomicrorrelato> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/microrrelatos#Microrrelato> .
+<https://w3id.org/def/microrrelatos#Audiomicrorrelato> <http://www.w3.org/2000/01/rdf-schema#comment> "Microrrelato grabado en forma de audio."@es .
 <https://w3id.org/def/microrrelatos#Audiomicrorrelato> <http://www.w3.org/2000/01/rdf-schema#label> "audiomicrorrelato"@es .
 # 
 # https://w3id.org/def/microrrelatos#Blog
 <https://w3id.org/def/microrrelatos#Blog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/microrrelatos#Blog> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/microrrelatos#MedioDigitalDePublicacion> .
-<https://w3id.org/def/microrrelatos#Blog> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
-_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/microrrelatos#nombreDelBlog> .
-_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/def/microrrelatos#Blog> <http://www.w3.org/2000/01/rdf-schema#comment> "Un medio de publicación en la Web que contiene distintos textos."@es .
+<https://w3id.org/def/microrrelatos#Blog> <http://www.w3.org/2000/01/rdf-schema#comment> "Un medio de publicación en la Web que contiene distintas entradas conocidaas como posts."@es .
 <https://w3id.org/def/microrrelatos#Blog> <http://www.w3.org/2000/01/rdf-schema#label> "blog"@es .
 # 
 # https://w3id.org/def/microrrelatos#Ciudad
@@ -262,10 +246,6 @@ _:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/
 # https://w3id.org/def/microrrelatos#Editorial
 <https://w3id.org/def/microrrelatos#Editorial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/microrrelatos#Editorial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/vocab/frbr/core#CorporateBody> .
-<https://w3id.org/def/microrrelatos#Editorial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/microrrelatos#nombreDeLaEditorial> .
-_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/def/microrrelatos#Editorial> <http://www.w3.org/2000/01/rdf-schema#comment> "No confundir con \"editorial\" en el sentido de artículo firmado por la propia editorial, que es un término procedente de FABIO."@es .
 <https://w3id.org/def/microrrelatos#Editorial> <http://www.w3.org/2000/01/rdf-schema#label> "editorial"@es .
 # 
@@ -325,6 +305,7 @@ _:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/
 # 
 # https://w3id.org/def/microrrelatos#Lugar
 <https://w3id.org/def/microrrelatos#Lugar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/microrrelatos#Lugar> <http://www.w3.org/2000/01/rdf-schema#comment> "La entidad definida como lugar abarca una amplia gama de sitios: terrestres y extraterrestres; históricos y contemporáneos; características geográficas y jurisdicciones geopolíticas (traducido de http://purl.org/vocab/frbr/core#Place)."@es .
 <https://w3id.org/def/microrrelatos#Lugar> <http://www.w3.org/2000/01/rdf-schema#label> "lugar"@es .
 # 
 # https://w3id.org/def/microrrelatos#MedioDigitalDePublicacion
@@ -363,18 +344,18 @@ _:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/
 # https://w3id.org/def/microrrelatos#Microrrelato
 <https://w3id.org/def/microrrelatos#Microrrelato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/microrrelatos#Microrrelato> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/microrrelatos#ObraArtistica> .
+<https://w3id.org/def/microrrelatos#Microrrelato> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/microrrelatos#tieneMedioDigitalDePublicacion> .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/microrrelatos#MedioDigitalDePublicacion> .
+<https://w3id.org/def/microrrelatos#Microrrelato> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/microrrelatos#tipologia> .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/def/microrrelatos#Microrrelato> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
 _:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/microrrelatos#tieneMedioDigitalDePublicacion> .
-_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/microrrelatos#MedioDigitalDePublicacion> .
-<https://w3id.org/def/microrrelatos#Microrrelato> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/microrrelatos#tipologia> .
-_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/def/microrrelatos#Microrrelato> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/fabio/hasURL> .
-_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#anyURI> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/fabio/hasURL> .
+_:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#anyURI> .
 <https://w3id.org/def/microrrelatos#Microrrelato> <http://www.w3.org/2000/01/rdf-schema#comment> "El microrrelato es un relato de muy pocas líneas que, por la brevedad y precisión en su vocabulario, crea la intensidad suficiente para turbar al lector (http://www.ies-ramonycajal.com/index.php/departamentos-mainmenu-32/dpto-lengua-espa-mainmenu-107/571-que-es-y-como-escribir-un-microrrelato)."@es .
 <https://w3id.org/def/microrrelatos#Microrrelato> <http://www.w3.org/2000/01/rdf-schema#label> "microrrelato"@es .
 # 
@@ -395,26 +376,16 @@ _:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/X
 # 
 # https://w3id.org/def/microrrelatos#ObraArtistica
 <https://w3id.org/def/microrrelatos#ObraArtistica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/microrrelatos#ObraArtistica> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/microrrelatos#tieneMedioDigitalDePublicacion> .
-_:genid6 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/microrrelatos#MedioDigitalDePublicacion> .
-<https://w3id.org/def/microrrelatos#ObraArtistica> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/microrrelatos#obraArtisticaTieneTitulo> .
-_:genid7 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/microrrelatos#ObraArtistica> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/microrrelatos#tieneMedioDigitalDePublicacion> .
+_:genid4 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/microrrelatos#MedioDigitalDePublicacion> .
 <https://w3id.org/def/microrrelatos#ObraArtistica> <http://www.w3.org/2000/01/rdf-schema#comment> "Trabajo como arte en su sentido más amplio, incluyendo trabajos literarios, obras musicales, arte visual, etc. (traducido de http://purl.org/spar/fabio/ArtisticWork)"@es .
 <https://w3id.org/def/microrrelatos#ObraArtistica> <http://www.w3.org/2000/01/rdf-schema#label> "obra artística"@es .
 # 
 # https://w3id.org/def/microrrelatos#ObraArtisticaSinTitulo
 <https://w3id.org/def/microrrelatos#ObraArtisticaSinTitulo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/microrrelatos#ObraArtisticaSinTitulo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/microrrelatos#ObraArtistica> .
-<https://w3id.org/def/microrrelatos#ObraArtisticaSinTitulo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid8 <http://www.w3.org/2002/07/owl#complementOf> _:genid9 .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/microrrelatos#obraArtisticaTieneTitulo> .
-_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
 <https://w3id.org/def/microrrelatos#ObraArtisticaSinTitulo> <http://www.w3.org/2000/01/rdf-schema#label> "obra artística sin título"@es .
 # 
 # https://w3id.org/def/microrrelatos#Pais
@@ -424,23 +395,25 @@ _:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/
 # 
 # https://w3id.org/def/microrrelatos#Persona
 <https://w3id.org/def/microrrelatos#Persona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/microrrelatos#Persona> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/microrrelatos#nombreDeLaPersona> .
-_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-<https://w3id.org/def/microrrelatos#Persona> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/microrrelatos#apellidos> .
-_:genid11 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/microrrelatos#Persona> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/microrrelatos#nombreDePila> .
+_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/microrrelatos#Persona> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/microrrelatos#apellidos> .
+_:genid6 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/def/microrrelatos#Persona> <http://www.w3.org/2000/01/rdf-schema#comment> "Dado que se ha establecido que esta clase es equivalente a la clase `Person`de FOAF, se recomienda leer su descripción en dicho vocabulario."@es .
+<https://w3id.org/def/microrrelatos#Persona> <http://www.w3.org/2000/01/rdf-schema#comment> "Individuo de la especie humana (https://dle.rae.es/persona?m=form)."@es .
 <https://w3id.org/def/microrrelatos#Persona> <http://www.w3.org/2000/01/rdf-schema#label> "persona"@es .
 # 
 # https://w3id.org/def/microrrelatos#PublicacionImpresa
 <https://w3id.org/def/microrrelatos#PublicacionImpresa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/microrrelatos#PublicacionImpresa> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Expression> .
-<https://w3id.org/def/microrrelatos#PublicacionImpresa> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/microrrelatos#tieneEditorial> .
-_:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/microrrelatos#Editorial> .
+<https://w3id.org/def/microrrelatos#PublicacionImpresa> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/microrrelatos#tieneEditorial> .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/microrrelatos#Editorial> .
 <https://w3id.org/def/microrrelatos#PublicacionImpresa> <http://www.w3.org/2000/01/rdf-schema#label> "publicación impresa"@es .
 # 
 # https://w3id.org/def/microrrelatos#Pueblo
@@ -488,10 +461,10 @@ _:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/m
 # https://w3id.org/def/microrrelatos#publicacionImpresa
 <https://w3id.org/def/microrrelatos#publicacionImpresa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/microrrelatos#publicacionImpresa> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/PrintObject> .
-<https://w3id.org/def/microrrelatos#publicacionImpresa> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/microrrelatos#tieneEditorial> .
-_:genid13 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/microrrelatos#Editorial> .
+<https://w3id.org/def/microrrelatos#publicacionImpresa> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/microrrelatos#tieneEditorial> .
+_:genid8 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/microrrelatos#Editorial> .
 <https://w3id.org/def/microrrelatos#publicacionImpresa> <http://www.w3.org/2000/01/rdf-schema#label> "publicación impresa"@es .
 # 
 # Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
