@@ -283,6 +283,7 @@ frbr:Place owl:equivalentClass :Lugar .
 ###  https://w3id.org/def/microrrelatos#Dibujo
 :Dibujo rdf:type owl:Class ;
         rdfs:subClassOf fabio:StillImage ;
+        rdfs:comment "Delineación, figura o imagen ejecutada en oscuro y claro (https://es.wikipedia.org/wiki/Dibujo)."@es ;
         rdfs:label "dibujo"@es .
 
 
@@ -327,6 +328,7 @@ frbr:Place owl:equivalentClass :Lugar .
 ###  https://w3id.org/def/microrrelatos#Fotografia
 :Fotografia rdf:type owl:Class ;
             rdfs:subClassOf fabio:StillImage ;
+            rdfs:comment "Imagen fija obtenida mediante la acción de la luz sobre una superficie sensible o sobre un sensor (https://dle.rae.es/fotograf%C3%ADa?m=form)."@es ;
             rdfs:label "fotografía"@es .
 
 
@@ -340,6 +342,7 @@ frbr:Place owl:equivalentClass :Lugar .
 ###  https://w3id.org/def/microrrelatos#Ilustracion
 :Ilustracion rdf:type owl:Class ;
              rdfs:subClassOf fabio:StillImage ;
+             rdfs:comment "Estampa, grabado o dibujo que adorna o documenta un libro (https://dle.rae.es/ilustraci%C3%B3n?m=form)."@es ;
              rdfs:label "ilustración"@es .
 
 
@@ -409,6 +412,7 @@ frbr:Place owl:equivalentClass :Lugar .
 ###  https://w3id.org/def/microrrelatos#Meme
 :Meme rdf:type owl:Class ;
       rdfs:subClassOf fabio:Work ;
+      rdfs:comment "Imagen, video o texto, por lo general distorsionado con fines caricaturescos, que se difunde principalmente a través de internet (https://dle.rae.es/meme?m=form)."@es ;
       rdfs:label "meme"@es .
 
 
@@ -567,6 +571,7 @@ frbr:Place owl:equivalentClass :Lugar .
                                       owl:onProperty :tieneEditorial ;
                                       owl:allValuesFrom :Editorial
                                     ] ;
+                    rdfs:comment "Escrito impreso, como un libro, una revista, un periódico, etc., que ha sido publicado (https://dle.rae.es/publicaci%C3%B3n?m=form)."@es ;
                     rdfs:label "publicación impresa"@es .
 
 
