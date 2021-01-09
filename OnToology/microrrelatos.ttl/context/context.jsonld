@@ -13,19 +13,15 @@
       "@id" : "https://w3id.org/def/microrrelatos#tieneURL",
       "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
     },
-    "nombreDeLaEditorial" : {
-      "@id" : "https://w3id.org/def/microrrelatos#nombreDeLaEditorial",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
-    },
-    "publicacionImpresaAnnoDePublicacion" : {
-      "@id" : "https://w3id.org/def/microrrelatos#publicacionImpresaAnnoDePublicacion",
-      "@type" : "http://www.w3.org/2001/XMLSchema#gYear"
-    },
     "EspacioTelevisivo" : {
       "@id" : "https://w3id.org/def/microrrelatos#EspacioTelevisivo"
     },
     "RecreacionAudivisual" : {
       "@id" : "https://w3id.org/def/microrrelatos#RecreacionAudivisual"
+    },
+    "titulo" : {
+      "@id" : "https://w3id.org/def/microrrelatos#titulo",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "tienePublicacionImpresa" : {
       "@id" : "https://w3id.org/def/microrrelatos#tienePublicacionImpresa",
@@ -33,10 +29,6 @@
     },
     "MicrorrelatoVisualAnimado" : {
       "@id" : "https://w3id.org/def/microrrelatos#MicrorrelatoVisualAnimado"
-    },
-    "nombreDeLaPersona" : {
-      "@id" : "https://w3id.org/def/microrrelatos#nombreDeLaPersona",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "MicrorrelatoMultimedia" : {
       "@id" : "https://w3id.org/def/microrrelatos#MicrorrelatoMultimedia"
@@ -83,6 +75,10 @@
       "@id" : "http://xmlns.com/foaf/0.1/maker",
       "@type" : "@id"
     },
+    "nombreDePila" : {
+      "@id" : "https://w3id.org/def/microrrelatos#nombreDePila",
+      "@type" : "http://www.w3.org/2001/XMLSchema#string"
+    },
     "nombre" : {
       "@id" : "https://w3id.org/def/microrrelatos#nombre",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
@@ -94,9 +90,16 @@
     "label" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
     },
+    "Endeavour" : {
+      "@id" : "http://purl.org/vocab/frbr/core#Endeavour"
+    },
     "familyName" : {
       "@id" : "http://xmlns.com/foaf/0.1/familyName",
       "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
+    },
+    "annoDePublicacion" : {
+      "@id" : "https://w3id.org/def/microrrelatos#annoDePublicacion",
+      "@type" : "http://www.w3.org/2001/XMLSchema#gYear"
     },
     "Creeypasta" : {
       "@id" : "https://w3id.org/def/microrrelatos#Creeypasta"
@@ -134,10 +137,6 @@
     },
     "RevistaDigital" : {
       "@id" : "https://w3id.org/def/microrrelatos#RevistaDigital"
-    },
-    "nombreDelBlog" : {
-      "@id" : "https://w3id.org/def/microrrelatos#nombreDelBlog",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "Persona" : {
       "@id" : "https://w3id.org/def/microrrelatos#Persona"
@@ -202,6 +201,13 @@
     "PrintObject" : {
       "@id" : "http://purl.org/spar/fabio/PrintObject"
     },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "hasPublicationYear" : {
+      "@id" : "http://purl.org/spar/fabio/hasPublicationYear",
+      "@type" : "http://www.w3.org/2001/XMLSchema#gYear"
+    },
     "Fotografia" : {
       "@id" : "https://w3id.org/def/microrrelatos#Fotografia"
     },
@@ -252,10 +258,6 @@
       "@id" : "https://w3id.org/def/microrrelatos#tieneEditorial",
       "@type" : "@id"
     },
-    "nombreDelMedioDigital" : {
-      "@id" : "https://w3id.org/def/microrrelatos#nombreDelMedioDigital",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
-    },
     "MedioProporcionadoPorFacebook" : {
       "@id" : "https://w3id.org/def/microrrelatos#MedioProporcionadoPorFacebook"
     },
@@ -273,10 +275,6 @@
     },
     "MedioProporcionadoPorTwitter" : {
       "@id" : "https://w3id.org/def/microrrelatos#MedioProporcionadoPorTwitter"
-    },
-    "obraArtisticaTieneTitulo" : {
-      "@id" : "https://w3id.org/def/microrrelatos#obraArtisticaTieneTitulo",
-      "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
