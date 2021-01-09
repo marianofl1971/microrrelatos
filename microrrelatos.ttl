@@ -220,6 +220,7 @@ fabio:hasURL owl:equivalentProperty :tieneURL .
 :tipologia rdf:type owl:DatatypeProperty ;
            rdfs:domain :Microrrelato ;
            rdfs:range xsd:string ;
+           rdfs:comment "Cómo se muestra el microrrelato: fotografía + texto, microrrelato visual animado, etc."@es ;
            rdfs:label "tipología"@es .
 
 
@@ -227,6 +228,7 @@ fabio:hasURL owl:equivalentProperty :tieneURL .
 :titulo rdf:type owl:DatatypeProperty ;
         rdfs:domain :ObraArtistica ;
         rdfs:range xsd:string ;
+        rdfs:comment "Palabra o frase con que se da a conocer el nombre o asunto de una obra o de cada una de las partes o divisiones de un escrito (https://dle.rae.es/t%C3%ADtulo?m=form)."@es ;
         rdfs:label "título"@es .
 
 
