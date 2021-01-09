@@ -2,10 +2,20 @@
 <span class="markdown">
 This ontology has the following classes and properties.</span>
 <h4>Classes</h4>
-<ul class="hlist">
+<ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+   <li>
+      <a href="#http://purl.org/spar/fabio/ArtisticWork" title="http://purl.org/spar/fabio/ArtisticWork">
+         <span>artistic work</span>
+      </a>
+   </li>
    <li>
       <a href="#Audiomicrorrelato"
          title="https://w3id.org/def/microrrelatos#Audiomicrorrelato">audiomicrorrelato</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/spar/fabio/Blog" title="http://purl.org/spar/fabio/Blog">
+         <span>blog</span>
+      </a>
    </li>
    <li>
       <a href="#Blog" title="https://w3id.org/def/microrrelatos#Blog">blog</a>
@@ -116,7 +126,17 @@ This ontology has the following classes and properties.</span>
       <a href="#Pais" title="https://w3id.org/def/microrrelatos#Pais">país</a>
    </li>
    <li>
+      <a href="#http://purl.org/vocab/frbr/core#Person" title="http://purl.org/vocab/frbr/core#Person">
+         <span>person</span>
+      </a>
+   </li>
+   <li>
       <a href="#Persona" title="https://w3id.org/def/microrrelatos#Persona">persona</a>
+   </li>
+   <li>
+      <a href="#http://purl.org/vocab/frbr/core#Place" title="http://purl.org/vocab/frbr/core#Place">
+         <span>place</span>
+      </a>
    </li>
    <li>
       <a href="#PublicacionImpresa"
@@ -145,7 +165,8 @@ This ontology has the following classes and properties.</span>
          title="https://w3id.org/def/microrrelatos#RevistaDigital">revista digital</a>
    </li>
    <li>
-      <a href="#TallerDigital" title="https://w3id.org/def/microrrelatos#TallerDigital">taller digital</a>
+      <a href="#TallerDigital"
+         title="https://w3id.org/def/microrrelatos#TallerDigital">taller digital</a>
    </li>
    <li>
       <a href="#Videominificcion"
@@ -154,7 +175,7 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#Video" title="https://w3id.org/def/microrrelatos#Video">vídeo</a>
    </li>
-</ul><h4>Object Properties</h4><ul class="hlist">
+</ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
       <a href="#creaObraArtistica"
          title="https://w3id.org/def/microrrelatos#creaObraArtistica">crea obra artística</a>
@@ -164,15 +185,18 @@ This ontology has the following classes and properties.</span>
          title="https://w3id.org/def/microrrelatos#esObraArtisticaCreadaPor">es obra artística creada por</a>
    </li>
    <li>
+      <a href="#http://purl.org/vocab/frbr/core#part" title="http://purl.org/vocab/frbr/core#part">
+         <span>part</span>
+      </a>
+   </li>
+   <li>
       <a href="#tieneCiudad" title="https://w3id.org/def/microrrelatos#tieneCiudad">tiene ciudad</a>
    </li>
    <li>
       <a href="#tieneEditorial" title="https://w3id.org/def/microrrelatos#tieneEditorial">tiene editorial</a>
    </li>
    <li>
-      <a href="#tieneLugar" title="https://w3id.org/def/microrrelatos#tieneLugar">
-         <span>tiene lugar</span>
-      </a>
+      <a href="#tieneLugar" title="https://w3id.org/def/microrrelatos#tieneLugar">tiene lugar</a>
    </li>
    <li>
       <a href="#tieneMedioDigitalDePublicacion"
@@ -191,7 +215,7 @@ This ontology has the following classes and properties.</span>
    <li>
       <a href="#tienePueblo" title="https://w3id.org/def/microrrelatos#tienePueblo">tiene pueblo</a>
    </li>
-</ul><h4>Data Properties</h4><ul class="hlist">
+</ul><h4>Data Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
       <a href="#apellidos" title="https://w3id.org/def/microrrelatos#apellidos">apellidos</a>
    </li>
@@ -202,8 +226,8 @@ This ontology has the following classes and properties.</span>
       <a href="#annoDeInicio" title="https://w3id.org/def/microrrelatos#annoDeInicio">año de inicio</a>
    </li>
    <li>
-      <a href="#publicacionImpresaAnnoDePublicacion"
-         title="https://w3id.org/def/microrrelatos#publicacionImpresaAnnoDePublicacion">año de publicación (publicación impresa)</a>
+      <a href="#annoDePublicacion"
+         title="https://w3id.org/def/microrrelatos#annoDePublicacion">año de publicación</a>
    </li>
    <li>
       <a href="#codigoDePais" title="https://w3id.org/def/microrrelatos#codigoDePais">código de país</a>
@@ -212,19 +236,7 @@ This ontology has the following classes and properties.</span>
       <a href="#nombre" title="https://w3id.org/def/microrrelatos#nombre">nombre</a>
    </li>
    <li>
-      <a href="#nombreDeLaEditorial"
-         title="https://w3id.org/def/microrrelatos#nombreDeLaEditorial">nombre  de la editorial</a>
-   </li>
-   <li>
-      <a href="#nombreDeLaPersona"
-         title="https://w3id.org/def/microrrelatos#nombreDeLaPersona">nombre de la persona</a>
-   </li>
-   <li>
-      <a href="#nombreDelBlog" title="https://w3id.org/def/microrrelatos#nombreDelBlog">nombre del blog</a>
-   </li>
-   <li>
-      <a href="#nombreDelMedioDigital"
-         title="https://w3id.org/def/microrrelatos#nombreDelMedioDigital">nombre del medio digital</a>
+      <a href="#nombreDePila" title="https://w3id.org/def/microrrelatos#nombreDePila">nombre de pila</a>
    </li>
    <li>
       <a href="#sexo" title="https://w3id.org/def/microrrelatos#sexo">
@@ -232,13 +244,12 @@ This ontology has the following classes and properties.</span>
       </a>
    </li>
    <li>
-      <a href="#obraArtisticaTieneTitulo"
-         title="https://w3id.org/def/microrrelatos#obraArtisticaTieneTitulo">tiene título (obra artística)</a>
-   </li>
-   <li>
       <a href="#tieneURL" title="https://w3id.org/def/microrrelatos#tieneURL">tiene URL</a>
    </li>
    <li>
       <a href="#tipologia" title="https://w3id.org/def/microrrelatos#tipologia">tipología</a>
+   </li>
+   <li>
+      <a href="#titulo" title="https://w3id.org/def/microrrelatos#titulo">título</a>
    </li>
 </ul>
