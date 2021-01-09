@@ -116,7 +116,7 @@ frbr:part owl:equivalentProperty :tieneParte ;
 #################################################################
 
 ###  http://purl.org/dc/terms/title
-<http://purl.org/dc/terms/title> owl:equivalentProperty :tieneTitulo .
+<http://purl.org/dc/terms/title> owl:equivalentProperty :titulo .
 
 
 ###  http://purl.org/spar/fabio/hasPublicationYear
@@ -147,6 +147,7 @@ fabio:hasURL owl:equivalentProperty :tieneURL .
 :annoDeFin rdf:type owl:DatatypeProperty ;
            rdfs:domain owl:Thing ;
            rdfs:range xsd:gYear ;
+           rdfs:comment "Año en que termina algo."@es ;
            rdfs:label "año de fin"@es .
 
 
@@ -154,6 +155,7 @@ fabio:hasURL owl:equivalentProperty :tieneURL .
 :annoDeInicio rdf:type owl:DatatypeProperty ;
               rdfs:domain owl:Thing ;
               rdfs:range xsd:gYear ;
+              rdfs:comment "Año en que comienza algo."@es ;
               rdfs:label "año de inicio"@es .
 
 
@@ -161,6 +163,7 @@ fabio:hasURL owl:equivalentProperty :tieneURL .
 :annoDePublicacion rdf:type owl:DatatypeProperty ;
                    rdfs:domain fabio:Expression ;
                    rdfs:range xsd:gYear ;
+                   rdfs:comment "Año de publicación de una expresión de una obra artística."@es ;
                    rdfs:label "año de publicación"@es .
 
 
@@ -169,6 +172,7 @@ fabio:hasURL owl:equivalentProperty :tieneURL .
            rdfs:subPropertyOf :nombre ;
            rdfs:domain :Persona ;
            rdfs:range xsd:string ;
+           rdfs:comment "Un apellido es un nombre de familia con que se distinguen las personas; p. ej., Fernández, Guzmán (https://dle.rae.es/apellido?m=form)."@es ;
            rdfs:label "apellidos"@es .
 
 
@@ -176,6 +180,7 @@ fabio:hasURL owl:equivalentProperty :tieneURL .
 :codigoDePais rdf:type owl:DatatypeProperty ;
               rdfs:domain :Pais ;
               rdfs:range xsd:string ;
+              rdfs:comment "Los códigos de países son los códigos cortos alfabéticos o numéricos creados para representar a los países y sus áreas dependientes, para usar en el proceso de datos y comunicaciones (https://es.wikipedia.org/wiki/C%C3%B3digo_de_pa%C3%ADs). El sistema más extendido es ISO 3166-1 (https://gist.github.com/brenes/1095110)."@es ;
               rdfs:label "código de país"@es .
 
 
@@ -183,6 +188,7 @@ fabio:hasURL owl:equivalentProperty :tieneURL .
 :nombre rdf:type owl:DatatypeProperty ;
         rdfs:domain owl:Thing ;
         rdfs:range xsd:string ;
+        rdfs:comment "Palabra que designa o identifica seres animados o inanimados (https://dle.rae.es/nombre?m=form)."@es ;
         rdfs:label "nombre"@es .
 
 
@@ -191,26 +197,22 @@ fabio:hasURL owl:equivalentProperty :tieneURL .
               rdfs:subPropertyOf :nombre ;
               rdfs:domain :Persona ;
               rdfs:range xsd:string ;
+              rdfs:comment "Nombre que se da a una persona cuando se bautiza o el que se le adjudica por elección para identificarla junto a los apellidos (https://dle.rae.es/nombre?m=form#7JmtrIe)."@es ;
               rdfs:label "nombre de pila"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#sexo
 :sexo rdf:type owl:DatatypeProperty ;
       rdfs:domain :Persona ;
-      rdfs:range xsd:string .
-
-
-###  https://w3id.org/def/microrrelatos#tieneTitulo
-:tieneTitulo rdf:type owl:DatatypeProperty ;
-             rdfs:domain :ObraArtistica ;
-             rdfs:range xsd:string ;
-             rdfs:label "tiene título"@es .
+      rdfs:range xsd:string ;
+      rdfs:comment "Condición orgánica, masculina o femenina, de los animales y las plantas (https://dle.rae.es/sexo?m=form)."@es .
 
 
 ###  https://w3id.org/def/microrrelatos#tieneURL
 :tieneURL rdf:type owl:DatatypeProperty ;
-          rdfs:domain owl:Thing ;
+          rdfs:domain frbr:Endeavour ;
           rdfs:range xsd:anyURI ;
+          rdfs:comment "Un identificador, en forma de un localizador universal de recursos HTTP (URL), para un recurso particular en la World Wide Web."@es ;
           rdfs:label "tiene URL"@es .
 
 
@@ -219,6 +221,13 @@ fabio:hasURL owl:equivalentProperty :tieneURL .
            rdfs:domain :Microrrelato ;
            rdfs:range xsd:string ;
            rdfs:label "tipología"@es .
+
+
+###  https://w3id.org/def/microrrelatos#titulo
+:titulo rdf:type owl:DatatypeProperty ;
+        rdfs:domain :ObraArtistica ;
+        rdfs:range xsd:string ;
+        rdfs:label "título"@es .
 
 
 #################################################################
