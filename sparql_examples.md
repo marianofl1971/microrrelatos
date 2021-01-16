@@ -30,14 +30,14 @@ nombre  apellidos
 "Ana"^^<http://www.w3.org/2001/XMLSchema#string> "Martínez Castillo"^^<http://www.w3.org/2001/XMLSchema#string>
 ``` 
 
-3. El título de los microrrelatos publicados por Ana Martínez Castillo:
+3.  Listado de todos los títulos de los microrrelatos con sus autore: 
 
 ```
 PREFIX mcr:   <https://w3id.org/def/microrrelatos#>
 
-select distinct ?titulo{
-    ?microrrelato mcr:esObraArtisticaCreadaPor ?autor .
-    ?label rdfs:label "Ana Martínez Castillo"@es .
-    ?microrrelato rdfs:label ?titulo
+select distinct ?titulo ?nombre_autor{
+    ?uri_microrrelato mcr:esObraArtisticaCreadaPor ?uri_autor .
+    ?uri_autor rdfs:label ?nombre_autor .
+    ?uri_microrrelato rdfs:label ?titulo
 }
 ```  
