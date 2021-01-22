@@ -296,7 +296,8 @@ frbr:Place owl:equivalentClass :Lugar .
 
 ###  https://w3id.org/def/microrrelatos#Cortometraje
 :Cortometraje rdf:type owl:Class ;
-              rdfs:subClassOf fabio:Film ;
+              rdfs:subClassOf fabio:Film ,
+                              :ObraArtistica ;
               rdfs:comment "Producción audiovisual o cinematográfica con una duración menor a 30 minutos (https://en.wikipedia.org/wiki/Short_film)."@es ;
               rdfs:label "cortometraje"@es .
 
