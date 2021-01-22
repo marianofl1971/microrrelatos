@@ -15,6 +15,22 @@
     <owl:Ontology rdf:about="https://w3id.org/def/microrrelatos">
         <owl:imports rdf:resource="http://purl.org/spar/fabio/2019-02-19"/>
         <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <dc:description xml:lang="es">Esta ontología ha sido creada dentro del proyecto MiRed:
+
+Título: «MiRed (Microrrelato hipermedial español e hispanoamericano (2000-2020). Elaboración de un repositorio semántico y otros desafíos en la red»
+Referencia: RTI2018-094725-B-I00
+Financiación: Ministerio de Ciencia, Innovación y Universidades y Fondo Europeo de Desarrollo (FEDER), en la convocatoria 2018 dentro del marco del Plan Estatal de I+D+I Orientada a los Retos de la Sociedad.
+
+Licencia
+
+Derechos de autor 2020 Mariano Fernández López (ingeniero), Ana Calvo Revilla y Ángel Arias Urrutia (expertos del dominio).
+
+Autorizado en virtud de la Licencia de Apache, Versión 2.0 (la &quot;Licencia&quot;); se prohíbe utilizar este archivo excepto en cumplimiento de la Licencia. Podrá obtener una copia de la Licencia en:
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+A menos que lo exijan las leyes pertinentes o se haya establecido por escrito, el software distribuido en virtud de la Licencia se distribuye “TAL CUAL”, SIN GARANTÍAS NI CONDICIONES DE NINGÚN TIPO, ya sean expresas o implícitas. Véase la Licencia para consultar el texto específico relativo a los permisos y limitaciones establecidos en la Licencia.</dc:description>
+        <foaf:name xml:lang="es">Ontología de microrrelatos en español</foaf:name>
     </owl:Ontology>
     
 
@@ -479,6 +495,7 @@
 
     <owl:Class rdf:about="https://w3id.org/def/microrrelatos#Cortometraje">
         <rdfs:subClassOf rdf:resource="http://purl.org/spar/fabio/Film"/>
+        <rdfs:subClassOf rdf:resource="https://w3id.org/def/microrrelatos#ObraArtistica"/>
         <rdfs:comment xml:lang="es">Producción audiovisual o cinematográfica con una duración menor a 30 minutos (https://en.wikipedia.org/wiki/Short_film).</rdfs:comment>
         <rdfs:label xml:lang="es">cortometraje</rdfs:label>
     </owl:Class>
@@ -945,23 +962,6 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/microrrelatos#Video"/>
         <rdfs:comment xml:lang="es">Microrrelato en forma de vídeo.</rdfs:comment>
         <rdfs:label xml:lang="es">videominificción</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- https://w3id.org/def/microrrelatos#publicacionImpresa -->
-
-
-    <owl:Class rdf:about="https://w3id.org/def/microrrelatos#publicacionImpresa">
-        <rdfs:subClassOf rdf:resource="http://purl.org/spar/fabio/PrintObject"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="https://w3id.org/def/microrrelatos#tieneEditorial"/>
-                <owl:allValuesFrom rdf:resource="https://w3id.org/def/microrrelatos#Editorial"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:comment xml:lang="es">Escrito impreso, como un libro, una revista, un periódico, etc., que ha sido publicado (https://dle.rae.es/publicaci%C3%B3n?m=form).</rdfs:comment>
-        <rdfs:label xml:lang="es">publicación impresa</rdfs:label>
     </owl:Class>
 </rdf:RDF>
 
