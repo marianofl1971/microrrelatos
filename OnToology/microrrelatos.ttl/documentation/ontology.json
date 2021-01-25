@@ -62,15 +62,6 @@
     "@id" : "https://w3id.org/def/microrrelatos#Editorial"
   } ]
 }, {
-  "@id" : "_:genid8",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/def/microrrelatos#Editorial"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/microrrelatos#tieneEditorial"
-  } ]
-}, {
   "@id" : "http://purl.org/dc/terms/title",
   "http://www.w3.org/2002/07/owl#equivalentProperty" : [ {
     "@id" : "https://w3id.org/def/microrrelatos#titulo"
@@ -149,10 +140,18 @@
 }, {
   "@id" : "https://w3id.org/def/microrrelatos",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "es",
+    "@value" : "Esta ontología ha sido creada dentro del proyecto MiRed:\n\nTítulo: «MiRed (Microrrelato hipermedial español e hispanoamericano (2000-2020). Elaboración de un repositorio semántico y otros desafíos en la red»\nReferencia: RTI2018-094725-B-I00\nFinanciación: Ministerio de Ciencia, Innovación y Universidades y Fondo Europeo de Desarrollo (FEDER), en la convocatoria 2018 dentro del marco del Plan Estatal de I+D+I Orientada a los Retos de la Sociedad.\n\nLicencia\n\nDerechos de autor 2020 Mariano Fernández López (ingeniero), Ana Calvo Revilla y Ángel Arias Urrutia (expertos del dominio).\n\nAutorizado en virtud de la Licencia de Apache, Versión 2.0 (la \"Licencia\"); se prohíbe utilizar este archivo excepto en cumplimiento de la Licencia. Podrá obtener una copia de la Licencia en:\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nA menos que lo exijan las leyes pertinentes o se haya establecido por escrito, el software distribuido en virtud de la Licencia se distribuye “TAL CUAL”, SIN GARANTÍAS NI CONDICIONES DE NINGÚN TIPO, ya sean expresas o implícitas. Véase la Licencia para consultar el texto específico relativo a los permisos y limitaciones establecidos en la Licencia."
+  } ],
   "http://www.w3.org/2002/07/owl#imports" : [ {
     "@id" : "http://purl.org/spar/fabio/2019-02-19"
   }, {
     "@id" : "http://xmlns.com/foaf/0.1/"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@language" : "es",
+    "@value" : "Ontología de microrrelatos en español"
   } ]
 }, {
   "@id" : "https://w3id.org/def/microrrelatos#Audiomicrorrelato",
@@ -211,6 +210,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/spar/fabio/Film"
+  }, {
+    "@id" : "https://w3id.org/def/microrrelatos#ObraArtistica"
   } ]
 }, {
   "@id" : "https://w3id.org/def/microrrelatos#Creeypasta",
@@ -378,7 +379,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "Ilustración que tiene insertado un microrrelato."
+    "@value" : "Ilustración que tiene insertada un microrrelato."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -927,22 +928,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/def/microrrelatos#nombre"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/microrrelatos#publicacionImpresa",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Escrito impreso, como un libro, una revista, un periódico, etc., que ha sido publicado (https://dle.rae.es/publicaci%C3%B3n?m=form)."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "publicación impresa"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/spar/fabio/PrintObject"
-  }, {
-    "@id" : "_:genid8"
   } ]
 }, {
   "@id" : "https://w3id.org/def/microrrelatos#sexo",

@@ -1,6 +1,8 @@
 <https://w3id.org/def/microrrelatos> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
 <https://w3id.org/def/microrrelatos> <http://www.w3.org/2002/07/owl#imports> <http://purl.org/spar/fabio/2019-02-19> .
 <https://w3id.org/def/microrrelatos> <http://www.w3.org/2002/07/owl#imports> <http://xmlns.com/foaf/0.1/> .
+<https://w3id.org/def/microrrelatos> <http://purl.org/dc/elements/1.1/description> "Esta ontología ha sido creada dentro del proyecto MiRed:\n\nTítulo: «MiRed (Microrrelato hipermedial español e hispanoamericano (2000-2020). Elaboración de un repositorio semántico y otros desafíos en la red»\nReferencia: RTI2018-094725-B-I00\nFinanciación: Ministerio de Ciencia, Innovación y Universidades y Fondo Europeo de Desarrollo (FEDER), en la convocatoria 2018 dentro del marco del Plan Estatal de I+D+I Orientada a los Retos de la Sociedad.\n\nLicencia\n\nDerechos de autor 2020 Mariano Fernández López (ingeniero), Ana Calvo Revilla y Ángel Arias Urrutia (expertos del dominio).\n\nAutorizado en virtud de la Licencia de Apache, Versión 2.0 (la \"Licencia\"); se prohíbe utilizar este archivo excepto en cumplimiento de la Licencia. Podrá obtener una copia de la Licencia en:\n\nhttp://www.apache.org/licenses/LICENSE-2.0\n\nA menos que lo exijan las leyes pertinentes o se haya establecido por escrito, el software distribuido en virtud de la Licencia se distribuye “TAL CUAL”, SIN GARANTÍAS NI CONDICIONES DE NINGÚN TIPO, ya sean expresas o implícitas. Véase la Licencia para consultar el texto específico relativo a los permisos y limitaciones establecidos en la Licencia."@es .
+<https://w3id.org/def/microrrelatos> <http://xmlns.com/foaf/0.1/name> "Ontología de microrrelatos en español"@es .
 # 
 # 
 # #################################################################
@@ -246,6 +248,7 @@
 # https://w3id.org/def/microrrelatos#Cortometraje
 <https://w3id.org/def/microrrelatos#Cortometraje> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/microrrelatos#Cortometraje> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Film> .
+<https://w3id.org/def/microrrelatos#Cortometraje> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/microrrelatos#ObraArtistica> .
 <https://w3id.org/def/microrrelatos#Cortometraje> <http://www.w3.org/2000/01/rdf-schema#comment> "Producción audiovisual o cinematográfica con una duración menor a 30 minutos (https://en.wikipedia.org/wiki/Short_film)."@es .
 <https://w3id.org/def/microrrelatos#Cortometraje> <http://www.w3.org/2000/01/rdf-schema#label> "cortometraje"@es .
 # 
@@ -322,7 +325,7 @@
 <https://w3id.org/def/microrrelatos#IlustracionConMicrorrelatoInsertado> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/def/microrrelatos#IlustracionConMicrorrelatoInsertado> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/microrrelatos#Ilustracion> .
 <https://w3id.org/def/microrrelatos#IlustracionConMicrorrelatoInsertado> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/microrrelatos#MicrorrelatoMultimedia> .
-<https://w3id.org/def/microrrelatos#IlustracionConMicrorrelatoInsertado> <http://www.w3.org/2000/01/rdf-schema#comment> "Ilustración que tiene insertado un microrrelato."@es .
+<https://w3id.org/def/microrrelatos#IlustracionConMicrorrelatoInsertado> <http://www.w3.org/2000/01/rdf-schema#comment> "Ilustración que tiene insertada un microrrelato."@es .
 <https://w3id.org/def/microrrelatos#IlustracionConMicrorrelatoInsertado> <http://www.w3.org/2000/01/rdf-schema#label> "ilustración con microrrelato insertado"@es .
 # 
 # https://w3id.org/def/microrrelatos#LaminaIlustrada
@@ -508,15 +511,5 @@ _:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/mi
 <https://w3id.org/def/microrrelatos#Videominificcion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/microrrelatos#Video> .
 <https://w3id.org/def/microrrelatos#Videominificcion> <http://www.w3.org/2000/01/rdf-schema#comment> "Microrrelato en forma de vídeo."@es .
 <https://w3id.org/def/microrrelatos#Videominificcion> <http://www.w3.org/2000/01/rdf-schema#label> "videominificción"@es .
-# 
-# https://w3id.org/def/microrrelatos#publicacionImpresa
-<https://w3id.org/def/microrrelatos#publicacionImpresa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/def/microrrelatos#publicacionImpresa> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/PrintObject> .
-<https://w3id.org/def/microrrelatos#publicacionImpresa> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/microrrelatos#tieneEditorial> .
-_:genid8 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://w3id.org/def/microrrelatos#Editorial> .
-<https://w3id.org/def/microrrelatos#publicacionImpresa> <http://www.w3.org/2000/01/rdf-schema#comment> "Escrito impreso, como un libro, una revista, un periódico, etc., que ha sido publicado (https://dle.rae.es/publicaci%C3%B3n?m=form)."@es .
-<https://w3id.org/def/microrrelatos#publicacionImpresa> <http://www.w3.org/2000/01/rdf-schema#label> "publicación impresa"@es .
 # 
 # Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
