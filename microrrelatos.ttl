@@ -452,13 +452,6 @@ frbr:Place owl:equivalentClass :Lugar .
       rdfs:label "meme"@es .
 
 
-###  https://w3id.org/def/microrrelatos#MicorrelatoConVideo
-:MicorrelatoConVideo rdf:type owl:Class ;
-                     rdfs:subClassOf :MicrorrelatoMultimedia ;
-                     rdfs:comment "Microrrelato que incluye vídeo"@es ;
-                     rdfs:label "microrrelato con vídeo"@es .
-
-
 ###  https://w3id.org/def/microrrelatos#Microrrelato
 :Microrrelato rdf:type owl:Class ;
               rdfs:subClassOf :ObraArtistica ,
@@ -476,27 +469,6 @@ frbr:Place owl:equivalentClass :Lugar .
                               ] ;
               rdfs:comment "El microrrelato es un relato de muy pocas líneas que, por la brevedad y precisión en su vocabulario, crea la intensidad suficiente para turbar al lector (http://www.ies-ramonycajal.com/index.php/departamentos-mainmenu-32/dpto-lengua-espa-mainmenu-107/571-que-es-y-como-escribir-un-microrrelato)."@es ;
               rdfs:label "microrrelato"@es .
-
-
-###  https://w3id.org/def/microrrelatos#MicrorrelatoConDibujo
-:MicrorrelatoConDibujo rdf:type owl:Class ;
-                       rdfs:subClassOf :MicrorrelatoMultimedia ;
-                       rdfs:comment "Microrrelato que incluye dibujo."@es ;
-                       rdfs:label "microrrelato con dibujo"@es .
-
-
-###  https://w3id.org/def/microrrelatos#MicrorrelatoConFotografia
-:MicrorrelatoConFotografia rdf:type owl:Class ;
-                           rdfs:subClassOf :MicrorrelatoMultimedia ;
-                           rdfs:comment "Microrrelato que incluye fotografía."@es ;
-                           rdfs:label "microrrelato con fotografía"@es .
-
-
-###  https://w3id.org/def/microrrelatos#MicrorrelatoConIlustracion
-:MicrorrelatoConIlustracion rdf:type owl:Class ;
-                            rdfs:subClassOf :MicrorrelatoMultimedia ;
-                            rdfs:comment "Microrrelato que incluye ilustración."@es ;
-                            rdfs:label "microrrelato con ilustración"@es .
 
 
 ###  https://w3id.org/def/microrrelatos#MicrorrelatoConTexto
