@@ -22,14 +22,6 @@ select distinct ?nombre ?apellidos{
 }
 ```
 
-El resultado es el siguiente:
-
-```
-nombre  apellidos
-
-"Ana"^^<http://www.w3.org/2001/XMLSchema#string> "Martínez Castillo"^^<http://www.w3.org/2001/XMLSchema#string>
-``` 
-
 3.  Listado de todos los títulos de los microrrelatos con sus autore: 
 
 ```
