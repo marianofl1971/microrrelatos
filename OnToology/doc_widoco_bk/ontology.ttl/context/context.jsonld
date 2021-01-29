@@ -1,40 +1,40 @@
 {
   "@context" : {
     "Ciudad" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#Ciudad"
+      "@id" : "https://w3id.org/def/microrrelatos#Ciudad"
     },
     "Microrrelato" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#Microrrelato"
+      "@id" : "https://w3id.org/def/microrrelatos#Microrrelato"
     },
     "Magazine" : {
       "@id" : "http://purl.org/spar/fabio/Magazine"
     },
     "tieneURL" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#tieneURL",
+      "@id" : "https://w3id.org/def/microrrelatos#tieneURL",
       "@type" : "http://www.w3.org/2001/XMLSchema#anyURI"
     },
     "EspacioTelevisivo" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#EspacioTelevisivo"
+      "@id" : "https://w3id.org/def/microrrelatos#EspacioTelevisivo"
     },
     "RecreacionAudivisual" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#RecreacionAudivisual"
+      "@id" : "https://w3id.org/def/microrrelatos#RecreacionAudivisual"
     },
     "titulo" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#titulo",
+      "@id" : "https://w3id.org/def/microrrelatos#titulo",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "tienePublicacionImpresa" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#tienePublicacionImpresa",
+      "@id" : "https://w3id.org/def/microrrelatos#tienePublicacionImpresa",
       "@type" : "@id"
     },
     "MicrorrelatoVisualAnimado" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#MicrorrelatoVisualAnimado"
+      "@id" : "https://w3id.org/def/microrrelatos#MicrorrelatoVisualAnimado"
     },
     "MicrorrelatoMultimedia" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#MicrorrelatoMultimedia"
+      "@id" : "https://w3id.org/def/microrrelatos#MicrorrelatoMultimedia"
     },
     "ObraArtisticaSinTitulo" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#ObraArtisticaSinTitulo"
+      "@id" : "https://w3id.org/def/microrrelatos#ObraArtisticaSinTitulo"
     },
     "CorporateBody" : {
       "@id" : "http://purl.org/vocab/frbr/core#CorporateBody"
@@ -43,45 +43,45 @@
       "@id" : "http://www.w3.org/2002/07/owl#Thing"
     },
     "MedioDigitalDePublicacion" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#MedioDigitalDePublicacion"
+      "@id" : "https://w3id.org/def/microrrelatos#MedioDigitalDePublicacion"
     },
     "part" : {
       "@id" : "http://purl.org/vocab/frbr/core#part",
       "@type" : "@id"
     },
     "sexo" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#sexo",
+      "@id" : "https://w3id.org/def/microrrelatos#sexo",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "Cuentometraje" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#Cuentometraje"
+      "@id" : "https://w3id.org/def/microrrelatos#Cuentometraje"
     },
     "Video" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#Video"
+      "@id" : "https://w3id.org/def/microrrelatos#Video"
     },
     "LaminaIlustrada" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#LaminaIlustrada"
+      "@id" : "https://w3id.org/def/microrrelatos#LaminaIlustrada"
     },
     "Cortometraje" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#Cortometraje"
+      "@id" : "https://w3id.org/def/microrrelatos#Cortometraje"
     },
     "MicrorrelatoConTexto" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#MicrorrelatoConTexto"
+      "@id" : "https://w3id.org/def/microrrelatos#MicrorrelatoConTexto"
     },
     "maker" : {
       "@id" : "http://xmlns.com/foaf/0.1/maker",
       "@type" : "@id"
     },
     "nombreDePila" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#nombreDePila",
+      "@id" : "https://w3id.org/def/microrrelatos#nombreDePila",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "nombre" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#nombre",
+      "@id" : "https://w3id.org/def/microrrelatos#nombre",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "codigoDePais" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#codigoDePais",
+      "@id" : "https://w3id.org/def/microrrelatos#codigoDePais",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "label" : {
@@ -95,20 +95,20 @@
       "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     "annoDePublicacion" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#annoDePublicacion",
+      "@id" : "https://w3id.org/def/microrrelatos#annoDePublicacion",
       "@type" : "http://www.w3.org/2001/XMLSchema#gYear"
     },
     "Creeypasta" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#Creeypasta"
+      "@id" : "https://w3id.org/def/microrrelatos#Creeypasta"
     },
     "Pais" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#Pais"
+      "@id" : "https://w3id.org/def/microrrelatos#Pais"
     },
     "Localidad" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#Localidad"
+      "@id" : "https://w3id.org/def/microrrelatos#Localidad"
     },
     "Ilustracion" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#Ilustracion"
+      "@id" : "https://w3id.org/def/microrrelatos#Ilustracion"
     },
     "Expression" : {
       "@id" : "http://purl.org/spar/fabio/Expression"
@@ -118,7 +118,7 @@
       "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     "apellidos" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#apellidos",
+      "@id" : "https://w3id.org/def/microrrelatos#apellidos",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "hasURL" : {
@@ -129,35 +129,35 @@
       "@id" : "http://xmlns.com/foaf/0.1/Person"
     },
     "annoDeInicio" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#annoDeInicio",
+      "@id" : "https://w3id.org/def/microrrelatos#annoDeInicio",
       "@type" : "http://www.w3.org/2001/XMLSchema#gYear"
     },
     "RevistaDigital" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#RevistaDigital"
+      "@id" : "https://w3id.org/def/microrrelatos#RevistaDigital"
     },
     "Persona" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#Persona"
+      "@id" : "https://w3id.org/def/microrrelatos#Persona"
     },
     "name" : {
       "@id" : "http://xmlns.com/foaf/0.1/name",
       "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     "tienePueblo" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#tienePueblo",
+      "@id" : "https://w3id.org/def/microrrelatos#tienePueblo",
       "@type" : "@id"
     },
     "ObraArtistica" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#ObraArtistica"
+      "@id" : "https://w3id.org/def/microrrelatos#ObraArtistica"
     },
     "PublicacionImpresa" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#PublicacionImpresa"
+      "@id" : "https://w3id.org/def/microrrelatos#PublicacionImpresa"
     },
     "tieneParte" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#tieneParte",
+      "@id" : "https://w3id.org/def/microrrelatos#tieneParte",
       "@type" : "@id"
     },
     "tieneCiudad" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#tieneCiudad",
+      "@id" : "https://w3id.org/def/microrrelatos#tieneCiudad",
       "@type" : "@id"
     },
     "Work" : {
@@ -168,29 +168,29 @@
       "@type" : "http://www.w3.org/2000/01/rdf-schema#Literal"
     },
     "RedSocial" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#RedSocial"
+      "@id" : "https://w3id.org/def/microrrelatos#RedSocial"
     },
     "EspacioRadiofonicoFacebook" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#EspacioRadiofonicoFacebook"
+      "@id" : "https://w3id.org/def/microrrelatos#EspacioRadiofonicoFacebook"
     },
     "tieneMedioDigitalDePublicacion" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#tieneMedioDigitalDePublicacion",
+      "@id" : "https://w3id.org/def/microrrelatos#tieneMedioDigitalDePublicacion",
       "@type" : "@id"
     },
     "Blog" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#Blog"
+      "@id" : "https://w3id.org/def/microrrelatos#Blog"
     },
     "Hiperenlace" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#Hiperenlace"
+      "@id" : "https://w3id.org/def/microrrelatos#Hiperenlace"
     },
     "Place" : {
       "@id" : "http://purl.org/vocab/frbr/core#Place"
     },
     "IlustracionConMicrorrelatoInsertado" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#IlustracionConMicrorrelatoInsertado"
+      "@id" : "https://w3id.org/def/microrrelatos#IlustracionConMicrorrelatoInsertado"
     },
     "Meme" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#Meme"
+      "@id" : "https://w3id.org/def/microrrelatos#Meme"
     },
     "Movie" : {
       "@id" : "http://purl.org/spar/fabio/Movie"
@@ -203,94 +203,94 @@
       "@type" : "http://www.w3.org/2001/XMLSchema#gYear"
     },
     "Fotografia" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#Fotografia"
+      "@id" : "https://w3id.org/def/microrrelatos#Fotografia"
     },
     "Film" : {
       "@id" : "http://purl.org/spar/fabio/Film"
     },
     "Videominificcion" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#Videominificcion"
+      "@id" : "https://w3id.org/def/microrrelatos#Videominificcion"
     },
     "creaObraArtistica" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#creaObraArtistica",
+      "@id" : "https://w3id.org/def/microrrelatos#creaObraArtistica",
       "@type" : "@id"
     },
     "tieneLugar" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#tieneLugar",
+      "@id" : "https://w3id.org/def/microrrelatos#tieneLugar",
       "@type" : "@id"
     },
     "esObraArtisticaCreadaPor" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#esObraArtisticaCreadaPor",
+      "@id" : "https://w3id.org/def/microrrelatos#esObraArtisticaCreadaPor",
       "@type" : "@id"
     },
     "annoDeFin" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#annoDeFin",
+      "@id" : "https://w3id.org/def/microrrelatos#annoDeFin",
       "@type" : "http://www.w3.org/2001/XMLSchema#gYear"
     },
     "EspacioRadiofonico" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#EspacioRadiofonico"
+      "@id" : "https://w3id.org/def/microrrelatos#EspacioRadiofonico"
     },
     "Pueblo" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#Pueblo"
+      "@id" : "https://w3id.org/def/microrrelatos#Pueblo"
     },
     "RemediacionAudiovisual" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#RemediacionAudiovisual"
+      "@id" : "https://w3id.org/def/microrrelatos#RemediacionAudiovisual"
     },
     "EspacioTelevisivoYouTube" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#EspacioTelevisivoYouTube"
+      "@id" : "https://w3id.org/def/microrrelatos#EspacioTelevisivoYouTube"
     },
     "Lugar" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#Lugar"
+      "@id" : "https://w3id.org/def/microrrelatos#Lugar"
     },
     "MedioProporcionadoPorYouTube" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#MedioProporcionadoPorYouTube"
+      "@id" : "https://w3id.org/def/microrrelatos#MedioProporcionadoPorYouTube"
     },
     "StillImage" : {
       "@id" : "http://purl.org/spar/fabio/StillImage"
     },
     "tieneEditorial" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#tieneEditorial",
+      "@id" : "https://w3id.org/def/microrrelatos#tieneEditorial",
       "@type" : "@id"
     },
     "MedioProporcionadoPorFacebook" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#MedioProporcionadoPorFacebook"
+      "@id" : "https://w3id.org/def/microrrelatos#MedioProporcionadoPorFacebook"
     },
     "Dibujo" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#Dibujo"
+      "@id" : "https://w3id.org/def/microrrelatos#Dibujo"
     },
     "AudioDocument" : {
       "@id" : "http://purl.org/spar/fabio/AudioDocument"
     },
     "MedioProporcionadoPorInstragram" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#MedioProporcionadoPorInstragram"
+      "@id" : "https://w3id.org/def/microrrelatos#MedioProporcionadoPorInstragram"
     },
     "ArtisticWork" : {
       "@id" : "http://purl.org/spar/fabio/ArtisticWork"
     },
     "MedioProporcionadoPorTwitter" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#MedioProporcionadoPorTwitter"
+      "@id" : "https://w3id.org/def/microrrelatos#MedioProporcionadoPorTwitter"
     },
     "comment" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
     },
     "Editorial" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#Editorial"
+      "@id" : "https://w3id.org/def/microrrelatos#Editorial"
     },
     "TallerDigital" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#TallerDigital"
+      "@id" : "https://w3id.org/def/microrrelatos#TallerDigital"
     },
     "Audiomicrorrelato" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#Audiomicrorrelato"
+      "@id" : "https://w3id.org/def/microrrelatos#Audiomicrorrelato"
     },
     "DigitalItem" : {
       "@id" : "http://purl.org/spar/fabio/DigitalItem"
     },
     "tipologia" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#tipologia",
+      "@id" : "https://w3id.org/def/microrrelatos#tipologia",
       "@type" : "http://www.w3.org/2001/XMLSchema#string"
     },
     "tienePais" : {
-      "@id" : "https://mired.uspceu.es/microrrelatos#tienePais",
+      "@id" : "https://w3id.org/def/microrrelatos#tienePais",
       "@type" : "@id"
     },
     "description" : {
