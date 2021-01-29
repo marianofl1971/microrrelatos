@@ -2,28 +2,46 @@
   "@id" : "_:genid1",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/microrrelatos#tieneMedioDigitalDePublicacion"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/def/microrrelatos#MedioDigitalDePublicacion"
-  } ]
-}, {
-  "@id" : "_:genid2",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://w3id.org/def/microrrelatos#tipologia"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "_:genid3",
+  "@id" : "_:genid10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/microrrelatos#apellidos"
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/def/microrrelatos#Editorial"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/microrrelatos#tieneEditorial"
+  } ]
+}, {
+  "@id" : "_:genid2",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#anyURI"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://purl.org/spar/fabio/hasURL"
+  } ]
+}, {
+  "@id" : "_:genid3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/def/microrrelatos#Persona"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/microrrelatos#esObraArtisticaCreadaPor"
   } ]
 }, {
   "@id" : "_:genid4",
@@ -37,38 +55,47 @@
 }, {
   "@id" : "_:genid5",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/microrrelatos#nombreDePila"
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/def/microrrelatos#PublicacionImpresa"
   } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/microrrelatos#tienePublicacionImpresa"
   } ]
 }, {
   "@id" : "_:genid6",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "https://w3id.org/def/microrrelatos#Ciudad"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/microrrelatos#apellidos"
+    "@id" : "https://w3id.org/def/microrrelatos#tieneCiudad"
   } ]
 }, {
   "@id" : "_:genid7",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/microrrelatos#tieneEditorial"
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "https://w3id.org/def/microrrelatos#Pais"
   } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://w3id.org/def/microrrelatos#Editorial"
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/microrrelatos#tienePais"
   } ]
 }, {
   "@id" : "_:genid8",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "https://w3id.org/def/microrrelatos#Editorial"
+    "@id" : "https://w3id.org/def/microrrelatos#Pueblo"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/def/microrrelatos#tieneEditorial"
+    "@id" : "https://w3id.org/def/microrrelatos#tienePueblo"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/def/microrrelatos#nombreDePila"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
   "@id" : "http://purl.org/dc/terms/title",
@@ -147,12 +174,20 @@
     "@id" : "https://w3id.org/def/microrrelatos#nombre"
   } ]
 }, {
-  "@id" : "https://w3id.org/def/microrrelatos",
+  "@id" : "https://mired.uspceu.es/microrrelatos",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/elements/1.1/description" : [ {
+    "@language" : "es",
+    "@value" : "Esta ontología ha sido creada dentro del proyecto MiRed:\n\nTítulo: «MiRed (Microrrelato hipermedial español e hispanoamericano (2000-2020). Elaboración de un repositorio semántico y otros desafíos en la red»\nReferencia: RTI2018-094725-B-I00\nFinanciación: Ministerio de Ciencia, Innovación y Universidades y Fondo Europeo de Desarrollo (FEDER), en la convocatoria 2018 dentro del marco del Plan Estatal de I+D+I Orientada a los Retos de la Sociedad."
+  } ],
   "http://www.w3.org/2002/07/owl#imports" : [ {
     "@id" : "http://purl.org/spar/fabio/2019-02-19"
   }, {
     "@id" : "http://xmlns.com/foaf/0.1/"
+  } ],
+  "http://xmlns.com/foaf/0.1/name" : [ {
+    "@language" : "es",
+    "@value" : "Ontología de microrrelatos en español"
   } ]
 }, {
   "@id" : "https://w3id.org/def/microrrelatos#Audiomicrorrelato",
@@ -211,6 +246,8 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/spar/fabio/Film"
+  }, {
+    "@id" : "https://w3id.org/def/microrrelatos#ObraArtistica"
   } ]
 }, {
   "@id" : "https://w3id.org/def/microrrelatos#Creeypasta",
@@ -378,7 +415,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "es",
-    "@value" : "Ilustración que tiene insertado un microrrelato."
+    "@value" : "Ilustración que tiene insertada un microrrelato."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "es",
@@ -528,8 +565,6 @@
     "@id" : "_:genid1"
   }, {
     "@id" : "_:genid2"
-  }, {
-    "@id" : "_:genid3"
   } ]
 }, {
   "@id" : "https://w3id.org/def/microrrelatos#MicrorrelatoConTexto",
@@ -585,7 +620,11 @@
     "@value" : "obra artística"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "_:genid3"
+  }, {
     "@id" : "_:genid4"
+  }, {
+    "@id" : "_:genid5"
   } ]
 }, {
   "@id" : "https://w3id.org/def/microrrelatos#ObraArtisticaSinTitulo",
@@ -630,9 +669,15 @@
     "@value" : "persona"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid5"
-  }, {
     "@id" : "_:genid6"
+  }, {
+    "@id" : "_:genid7"
+  }, {
+    "@id" : "_:genid8"
+  }, {
+    "@id" : "_:genid9"
+  }, {
+    "@id" : "_:genid10"
   } ]
 }, {
   "@id" : "https://w3id.org/def/microrrelatos#PublicacionImpresa",
@@ -648,7 +693,7 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://purl.org/spar/fabio/Expression"
   }, {
-    "@id" : "_:genid7"
+    "@id" : "_:genid11"
   } ]
 }, {
   "@id" : "https://w3id.org/def/microrrelatos#Pueblo",
@@ -927,22 +972,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/def/microrrelatos#nombre"
-  } ]
-}, {
-  "@id" : "https://w3id.org/def/microrrelatos#publicacionImpresa",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "es",
-    "@value" : "Escrito impreso, como un libro, una revista, un periódico, etc., que ha sido publicado (https://dle.rae.es/publicaci%C3%B3n?m=form)."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "es",
-    "@value" : "publicación impresa"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://purl.org/spar/fabio/PrintObject"
-  }, {
-    "@id" : "_:genid8"
   } ]
 }, {
   "@id" : "https://w3id.org/def/microrrelatos#sexo",
