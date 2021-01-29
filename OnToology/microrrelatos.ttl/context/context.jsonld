@@ -39,9 +39,6 @@
     "CorporateBody" : {
       "@id" : "http://purl.org/vocab/frbr/core#CorporateBody"
     },
-    "publicacionImpresa" : {
-      "@id" : "https://w3id.org/def/microrrelatos#publicacionImpresa"
-    },
     "Thing" : {
       "@id" : "http://www.w3.org/2002/07/owl#Thing"
     },
@@ -198,9 +195,6 @@
     "Movie" : {
       "@id" : "http://purl.org/spar/fabio/Movie"
     },
-    "PrintObject" : {
-      "@id" : "http://purl.org/spar/fabio/PrintObject"
-    },
     "title" : {
       "@id" : "http://purl.org/dc/terms/title"
     },
@@ -298,6 +292,9 @@
     "tienePais" : {
       "@id" : "https://w3id.org/def/microrrelatos#tienePais",
       "@type" : "@id"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/elements/1.1/description"
     }
   }
 }
