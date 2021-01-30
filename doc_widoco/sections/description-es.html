@@ -3,85 +3,63 @@
 La figura 1 muestra las clases de la ontología. Está resaltada en azul la clase `mcr:Microrrelato`. La figura 2 presenta una serie de ejemplos de microrrelatos concretos.
 </span>
 
-<div><img src="images/diagramaDeClases.svg"
-	 style="display: inline-block"
-	 alt="Diagrama de clases de la ontología de microrrelatos"
-	 width="80%"
-	 height="80%"
-	 hspace="100"
-	 align=left>
-</div>
-<div style="display: inline-block;text-align: center;color:#FFFFFF">
-	<!-- DANGER, MUCHO DANGER: he puesto el color en blanco para engañar al navegador y me deje un espacio vertical -->
-	&nbsp;&nbsp;&nbsp;&nbsp;aa
-</div>
-<center>Figura 1. Diagrama de clases con sus relaciones (<i>object properties</i>) y atributos (<i>data properties</i>)</center>
+<div class="container">
+  <img src="images/diagramaDeClases.svg" alt="Conceptualización de microrrelatos" class="image">
+  <div class="overlay"><center>Figura 1. Diagrama de clases con sus relaciones (<i>object properties</i>) y atributos (<i>data properties</i>)<center></div>
 </div>
 
-<div><img src="images/microrrelato_001.svg"
-	 style="display: inline-block"
-	 alt="Microrrelato 1"
-	 width="80%"
-	 height="80%"
-	 hspace="100"
-	 align=left>
+<hr>
+
+<div class="container">
+  <img src="images/microrrelato_001.svg" alt="Microrrelato 1" class="image">
+  <div class="overlay"><center>Figura 2. Microrrelato 1: "Visitantes" de Ana Martínez Castillo<center></div>
 </div>
-<div><img src="images/microrrelato_015.svg"
-	 style="display: inline-block"
-	 alt="Microrrelato 15"
-	 width="80%"
-	 height="80%"
-	 hspace="100"
-	 align=left>
+
+<hr>
+
+<div class="container">
+  <img src="images/microrrelato_015.svg" alt="Microrrelato 15" class="image">
+  <div class="overlay"><center>Figura 3. Microrrelato 15: "El mundo en sus manos" de Miguel Ángel Molina López (el microrrelato tiene publicación impresa, y se conoce la ciudad del autor)<center></div>
 </div>
-<div><img src="images/microrrelato_054.svg"
-	 style="display: inline-block"
-	 alt="Microrrelato 15"
-	 width="80%"
-	 height="80%"
-	 hspace="100"
-	 align=left>
+
+<hr>
+
+<div class="container">
+  <img src="images/microrrelato_054.svg" alt="Microrrelato 54" class="image">
+  <div class="overlay"><center>Figura 4. Microrrelato 54: "Las fugas de Degas" de Pedro Díaz Sáenz de Sicilia (se tiene la anotación de la fotografía)<center></div>
 </div>
-<div><img src="images/microrrelato_136.svg"
-	 style="display: inline-block"
-	 alt="Microrrelato 15"
-	 width="80%"
-	 height="80%"
-	 hspace="100"
-	 align=left>
+
+<hr>
+
+<div class="container">
+  <img src="images/microrrelato_136.svg" alt="Microrrelato 136" class="image">
+  <div class="overlay"><center>Figura 5. Microrrelato 136: "Monstruosa y sublime" de Abril Albarrán (se sabe el año de inicio y de fin del medio de publicación digital, y no se especifica la información del microrrelato en sí)<center></div>
 </div>
-<div><img src="images/microrrelato_262.svg"
-	 style="display: inline-block"
-	 alt="Microrrelato 15"
-	 width="80%"
-	 height="80%"
-	 hspace="100"
-	 align=left>
+
+<hr>
+
+<div class="container">
+  <img src="images/microrrelato_262.svg" alt="Microrrelato 262" class="image">
+  <div class="overlay"><center>Figura 4. Microrrelato 262: "Aventura" de Andrés Neuman (el microrrelato incluye un hiperenlace, y el autor tiene dos países)<center></div>
 </div>
-<div style="display: inline-block;text-align: center;color:#FFFFFF">
-	<!-- DANGER, MUCHO DANGER: he puesto el color en blanco para engañar al navegador y me deje un espacio vertical -->
-	&nbsp;&nbsp;&nbsp;&nbsp;aa
-</div>
-<center>Figura 2. Diagramas con ejemplos de individuos y hechos</center>
+
+<hr>
 
 <span class="markdown">
 A continuación se muestran una serie de ejemplos de consultas [SPARQL](https://www.w3.org/TR/rdf-sparql-query/) que se pueden lanzar sobre la ontología poblada. 
 
-1.  El autor del primer microrrelato:
+-  El autor del primer microrrelato:
 
 ```
-PREFIX mcr:   <https://w3id.org/def/microrrelatos#>
-
 select distinct ?autor{
     mcr:microrrelato_1 mcr:esObraArtisticaCreadaPor ?autor
 }
 ``` 
 
-2.  El nombre y los apellidos del autor del primer microrrelato:
+-  El nombre y los apellidos del autor del primer microrrelato:
+
 
 ```
-PREFIX mcr:   <https://w3id.org/def/microrrelatos#>
-
 select distinct ?nombre ?apellidos{
     mcr:microrrelato_1 mcr:esObraArtisticaCreadaPor ?autor .
     ?autor mcr:nombreDePila ?nombre .
@@ -89,11 +67,9 @@ select distinct ?nombre ?apellidos{
 }
 ```
 
-3.  Listado de todos los títulos de los microrrelatos con sus autores: 
+-  Listado de todos los títulos de los microrrelatos con sus autores: 
 
 ```
-PREFIX mcr:   <https://w3id.org/def/microrrelatos#>
-
 select distinct ?titulo ?nombre_autor{
     ?uri_microrrelato mcr:esObraArtisticaCreadaPor ?uri_autor .
     ?uri_autor rdfs:label ?nombre_autor .
