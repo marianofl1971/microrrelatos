@@ -375,7 +375,7 @@ frbr:Place owl:equivalentClass :Lugar .
 ###  https://mired.uspceu.es/microrrelatos#IlustracionConMicrorrelatoInsertado
 :IlustracionConMicrorrelatoInsertado rdf:type owl:Class ;
                                      rdfs:subClassOf :Ilustracion ,
-                                                     :MicrorrelatoMultimedia ;
+                                                     :MicrorrelatoHipermedial ;
                                      rdfs:comment "Ilustración que tiene insertada un microrrelato."@es ;
                                      rdfs:label "ilustración con microrrelato insertado"@es .
 
@@ -464,11 +464,11 @@ frbr:Place owl:equivalentClass :Lugar .
                       rdfs:label "microrrelato con texto"@es .
 
 
-###  https://mired.uspceu.es/microrrelatos#MicrorrelatoMultimedia
-:MicrorrelatoMultimedia rdf:type owl:Class ;
-                        rdfs:subClassOf :Microrrelato ;
-                        rdfs:comment "Microrrelato que utiliza conjunta y simultáneamente diversos medios, como imágenes, sonidos y texto."@es ;
-                        rdfs:label "microrrelato multimedia"@es .
+###  https://mired.uspceu.es/microrrelatos#MicrorrelatoHipermedial
+:MicrorrelatoHipermedial rdf:type owl:Class ;
+                         rdfs:subClassOf :Microrrelato ;
+                         rdfs:comment "Microrrelato que utiliza conjunta y simultáneamente diversos medios, como imágenes, sonidos y texto."@es ;
+                         rdfs:label "microrrelato hipermedial"@es .
 
 
 ###  https://mired.uspceu.es/microrrelatos#MicrorrelatoVisualAnimado
