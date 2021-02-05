@@ -375,7 +375,7 @@ frbr:Place owl:equivalentClass :Lugar .
 ###  https://mired.uspceu.es/microrrelatos#IlustracionConMicrorrelatoInsertado
 :IlustracionConMicrorrelatoInsertado rdf:type owl:Class ;
                                      rdfs:subClassOf :Ilustracion ,
-                                                     :MicrorrelatoHipermedial ;
+                                                     :MicrorrelatoConIlustracion ;
                                      rdfs:comment "Ilustración que tiene insertada un microrrelato."@es ;
                                      rdfs:label "ilustración con microrrelato insertado"@es .
 
@@ -457,11 +457,53 @@ frbr:Place owl:equivalentClass :Lugar .
               rdfs:label "microrrelato"@es .
 
 
+###  https://mired.uspceu.es/microrrelatos#MicrorrelatoConDibujo
+:MicrorrelatoConDibujo rdf:type owl:Class ;
+                       owl:equivalentClass [ rdf:type owl:Restriction ;
+                                             owl:onProperty :tieneParte ;
+                                             owl:someValuesFrom :Dibujo
+                                           ] ;
+                       rdfs:subClassOf :MicrorrelatoHipermedial ;
+                       rdfs:comment "Microrrelato que incluye dibujo."@es ;
+                       rdfs:label "microrrelato con dibujo"@es .
+
+
+###  https://mired.uspceu.es/microrrelatos#MicrorrelatoConFotografia
+:MicrorrelatoConFotografia rdf:type owl:Class ;
+                           owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                 owl:onProperty :tieneParte ;
+                                                 owl:someValuesFrom :Fotografia
+                                               ] ;
+                           rdfs:subClassOf :MicrorrelatoHipermedial .
+
+
+###  https://mired.uspceu.es/microrrelatos#MicrorrelatoConIlustracion
+:MicrorrelatoConIlustracion rdf:type owl:Class ;
+                            owl:equivalentClass [ rdf:type owl:Restriction ;
+                                                  owl:onProperty :tieneParte ;
+                                                  owl:someValuesFrom :Ilustracion
+                                                ] ;
+                            rdfs:subClassOf :MicrorrelatoHipermedial ;
+                            rdfs:comment "MIcrorrelato que incluye ilustración."@es ;
+                            rdfs:label "microrrelato con ilustración"@es .
+
+
 ###  https://mired.uspceu.es/microrrelatos#MicrorrelatoConTexto
 :MicrorrelatoConTexto rdf:type owl:Class ;
                       rdfs:subClassOf :Microrrelato ;
                       rdfs:comment "Microrrelato que contiene texto."@es ;
                       rdfs:label "microrrelato con texto"@es .
+
+
+###  https://mired.uspceu.es/microrrelatos#MicrorrelatoConVideo
+:MicrorrelatoConVideo rdf:type owl:Class ;
+                      owl:equivalentClass [ rdf:type owl:Restriction ;
+                                            owl:onProperty :tieneParte ;
+                                            owl:someValuesFrom :Video
+                                          ] ;
+                      rdfs:subClassOf :MicrorrelatoHipermedial ;
+                      rdfs:comment "Microrrelato que incluye vídeo."@es ;
+                      rdfs:label "microrrelato con vídeo"@es .
 
 
 ###  https://mired.uspceu.es/microrrelatos#MicrorrelatoHipermedial
