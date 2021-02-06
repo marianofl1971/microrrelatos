@@ -494,6 +494,17 @@ frbr:Place owl:equivalentClass :Lugar .
                             rdfs:label "microrrelato con ilustración"@es .
 
 
+###  https://mired.uspceu.es/microrrelatos#MicrorrelatoConMeme
+:MicrorrelatoConMeme rdf:type owl:Class ;
+                     owl:equivalentClass [ rdf:type owl:Restriction ;
+                                           owl:onProperty :tieneParte ;
+                                           owl:someValuesFrom :Meme
+                                         ] ;
+                     rdfs:subClassOf :MicrorrelatoHipermedial ;
+                     rdfs:comment "Microrrelato que incluye meme."@es ;
+                     rdfs:label "microrrelato con meme"@es .
+
+
 ###  https://mired.uspceu.es/microrrelatos#MicrorrelatoConTexto
 :MicrorrelatoConTexto rdf:type owl:Class ;
                       rdfs:subClassOf :Microrrelato ;
