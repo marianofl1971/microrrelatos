@@ -375,7 +375,11 @@ frbr:Place owl:equivalentClass :Lugar .
 ###  https://mired.uspceu.es/microrrelatos#IlustracionConMicrorrelatoInsertado
 :IlustracionConMicrorrelatoInsertado rdf:type owl:Class ;
                                      rdfs:subClassOf :Ilustracion ,
-                                                     :MicrorrelatoConIlustracion ;
+                                                     :MicrorrelatoConIlustracion ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty :tieneParte ;
+                                                       owl:someValuesFrom :Microrrelato
+                                                     ] ;
                                      rdfs:comment "Ilustración que tiene insertada un microrrelato."@es ;
                                      rdfs:label "ilustración con microrrelato insertado"@es .
 
@@ -474,7 +478,9 @@ frbr:Place owl:equivalentClass :Lugar .
                                                  owl:onProperty :tieneParte ;
                                                  owl:someValuesFrom :Fotografia
                                                ] ;
-                           rdfs:subClassOf :MicrorrelatoHipermedial .
+                           rdfs:subClassOf :MicrorrelatoHipermedial ;
+                           rdfs:comment "Microrrelato que incluye fotografía."@es ;
+                           rdfs:label "microrrelato con fotografía"@es .
 
 
 ###  https://mired.uspceu.es/microrrelatos#MicrorrelatoConIlustracion
