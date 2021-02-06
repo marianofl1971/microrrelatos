@@ -67,6 +67,13 @@ frbr:part owl:equivalentProperty :tieneParte ;
                 rdfs:label "tiene editorial"@es .
 
 
+###  https://mired.uspceu.es/microrrelatos#tieneHiperlenace
+:tieneHiperlenace rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :tieneParte ;
+                  rdfs:comment "Relación entre la representación de una entidad en la Web y un hiperenlace."@es ;
+                  rdfs:label "tiene hiperenlace"@es .
+
+
 ###  https://mired.uspceu.es/microrrelatos#tieneLugar
 :tieneLugar rdf:type owl:ObjectProperty ;
             rdfs:domain owl:Thing ;
