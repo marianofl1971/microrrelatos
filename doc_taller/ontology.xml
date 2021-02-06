@@ -107,6 +107,17 @@ Financiación: Ministerio de Ciencia, Innovación y Universidades y Fondo Europe
     
 
 
+    <!-- https://mired.uspceu.es/microrrelatos#tieneHiperlenace -->
+
+
+    <owl:ObjectProperty rdf:about="https://mired.uspceu.es/microrrelatos#tieneHiperlenace">
+        <rdfs:subPropertyOf rdf:resource="https://mired.uspceu.es/microrrelatos#tieneParte"/>
+        <rdfs:comment xml:lang="es">Relación entre la representación de una entidad en la Web y un hiperenlace.</rdfs:comment>
+        <rdfs:label xml:lang="es">tiene hiperenlace</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
     <!-- https://mired.uspceu.es/microrrelatos#tieneLugar -->
 
 
@@ -621,7 +632,13 @@ Financiación: Ministerio de Ciencia, Innovación y Universidades y Fondo Europe
 
     <owl:Class rdf:about="https://mired.uspceu.es/microrrelatos#IlustracionConMicrorrelatoInsertado">
         <rdfs:subClassOf rdf:resource="https://mired.uspceu.es/microrrelatos#Ilustracion"/>
-        <rdfs:subClassOf rdf:resource="https://mired.uspceu.es/microrrelatos#MicrorrelatoHipermedial"/>
+        <rdfs:subClassOf rdf:resource="https://mired.uspceu.es/microrrelatos#MicrorrelatoConIlustracion"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mired.uspceu.es/microrrelatos#tieneParte"/>
+                <owl:someValuesFrom rdf:resource="https://mired.uspceu.es/microrrelatos#Microrrelato"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="es">Ilustración que tiene insertada un microrrelato.</rdfs:comment>
         <rdfs:label xml:lang="es">ilustración con microrrelato insertado</rdfs:label>
     </owl:Class>
@@ -749,6 +766,85 @@ Financiación: Ministerio de Ciencia, Innovación y Universidades y Fondo Europe
     
 
 
+    <!-- https://mired.uspceu.es/microrrelatos#MicrorrelatoConDibujo -->
+
+
+    <owl:Class rdf:about="https://mired.uspceu.es/microrrelatos#MicrorrelatoConDibujo">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mired.uspceu.es/microrrelatos#tieneParte"/>
+                <owl:someValuesFrom rdf:resource="https://mired.uspceu.es/microrrelatos#Dibujo"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://mired.uspceu.es/microrrelatos#MicrorrelatoHipermedial"/>
+        <rdfs:comment xml:lang="es">Microrrelato que incluye dibujo.</rdfs:comment>
+        <rdfs:label xml:lang="es">microrrelato con dibujo</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mired.uspceu.es/microrrelatos#MicrorrelatoConFotografia -->
+
+
+    <owl:Class rdf:about="https://mired.uspceu.es/microrrelatos#MicrorrelatoConFotografia">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mired.uspceu.es/microrrelatos#tieneParte"/>
+                <owl:someValuesFrom rdf:resource="https://mired.uspceu.es/microrrelatos#Fotografia"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://mired.uspceu.es/microrrelatos#MicrorrelatoHipermedial"/>
+        <rdfs:comment xml:lang="es">Microrrelato que incluye fotografía.</rdfs:comment>
+        <rdfs:label xml:lang="es">microrrelato con fotografía</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mired.uspceu.es/microrrelatos#MicrorrelatoConIlustracion -->
+
+
+    <owl:Class rdf:about="https://mired.uspceu.es/microrrelatos#MicrorrelatoConIlustracion">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mired.uspceu.es/microrrelatos#tieneParte"/>
+                <owl:someValuesFrom rdf:resource="https://mired.uspceu.es/microrrelatos#Ilustracion"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://mired.uspceu.es/microrrelatos#MicrorrelatoHipermedial"/>
+        <rdfs:comment xml:lang="es">MIcrorrelato que incluye ilustración.</rdfs:comment>
+        <rdfs:label xml:lang="es">microrrelato con ilustración</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mired.uspceu.es/microrrelatos#MicrorrelatoConLaminaIlustrada -->
+
+
+    <owl:Class rdf:about="https://mired.uspceu.es/microrrelatos#MicrorrelatoConLaminaIlustrada">
+        <rdfs:subClassOf rdf:resource="https://mired.uspceu.es/microrrelatos#MicrorrelatoHipermedial"/>
+        <rdfs:comment xml:lang="es">Microrrelato que incluye lámina ilustrada.</rdfs:comment>
+        <rdfs:label xml:lang="es">microrrelato con lámina ilustrada</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mired.uspceu.es/microrrelatos#MicrorrelatoConMeme -->
+
+
+    <owl:Class rdf:about="https://mired.uspceu.es/microrrelatos#MicrorrelatoConMeme">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mired.uspceu.es/microrrelatos#tieneParte"/>
+                <owl:someValuesFrom rdf:resource="https://mired.uspceu.es/microrrelatos#Meme"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://mired.uspceu.es/microrrelatos#MicrorrelatoHipermedial"/>
+        <rdfs:comment xml:lang="es">Microrrelato que incluye meme.</rdfs:comment>
+        <rdfs:label xml:lang="es">microrrelato con meme</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://mired.uspceu.es/microrrelatos#MicrorrelatoConTexto -->
 
 
@@ -756,6 +852,23 @@ Financiación: Ministerio de Ciencia, Innovación y Universidades y Fondo Europe
         <rdfs:subClassOf rdf:resource="https://mired.uspceu.es/microrrelatos#Microrrelato"/>
         <rdfs:comment xml:lang="es">Microrrelato que contiene texto.</rdfs:comment>
         <rdfs:label xml:lang="es">microrrelato con texto</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://mired.uspceu.es/microrrelatos#MicrorrelatoConVideo -->
+
+
+    <owl:Class rdf:about="https://mired.uspceu.es/microrrelatos#MicrorrelatoConVideo">
+        <owl:equivalentClass>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://mired.uspceu.es/microrrelatos#tieneParte"/>
+                <owl:someValuesFrom rdf:resource="https://mired.uspceu.es/microrrelatos#Video"/>
+            </owl:Restriction>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="https://mired.uspceu.es/microrrelatos#MicrorrelatoHipermedial"/>
+        <rdfs:comment xml:lang="es">Microrrelato que incluye vídeo.</rdfs:comment>
+        <rdfs:label xml:lang="es">microrrelato con vídeo</rdfs:label>
     </owl:Class>
     
 

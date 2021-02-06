@@ -50,6 +50,12 @@
 <https://mired.uspceu.es/microrrelatos#tieneEditorial> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre la publicación impresa y la editorial."@es .
 <https://mired.uspceu.es/microrrelatos#tieneEditorial> <http://www.w3.org/2000/01/rdf-schema#label> "tiene editorial"@es .
 # 
+# https://mired.uspceu.es/microrrelatos#tieneHiperlenace
+<https://mired.uspceu.es/microrrelatos#tieneHiperlenace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://mired.uspceu.es/microrrelatos#tieneHiperlenace> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://mired.uspceu.es/microrrelatos#tieneParte> .
+<https://mired.uspceu.es/microrrelatos#tieneHiperlenace> <http://www.w3.org/2000/01/rdf-schema#comment> "Relación entre la representación de una entidad en la Web y un hiperenlace."@es .
+<https://mired.uspceu.es/microrrelatos#tieneHiperlenace> <http://www.w3.org/2000/01/rdf-schema#label> "tiene hiperenlace"@es .
+# 
 # https://mired.uspceu.es/microrrelatos#tieneLugar
 <https://mired.uspceu.es/microrrelatos#tieneLugar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://mired.uspceu.es/microrrelatos#tieneLugar> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/2002/07/owl#Thing> .
@@ -324,7 +330,11 @@
 # https://mired.uspceu.es/microrrelatos#IlustracionConMicrorrelatoInsertado
 <https://mired.uspceu.es/microrrelatos#IlustracionConMicrorrelatoInsertado> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://mired.uspceu.es/microrrelatos#IlustracionConMicrorrelatoInsertado> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://mired.uspceu.es/microrrelatos#Ilustracion> .
-<https://mired.uspceu.es/microrrelatos#IlustracionConMicrorrelatoInsertado> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://mired.uspceu.es/microrrelatos#MicrorrelatoHipermedial> .
+<https://mired.uspceu.es/microrrelatos#IlustracionConMicrorrelatoInsertado> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://mired.uspceu.es/microrrelatos#MicrorrelatoConIlustracion> .
+<https://mired.uspceu.es/microrrelatos#IlustracionConMicrorrelatoInsertado> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://mired.uspceu.es/microrrelatos#tieneParte> .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://mired.uspceu.es/microrrelatos#Microrrelato> .
 <https://mired.uspceu.es/microrrelatos#IlustracionConMicrorrelatoInsertado> <http://www.w3.org/2000/01/rdf-schema#comment> "Ilustración que tiene insertada un microrrelato."@es .
 <https://mired.uspceu.es/microrrelatos#IlustracionConMicrorrelatoInsertado> <http://www.w3.org/2000/01/rdf-schema#label> "ilustración con microrrelato insertado"@es .
 # 
@@ -384,22 +394,78 @@
 # https://mired.uspceu.es/microrrelatos#Microrrelato
 <https://mired.uspceu.es/microrrelatos#Microrrelato> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://mired.uspceu.es/microrrelatos#Microrrelato> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://mired.uspceu.es/microrrelatos#ObraArtistica> .
-<https://mired.uspceu.es/microrrelatos#Microrrelato> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
-_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://mired.uspceu.es/microrrelatos#tipologia> .
-_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
 <https://mired.uspceu.es/microrrelatos#Microrrelato> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
 _:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/fabio/hasURL> .
-_:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#anyURI> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://mired.uspceu.es/microrrelatos#tipologia> .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://mired.uspceu.es/microrrelatos#Microrrelato> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <http://purl.org/spar/fabio/hasURL> .
+_:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#anyURI> .
 <https://mired.uspceu.es/microrrelatos#Microrrelato> <http://www.w3.org/2000/01/rdf-schema#comment> "El microrrelato es un relato de muy pocas líneas que, por la brevedad y precisión en su vocabulario, crea la intensidad suficiente para turbar al lector (http://www.ies-ramonycajal.com/index.php/departamentos-mainmenu-32/dpto-lengua-espa-mainmenu-107/571-que-es-y-como-escribir-un-microrrelato)."@es .
 <https://mired.uspceu.es/microrrelatos#Microrrelato> <http://www.w3.org/2000/01/rdf-schema#label> "microrrelato"@es .
+# 
+# https://mired.uspceu.es/microrrelatos#MicrorrelatoConDibujo
+<https://mired.uspceu.es/microrrelatos#MicrorrelatoConDibujo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://mired.uspceu.es/microrrelatos#MicrorrelatoConDibujo> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://mired.uspceu.es/microrrelatos#tieneParte> .
+_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://mired.uspceu.es/microrrelatos#Dibujo> .
+<https://mired.uspceu.es/microrrelatos#MicrorrelatoConDibujo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://mired.uspceu.es/microrrelatos#MicrorrelatoHipermedial> .
+<https://mired.uspceu.es/microrrelatos#MicrorrelatoConDibujo> <http://www.w3.org/2000/01/rdf-schema#comment> "Microrrelato que incluye dibujo."@es .
+<https://mired.uspceu.es/microrrelatos#MicrorrelatoConDibujo> <http://www.w3.org/2000/01/rdf-schema#label> "microrrelato con dibujo"@es .
+# 
+# https://mired.uspceu.es/microrrelatos#MicrorrelatoConFotografia
+<https://mired.uspceu.es/microrrelatos#MicrorrelatoConFotografia> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://mired.uspceu.es/microrrelatos#MicrorrelatoConFotografia> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://mired.uspceu.es/microrrelatos#tieneParte> .
+_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://mired.uspceu.es/microrrelatos#Fotografia> .
+<https://mired.uspceu.es/microrrelatos#MicrorrelatoConFotografia> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://mired.uspceu.es/microrrelatos#MicrorrelatoHipermedial> .
+<https://mired.uspceu.es/microrrelatos#MicrorrelatoConFotografia> <http://www.w3.org/2000/01/rdf-schema#comment> "Microrrelato que incluye fotografía."@es .
+<https://mired.uspceu.es/microrrelatos#MicrorrelatoConFotografia> <http://www.w3.org/2000/01/rdf-schema#label> "microrrelato con fotografía"@es .
+# 
+# https://mired.uspceu.es/microrrelatos#MicrorrelatoConIlustracion
+<https://mired.uspceu.es/microrrelatos#MicrorrelatoConIlustracion> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://mired.uspceu.es/microrrelatos#MicrorrelatoConIlustracion> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://mired.uspceu.es/microrrelatos#tieneParte> .
+_:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://mired.uspceu.es/microrrelatos#Ilustracion> .
+<https://mired.uspceu.es/microrrelatos#MicrorrelatoConIlustracion> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://mired.uspceu.es/microrrelatos#MicrorrelatoHipermedial> .
+<https://mired.uspceu.es/microrrelatos#MicrorrelatoConIlustracion> <http://www.w3.org/2000/01/rdf-schema#comment> "MIcrorrelato que incluye ilustración."@es .
+<https://mired.uspceu.es/microrrelatos#MicrorrelatoConIlustracion> <http://www.w3.org/2000/01/rdf-schema#label> "microrrelato con ilustración"@es .
+# 
+# https://mired.uspceu.es/microrrelatos#MicrorrelatoConLaminaIlustrada
+<https://mired.uspceu.es/microrrelatos#MicrorrelatoConLaminaIlustrada> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://mired.uspceu.es/microrrelatos#MicrorrelatoConLaminaIlustrada> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://mired.uspceu.es/microrrelatos#MicrorrelatoHipermedial> .
+<https://mired.uspceu.es/microrrelatos#MicrorrelatoConLaminaIlustrada> <http://www.w3.org/2000/01/rdf-schema#comment> "Microrrelato que incluye lámina ilustrada."@es .
+<https://mired.uspceu.es/microrrelatos#MicrorrelatoConLaminaIlustrada> <http://www.w3.org/2000/01/rdf-schema#label> "microrrelato con lámina ilustrada"@es .
+# 
+# https://mired.uspceu.es/microrrelatos#MicrorrelatoConMeme
+<https://mired.uspceu.es/microrrelatos#MicrorrelatoConMeme> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://mired.uspceu.es/microrrelatos#MicrorrelatoConMeme> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://mired.uspceu.es/microrrelatos#tieneParte> .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://mired.uspceu.es/microrrelatos#Meme> .
+<https://mired.uspceu.es/microrrelatos#MicrorrelatoConMeme> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://mired.uspceu.es/microrrelatos#MicrorrelatoHipermedial> .
+<https://mired.uspceu.es/microrrelatos#MicrorrelatoConMeme> <http://www.w3.org/2000/01/rdf-schema#comment> "Microrrelato que incluye meme."@es .
+<https://mired.uspceu.es/microrrelatos#MicrorrelatoConMeme> <http://www.w3.org/2000/01/rdf-schema#label> "microrrelato con meme"@es .
 # 
 # https://mired.uspceu.es/microrrelatos#MicrorrelatoConTexto
 <https://mired.uspceu.es/microrrelatos#MicrorrelatoConTexto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://mired.uspceu.es/microrrelatos#MicrorrelatoConTexto> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://mired.uspceu.es/microrrelatos#Microrrelato> .
 <https://mired.uspceu.es/microrrelatos#MicrorrelatoConTexto> <http://www.w3.org/2000/01/rdf-schema#comment> "Microrrelato que contiene texto."@es .
 <https://mired.uspceu.es/microrrelatos#MicrorrelatoConTexto> <http://www.w3.org/2000/01/rdf-schema#label> "microrrelato con texto"@es .
+# 
+# https://mired.uspceu.es/microrrelatos#MicrorrelatoConVideo
+<https://mired.uspceu.es/microrrelatos#MicrorrelatoConVideo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://mired.uspceu.es/microrrelatos#MicrorrelatoConVideo> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://mired.uspceu.es/microrrelatos#tieneParte> .
+_:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://mired.uspceu.es/microrrelatos#Video> .
+<https://mired.uspceu.es/microrrelatos#MicrorrelatoConVideo> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://mired.uspceu.es/microrrelatos#MicrorrelatoHipermedial> .
+<https://mired.uspceu.es/microrrelatos#MicrorrelatoConVideo> <http://www.w3.org/2000/01/rdf-schema#comment> "Microrrelato que incluye vídeo."@es .
+<https://mired.uspceu.es/microrrelatos#MicrorrelatoConVideo> <http://www.w3.org/2000/01/rdf-schema#label> "microrrelato con vídeo"@es .
 # 
 # https://mired.uspceu.es/microrrelatos#MicrorrelatoHipermedial
 <https://mired.uspceu.es/microrrelatos#MicrorrelatoHipermedial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -415,18 +481,18 @@ _:genid2 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/X
 # 
 # https://mired.uspceu.es/microrrelatos#ObraArtistica
 <https://mired.uspceu.es/microrrelatos#ObraArtistica> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://mired.uspceu.es/microrrelatos#ObraArtistica> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://mired.uspceu.es/microrrelatos#esObraArtisticaCreadaPor> .
-_:genid3 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://mired.uspceu.es/microrrelatos#Persona> .
-<https://mired.uspceu.es/microrrelatos#ObraArtistica> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://mired.uspceu.es/microrrelatos#tieneMedioDigitalDePublicacion> .
-_:genid4 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://mired.uspceu.es/microrrelatos#MedioDigitalDePublicacion> .
-<https://mired.uspceu.es/microrrelatos#ObraArtistica> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://mired.uspceu.es/microrrelatos#tienePublicacionImpresa> .
-_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://mired.uspceu.es/microrrelatos#PublicacionImpresa> .
+<https://mired.uspceu.es/microrrelatos#ObraArtistica> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://mired.uspceu.es/microrrelatos#esObraArtisticaCreadaPor> .
+_:genid9 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://mired.uspceu.es/microrrelatos#Persona> .
+<https://mired.uspceu.es/microrrelatos#ObraArtistica> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://mired.uspceu.es/microrrelatos#tieneMedioDigitalDePublicacion> .
+_:genid10 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://mired.uspceu.es/microrrelatos#MedioDigitalDePublicacion> .
+<https://mired.uspceu.es/microrrelatos#ObraArtistica> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://mired.uspceu.es/microrrelatos#tienePublicacionImpresa> .
+_:genid11 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://mired.uspceu.es/microrrelatos#PublicacionImpresa> .
 <https://mired.uspceu.es/microrrelatos#ObraArtistica> <http://www.w3.org/2000/01/rdf-schema#comment> "Trabajo como arte en su sentido más amplio, incluyendo trabajos literarios, obras musicales, arte visual, etc. (traducido de http://purl.org/spar/fabio/ArtisticWork)"@es .
 <https://mired.uspceu.es/microrrelatos#ObraArtistica> <http://www.w3.org/2000/01/rdf-schema#label> "obra artística"@es .
 # 
@@ -444,26 +510,26 @@ _:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://mired.uspceu.es/
 # 
 # https://mired.uspceu.es/microrrelatos#Persona
 <https://mired.uspceu.es/microrrelatos#Persona> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://mired.uspceu.es/microrrelatos#Persona> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://mired.uspceu.es/microrrelatos#tieneCiudad> .
-_:genid6 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://mired.uspceu.es/microrrelatos#Ciudad> .
-<https://mired.uspceu.es/microrrelatos#Persona> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://mired.uspceu.es/microrrelatos#tienePais> .
-_:genid7 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://mired.uspceu.es/microrrelatos#Pais> .
-<https://mired.uspceu.es/microrrelatos#Persona> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://mired.uspceu.es/microrrelatos#tienePueblo> .
-_:genid8 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://mired.uspceu.es/microrrelatos#Pueblo> .
-<https://mired.uspceu.es/microrrelatos#Persona> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://mired.uspceu.es/microrrelatos#nombreDePila> .
-_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
-<https://mired.uspceu.es/microrrelatos#Persona> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://mired.uspceu.es/microrrelatos#apellidos> .
-_:genid10 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://mired.uspceu.es/microrrelatos#Persona> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://mired.uspceu.es/microrrelatos#tieneCiudad> .
+_:genid12 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://mired.uspceu.es/microrrelatos#Ciudad> .
+<https://mired.uspceu.es/microrrelatos#Persona> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://mired.uspceu.es/microrrelatos#tienePais> .
+_:genid13 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://mired.uspceu.es/microrrelatos#Pais> .
+<https://mired.uspceu.es/microrrelatos#Persona> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://mired.uspceu.es/microrrelatos#tienePueblo> .
+_:genid14 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://mired.uspceu.es/microrrelatos#Pueblo> .
+<https://mired.uspceu.es/microrrelatos#Persona> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://mired.uspceu.es/microrrelatos#nombreDePila> .
+_:genid15 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://mired.uspceu.es/microrrelatos#Persona> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://mired.uspceu.es/microrrelatos#apellidos> .
+_:genid16 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
 <https://mired.uspceu.es/microrrelatos#Persona> <http://www.w3.org/2000/01/rdf-schema#comment> "Dado que se ha establecido que esta clase es equivalente a la clase `Person`de FOAF, se recomienda leer su descripción en dicho vocabulario."@es .
 <https://mired.uspceu.es/microrrelatos#Persona> <http://www.w3.org/2000/01/rdf-schema#comment> "Individuo de la especie humana (https://dle.rae.es/persona?m=form)."@es .
 <https://mired.uspceu.es/microrrelatos#Persona> <http://www.w3.org/2000/01/rdf-schema#label> "persona"@es .
@@ -471,10 +537,10 @@ _:genid10 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/
 # https://mired.uspceu.es/microrrelatos#PublicacionImpresa
 <https://mired.uspceu.es/microrrelatos#PublicacionImpresa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://mired.uspceu.es/microrrelatos#PublicacionImpresa> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://purl.org/spar/fabio/Expression> .
-<https://mired.uspceu.es/microrrelatos#PublicacionImpresa> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://mired.uspceu.es/microrrelatos#tieneEditorial> .
-_:genid11 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://mired.uspceu.es/microrrelatos#Editorial> .
+<https://mired.uspceu.es/microrrelatos#PublicacionImpresa> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <https://mired.uspceu.es/microrrelatos#tieneEditorial> .
+_:genid17 <http://www.w3.org/2002/07/owl#allValuesFrom> <https://mired.uspceu.es/microrrelatos#Editorial> .
 <https://mired.uspceu.es/microrrelatos#PublicacionImpresa> <http://www.w3.org/2000/01/rdf-schema#comment> "Escrito impreso, como un libro, una revista, un periódico, etc., que ha sido publicado (https://dle.rae.es/publicaci%C3%B3n?m=form)."@es .
 <https://mired.uspceu.es/microrrelatos#PublicacionImpresa> <http://www.w3.org/2000/01/rdf-schema#label> "publicación impresa"@es .
 # 
